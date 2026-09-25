@@ -1,0 +1,45 @@
+record_id,resource,decision,reason
+D01,CAMMA Datasets — Cholec80 official entry,retain,"Cholec80 scale, fps, annotation frequency, CC BY-NC-SA 4.0, overlap warning."
+D02,TF-Cholec80,retain,"Cholec80 preparation route and storage estimate (~166 GB temporary, ~85.2 GB extracted)."
+D03,EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos,retain,Cholec80 foundational citation and workflow/tool benchmark.
+D04,CholecT50 official repository,retain,50 videos; 45 Cholec80 + 5 Cholec120; 1 fps frames; official variants; CC BY-NC-SA.
+D05,Rendezvous: Attention mechanisms for recognition of surgical action triplets,retain,CholecT50 action-triplet benchmark and 100 triplet classes.
+D06,CholecSeg8k: A Semantic Segmentation Dataset for Laparoscopic Cholecystectomy Based on Cholec80,retain,"8,080 frames derived from 17 Cholec80 videos."
+D07,CholecInstanceSeg: A Tool Instance Segmentation Dataset for Laparoscopic Surgery,retain,"41,933 frames; composite provenance across CholecT50/CholecSeg8k/Cholec80 and explicit overlap analysis."
+D08,Endoscapes official repository,retain,"201-video structure, official video splits, CC BY-NC-SA statement and CAMMA overlap warning."
+D09,Endoscapes2023 v1.0.0,retain,Current file access requires registration + DUA; Restricted Health Data License 1.5.0.
+D10,"Endoscapes, a critical view of safety and surgical scene segmentation dataset",retain,"Dataset scope, clinical labels and annotation design."
+D11,"Video dataset for surgical phase, keypoint, and instrument recognition in laparoscopic surgery (PhaKIR)",retain,"8 full videos, 3 German centres, 25 fps, 1080p; dense phase and 1-fps keypoint/instance labels."
+D12,PhaKIR institutional publication record,retain,"Controlled Zenodo access, CC BY-NC-SA, multi-stage medical review and reuse notes."
+D13,HeiChole benchmark,retain,"33 videos, 3 centres, 22 h; phase/action/instrument/skill annotations and hidden-test benchmark."
+D14,HeiChole OPARA data publication,retain,"Public dataset bundle (~156.21 GB), CC BY-NC-SA 4.0."
+D15,Deep learning for surgical workflow analysis: survey,retain,HeiChole centre/camera heterogeneity and broader workflow dataset context.
+D16,MultiBypass140 official repository,retain,"140 videos, 2 centres, official 5-fold splits, CC BY-NC-SA, download instructions."
+D17,Challenges in multi-centric generalization: phase and step recognition in Roux-en-Y gastric bypass surgery,retain,"70+70 centre structure, 12 phases/46 steps, cross-centre generalization design."
+D18,MultiBypass140 issue #9 — multibypass03.zip appears corrupted,retain,2026 report that one archive contains metadata only; remaining visible parts are very large.
+D19,AutoLaparo official website,retain,"21 hysterectomy videos, 25 fps, 1080p, ~1,388 min, request access."
+D20,AutoLaparo: A New Dataset of Integrated Multi-tasks for Image-guided Surgical Automation,retain,Workflow/camera-motion/segmentation design and benchmark.
+D21,SAR-RARP50 challenge paper,retain,50 robot-assisted prostatectomy suturing video segments; action + instrument segmentation.
+D22,SAR-RARP50 train set,retain,"Train archive ~25.1 GB, CC BY-NC-SA 4.0."
+D23,SAR-RARP50 test set,retain,"Test archive ~6.15 GB, CC BY-NC-SA 4.0."
+D24,SARAS-ESAD dataset,retain,"Frame/instance counts, 21 action classes, registration access, unreleased test statement."
+D25,JIGSAWS official release,retain,Stereo video + kinematics + gesture/skill labels; request access; academic/non-commercial only.
+D26,A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery,retain,"JIGSAWS benchmark, standardized cross-validation and evaluation."
+D27,ROBUST-MIS 2019 challenge report,retain,"10,040 annotated images / 30 procedures / 3 surgery types; increasing domain-gap evaluation."
+D28,Heidelberg colorectal data set for surgical data science,retain,"HeiCo release terms (CC BY-NC-SA), Synapse/challenge access and workflow/instrument data."
+D29,CaDIS official page,retain,"4,670 images / 25 CATARACTS training videos, 36 classes and video-level split; current download link says coming soon."
+D30,CaDIS: Cataract dataset for surgical RGB-image segmentation,retain,CaDIS task and annotation design.
+D31,CATARACTS data description,retain,"50 cataract videos from Brest University Hospital, 3 surgeons."
+D32,CATARACTS download/usage terms,retain,IEEE DataPort route and explicit prohibition of commercial use.
+D33,EndoVis datasets and publications index,retain,Canonical access links for EndoVis 2017 and related challenges.
+D34,2018 Robotic Scene Segmentation Challenge,retain,Robotic/porcine scene benchmark and explicit caution that porcine tissue is simpler than human tissue.
+D35,SurgVU official dataset repository,retain,"280 videos, 155 training sessions, >840 h, 60 fps, 720p, CC BY-NC-SA 4.0."
+D36,Surgical Visual Understanding (SurgVU) Dataset,retain,SurgVU dataset description and public video/label URLs.
+X01,Purely private surgical datasets,exclude,Cannot support reproducible public Phase 0 experimentation.
+X02,Dataset mirrors without canonical provenance,exclude,Use official project/repository/paper where possible.
+X03,Synthetic-only surgical datasets,defer,"Potential augmentation resource, not primary P0.3 clinical benchmark."
+X04,Radiology/pathology datasets,exclude,Outside surgical-video scope.
+X05,Datasets with task mismatch and no plausible reliability role,deprioritize,Would widen scope without helping candidate tasks.
+X06,Leaderboards without data-access documentation,exclude,Insufficient reproducibility for feasibility audit.
+X07,Commercial/private robotic telemetry corpora,exclude/unavailable,No reproducible public access route identified.
+X08,New 2026 datasets not yet independently documented enough for candidate use,monitor,Record in later search update rather than commit to experiments now.

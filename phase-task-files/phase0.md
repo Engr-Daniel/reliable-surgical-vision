@@ -16,8 +16,8 @@ The phase is complete only when the provisional research tracks have been stress
 |---|---|---|
 | P0.1 | Toumai Technical Literature & Architecture Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.2 | Surgical Computer-Vision Landscape Reconnaissance | **COMPLETE — 2026-09-25** |
-| P0.3 | Dataset Reconnaissance | **READY TO START** |
-| P0.4 | Distribution-Shift Literature Reconnaissance | Not started |
+| P0.3 | Dataset Reconnaissance | **COMPLETE — 2026-09-25** |
+| P0.4 | Distribution-Shift Literature Reconnaissance | **READY TO START** |
 | P0.5 | Reliable-Inference Literature Reconnaissance | Not started |
 | P0.6 | Telesurgery / Network Literature Reconnaissance | Not started |
 | P0.7 | Intersection Analysis & Novelty Stress-Test | Not started |
@@ -709,11 +709,361 @@ P0.3 should audit dataset access, licensing, provenance, source-video overlap, s
 
 ---
 
+# P0.3 — Dataset Reconnaissance
+
+## Status
+
+`COMPLETE — 2026-09-25`
+
+## 1. Purpose
+
+Identify and rigorously assess candidate surgical-video datasets for later experiments on **distribution shift, uncertainty, selective inference, conformal prediction, and network/temporal degradation**.
+
+P0.3 is not a dataset popularity survey and does not make the final Phase 1 dataset choice.
+
+It asks:
+
+> **Which datasets can support scientifically valid, reproducible reliability experiments without hidden provenance leakage, access/licensing mistakes, or incompatible task assumptions?**
+
+The task explicitly audits:
+
+- access and current availability;
+- dataset/data-use licence;
+- redistribution/derivative constraints;
+- procedure and modality;
+- full-video vs frame-only release;
+- annotation coverage;
+- centre/site structure;
+- procedure/video-level splits;
+- source-video overlap and derived-dataset lineage;
+- temporal/network-degradation suitability;
+- visual-corruption suitability;
+- storage/download/compute burden;
+- working experimental role.
+
+---
+
+## 2. Scope Boundaries
+
+### In scope
+
+- candidate datasets identified during P0.2;
+- human laparoscopic/endoscopic datasets;
+- human robot-assisted surgery datasets;
+- multicentre datasets;
+- robustness/domain-gap datasets;
+- robotic training datasets when they provide unique technical value;
+- official challenge/test structures;
+- access/licence/DUA status;
+- provenance overlap;
+- leakage risk;
+- operational feasibility.
+
+### Out of scope
+
+- final synthetic-corruption taxonomy → **P0.4**;
+- calibration/conformal/selective-prediction method choice → **P0.5**;
+- exact network impairment emulator → **P0.6**;
+- final task/dataset/paper selection → **P0.7**;
+- downloading or redistributing restricted raw surgical video during Phase 0.
+
+---
+
+## 3. Research Questions
+
+### RQ1 — Dataset Viability
+
+Which public or controlled-access datasets can support the candidate surgical-CV tasks identified in P0.2?
+
+Determine:
+
+- procedure;
+- modality;
+- clinical vs training/porcine domain;
+- task;
+- scale;
+- annotation type;
+- raw/full video availability;
+- centre structure.
+
+### RQ2 — Access, Licence and Redistribution
+
+For each candidate:
+
+- where is the canonical access route?
+- is registration/request approval required?
+- what is the data licence?
+- is commercial use restricted?
+- may data or derived data be redistributed?
+- is a DUA required?
+- does the hosted data route impose stricter terms than the code/project repository?
+
+**Article licences and code licences must not be substituted for dataset licences.**
+
+### RQ3 — Provenance and Overlap
+
+Which datasets:
+
+- derive from the same source videos?
+- share patient/procedure/video identities?
+- contain re-extracted frames from the same surgery?
+- combine annotations from earlier datasets?
+
+The objective is to prevent false “external” evaluation caused by hidden source-video overlap.
+
+### RQ4 — Split Integrity and Natural Domains
+
+For each dataset:
+
+- what is the official split?
+- is the split procedure/video level?
+- is centre/site metadata available?
+- can centre, procedure or device define a natural shift?
+- is patient/video overlap excluded?
+- is the challenge test set public or hidden?
+
+### RQ5 — Annotation Coverage and Ground Truth
+
+Audit:
+
+- phase/action annotation frequency;
+- semantic/instance masks;
+- bounding boxes;
+- keypoints;
+- expert review;
+- multi-rater labels where available;
+- sparse vs dense annotation;
+- annotation quality limitations.
+
+### RQ6 — Shift and Network/Temporal Suitability
+
+Which datasets can support:
+
+- visual corruptions;
+- codec/re-encoding experiments;
+- frame loss;
+- duplicated frames;
+- irregular sampling;
+- temporal gaps;
+- jitter-inspired scheduling;
+- temporal-context truncation;
+- natural cross-centre/procedure shift?
+
+Full-video availability must be distinguished from frame-only releases.
+
+### RQ7 — Operational Feasibility
+
+What practical constraints affect use?
+
+Audit:
+
+- storage;
+- download size;
+- access friction;
+- current broken links/archive issues;
+- compute burden;
+- annotation preparation;
+- video extraction requirements.
+
+### RQ8 — Working Shortlist
+
+Which datasets should remain on the **working feasibility shortlist** for later Phase 0 tasks?
+
+This is not a ranking and is not the final Phase 1 selection.
+
+---
+
+## 4. Evidence Strategy
+
+Priority:
+
+1. official dataset repositories/pages;
+2. institutional data repositories;
+3. peer-reviewed dataset/benchmark papers;
+4. official challenge documentation;
+5. current issue trackers where an issue directly affects dataset availability;
+6. high-quality reviews only for metadata not exposed by the primary source.
+
+A current access-status claim must not be based solely on an old paper if the live official data page contradicts it.
+
+---
+
+## 5. Work Packages
+
+### WP1 — Candidate Registry
+
+Seed candidates from P0.2 and confirm canonical identities.
+
+**Output:** `dataset-registry.csv`
+
+### WP2 — Access / Licence Audit
+
+Verify current access routes, restrictions and data-use terms.
+
+**Output:** `access-license-audit.csv`
+
+### WP3 — Provenance / Overlap Audit
+
+Trace datasets to their source procedures/videos and identify derived-data relationships.
+
+**Output:** `provenance-overlap-map.md`
+
+### WP4 — Split / Leakage Audit
+
+Assess procedure-level split integrity, hidden tests and natural site/domain structure.
+
+**Output:** `split-leakage-audit.csv`
+
+### WP5 — Temporal / Network Suitability
+
+Determine whether genuine sequence data exist and whether labels can remain synchronized after controlled temporal/video degradation.
+
+**Output:** `temporal-network-suitability.csv`
+
+### WP6 — Operational Feasibility
+
+Record storage, access friction and currently broken/incomplete resources.
+
+**Output:** `compute-access-feasibility.csv`
+
+### WP7 — Decision Synthesis
+
+Map each dataset to an experimental role without prematurely choosing the final experiment.
+
+**Outputs:**
+- `dataset-decision-matrix.csv`
+- `dataset-shortlist.md`
+
+### WP8 — RQ and Evidence Closure
+
+Answer every P0.3 RQ and preserve unresolved questions for P0.4–P0.7.
+
+**Outputs:**
+- `rq-answer-matrix.md`
+- `open-questions.md`
+
+---
+
+## 6. Required Artifacts
+
+### A1 — Search Protocol
+`datasets/search-protocol.md`
+
+### A2 — Source Screening Log
+`datasets/source-screening-log.csv`
+
+### A3 — Dataset Registry
+`datasets/dataset-registry.csv`
+
+### A4 — Access and Licence Audit
+`datasets/access-license-audit.csv`
+
+### A5 — Provenance and Overlap Map
+`datasets/provenance-overlap-map.md`
+
+### A6 — Split and Leakage Audit
+`datasets/split-leakage-audit.csv`
+
+### A7 — Temporal / Network Suitability Map
+`datasets/temporal-network-suitability.csv`
+
+### A8 — Compute / Access Feasibility Map
+`datasets/compute-access-feasibility.csv`
+
+### A9 — Dataset Decision Matrix
+`datasets/dataset-decision-matrix.csv`
+
+### A10 — Working Dataset Shortlist
+`datasets/dataset-shortlist.md`
+
+### A11 — Research Question Answer Matrix
+`datasets/rq-answer-matrix.md`
+
+### A12 — Open Questions
+`datasets/open-questions.md`
+
+### A13 — Evidence Traceability
+- `datasets/source-index.md`
+- `datasets/source-audit.md`
+- `datasets/references.bib`
+
+### A14 — Programme Updates
+- `literature/literature-map.csv`
+- `literature/references.bib`
+- `TASK.md`
+- `RESEARCH_LOG.md`
+- `MEMORY.md`
+- `README.md`
+- `P0.3_COMPLETION_REPORT.md`
+
+---
+
+## 7. Quality Requirements
+
+### Provenance before convenience
+A convenient dataset must not be treated as external validation if it contains procedures used in training.
+
+### Procedure-level integrity
+Frames from the same source procedure must not cross train/calibration/test boundaries.
+
+### Licence fidelity
+Record the licence attached to the **data actually downloaded**, not just the paper or GitHub code.
+
+### Access-state fidelity
+Broken or pending download routes must be recorded as operational limitations.
+
+### Domain fidelity
+Human clinical, porcine, ex-vivo, simulation and training domains must remain explicitly separated.
+
+### Temporal fidelity
+Frame-only datasets cannot be used to claim realistic network/frame-timing experiments.
+
+### No final-selection overreach
+P0.3 may identify a working shortlist, but P0.4–P0.7 remain mandatory before final experimental commitment.
+
+---
+
+## 8. P0.3 Exit Criteria
+
+P0.3 is complete when:
+
+- [x] candidate datasets have been identified and audited;
+- [x] procedure/modality/task/annotation structure has been recorded;
+- [x] current access routes have been checked;
+- [x] licence/DUA/commercial-use constraints have been recorded;
+- [x] source-video overlap and derived-data lineage have been mapped;
+- [x] procedure/video-level split and leakage risks have been documented;
+- [x] multicentre/procedure/device natural-shift structure has been recorded where available;
+- [x] visual-corruption suitability has been assessed;
+- [x] temporal/network-degradation suitability has been assessed;
+- [x] storage/download/compute constraints have been assessed;
+- [x] current access failures have been recorded rather than ignored;
+- [x] a working, non-final dataset shortlist has been produced;
+- [x] all P0.3 RQs have evidence-linked answers;
+- [x] unresolved questions for P0.4–P0.7 have been recorded;
+- [x] global literature/reference records have been updated;
+- [x] `TASK.md`, `RESEARCH_LOG.md`, `MEMORY.md`, and `README.md` have been updated;
+- [x] `P0.3_COMPLETION_REPORT.md` has been produced.
+
+---
+
+## 9. P0.3 Completion Milestone
+
+P0.3 completed on **2026-09-25** after access, provenance, split, licence and feasibility audit.
+
+Suggested repository milestone after commit/review:
+
+**`v0.0.3 — Dataset Feasibility Map`**
+
+The next active task is:
+
+**P0.4 — Distribution-Shift Literature Reconnaissance**
+
+P0.4 should determine which natural/synthetic shifts have already been studied and which corruption protocols are scientifically defensible before any experimental shift generator is fixed.
+
+---
+
 # Remaining Phase 0 Tasks
-
-## P0.3 — Dataset Reconnaissance
-
-Identify and rigorously assess candidate datasets for later experimental work, including access, licensing, annotations, domain/site structure, task suitability, and distribution-shift potential.
 
 ## P0.4 — Distribution-Shift Literature Reconnaissance
 
@@ -747,7 +1097,7 @@ Phase 0 is complete when:
 
 - [x] Toumai architecture reconnaissance is complete;
 - [x] surgical-CV landscape is mapped;
-- [ ] candidate datasets are mapped and feasibility-audited;
+- [x] candidate datasets are mapped and feasibility-audited;
 - [ ] distribution-shift literature is mapped;
 - [ ] reliable-inference literature is mapped;
 - [ ] telesurgery/network literature is mapped;

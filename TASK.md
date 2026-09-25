@@ -9,29 +9,31 @@
 **Milestone:** `v0.0.1 — Toumai Architecture Reconnaissance`
 
 ### P0.2 Surgical computer-vision landscape — COMPLETE
-- [x] Map task taxonomy.
-- [x] Map representative datasets/benchmarks.
-- [x] Map representative model/baseline families.
-- [x] Document metrics and benchmark practice.
-- [x] Identify online/real-time/deployment evidence.
-- [x] Assess reliability relevance without final task selection.
-- [x] Produce reproducible search/screening trail.
-- [x] Produce RQ answer matrix.
-- [x] Update global literature records.
-- [x] Produce `P0.2_COMPLETION_REPORT.md`.
+- [x] Task/model/benchmark landscape complete.
+- [x] RQ answer matrix: `literature/surgical-vision/rq-answer-matrix.md`.
 
-**Suggested milestone after commit/review:** `v0.0.2 — Surgical Computer-Vision Landscape`
+**Milestone:** `v0.0.2 — Surgical Computer-Vision Landscape`
 
-### P0.3 Dataset reconnaissance — READY TO START
-- [ ] Audit candidate datasets in depth.
-- [ ] Record procedure, modality, annotations, provenance and overlap.
-- [ ] Audit licence/access/redistribution constraints.
-- [ ] Audit official splits and leakage risk.
-- [ ] Identify datasets suitable for visual and temporal/network corruption.
-- [ ] Produce evidence-backed experimental dataset shortlist.
+### P0.3 Dataset reconnaissance — COMPLETE
+- [x] Audit 18 candidate datasets.
+- [x] Record procedure, modality, annotations, provenance and overlap.
+- [x] Audit current access/licence/DUA/redistribution constraints.
+- [x] Audit official splits and procedure-level leakage risk.
+- [x] Map full-video suitability for temporal/network degradation.
+- [x] Map visual-corruption and natural-shift suitability.
+- [x] Audit storage/download/current availability constraints.
+- [x] Produce working, non-final dataset shortlist.
+- [x] Produce `datasets/rq-answer-matrix.md`.
+- [x] Produce `P0.3_COMPLETION_REPORT.md`.
 
-### P0.4 Distribution-shift literature
+**Suggested milestone after commit/review:** `v0.0.3 — Dataset Feasibility Map`
+
+### P0.4 Distribution-shift literature — READY TO START
 - [ ] Map surgical-CV domain shift, domain generalisation, robustness, corruption and OOD evaluation.
+- [ ] Build natural/synthetic shift taxonomy.
+- [ ] Audit corruption protocols and severity definitions.
+- [ ] Identify work on temporal/video degradation and compound shifts.
+- [ ] Produce evidence-linked RQ answers and update candidate experimental shifts.
 
 ### P0.5 Reliable-inference literature
 - [ ] Map calibration, uncertainty, OOD detection, selective prediction and conformal prediction.
@@ -45,4 +47,5 @@
 - [ ] Stress-test Track A–C novelty and revise research questions.
 
 ## Phase milestone
+
 **M0 — Evidence-backed Research Map**

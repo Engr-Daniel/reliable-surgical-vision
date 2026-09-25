@@ -1,0 +1,19 @@
+dataset_id,dataset,primary_task_value,temporal_value,natural_shift_value,spatial_value,robotic_clinical_relevance,immediate_feasibility,p0_3_disposition,rationale
+DS01,Cholec80,Temporal workflow,Strong,Limited,Moderate,Moderate,Strong,Working candidate,Phase recognition + controlled temporal/video degradation baseline
+DS10,SAR-RARP50,Robot-assisted action + instrument segmentation,Strong,Moderate,Strong,Very strong,Strong,Working candidate,Direct human robot-assisted domain with manageable official archives
+DS05,Endoscapes2023,Anatomy/instrument/CVS spatial perception,Moderate,Limited,Very strong,Very strong,Moderate,Working candidate,Rich clinical spatial/safety annotations; current access governed by PhysioNet DUA
+DS06,PhaKIR,Phase + keypoint + instance segmentation,Strong,Very strong,Very strong,Strong,Moderate,Working multicentre validation candidate,Only 8 public full videos but unusually rich multi-task/centre structure
+DS07,HeiChole,Phase/action/tool/skill,Strong,Very strong,Moderate,Strong,Low–moderate,Natural-shift validation candidate,Multicentre real human video; storage heavy
+DS13,HeiCo/ROBUST-MIS,Instrument segmentation/detection,Moderate,Strong (procedure gap),Very strong,Strong,Strong,Natural robustness validation candidate,Explicit increasing-domain-gap benchmark
+DS09,AutoLaparo,Workflow + anatomy/tool segmentation,Strong,Cross-procedure rather than multicentre,Strong,Moderate,Moderate,Cross-procedure validation candidate,Different procedure/anatomy with complete videos
+DS08,MultiBypass140,Phase/step,Very strong,Very strong,Limited,Very strong,Low today,High-value candidate on operational hold,"Excellent two-centre temporal benchmark, but current archive problem + huge storage"
+DS02,CholecT50,Triplets/action,Moderate,Low independent value,Moderate,Moderate,Strong,Secondary task resource,Strong action semantics but overlaps Cholec80
+DS04,CholecInstanceSeg,Instrument instance segmentation,Limited,Low independent value,Very strong,Moderate,Moderate,Secondary dense-label resource,Excellent masks but composite provenance
+DS11,ESAD,Robotic action detection,Moderate,Limited,Strong,Very strong,Moderate,Secondary,Four complete sessions constrain reliability claims
+DS12,JIGSAWS,Gesture/skill + kinematics,Very strong,Training-domain only,Limited,Robotic but non-clinical,Strong,Methodological secondary,"Excellent synchronized kinematics, weak clinical representativeness"
+DS14,CaDIS,Anatomy/tool semantic segmentation,Limited,Cross-modality,Very strong,Low robotic relevance,Low today,Access hold,Official page currently lacks working download link
+DS15,CATARACTS,Tool recognition,Strong,Cross-modality,Limited,Low robotic relevance,Moderate,Secondary external domain,"Full cataract videos, but task/procedure mismatch"
+DS16,EndoVis2017,Robotic instrument segmentation,Moderate,Porcine domain,Very strong,Strong platform relevance,Strong,Legacy secondary,"Useful small robotic corruption benchmark, non-human"
+DS17,EndoVis2018,Robotic scene segmentation,Moderate,Porcine domain,Very strong,Strong platform relevance,Strong,Legacy secondary,Non-human scene domain
+DS18,SurgVU,Robotic tools/tasks,Very strong,Training/porcine domain,Strong,Strong platform relevance,Low due scale,Pretraining/secondary,Massive scale but not clinical human surgery
+DS03,CholecSeg8k,Semantic segmentation,Limited,No independent domain,Very strong,Moderate,Strong,Secondary only,Derived directly from Cholec80

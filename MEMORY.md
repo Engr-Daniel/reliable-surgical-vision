@@ -52,6 +52,16 @@ The programme is in **Phase 0: Research Foundation**. No paper title, novelty cl
 - Phase/workflow recognition and instrument/anatomy segmentation/detection are candidate families only; final selection remains gated by P0.3–P0.7.
 - Every completed Phase 0 task should include an `rq-answer-matrix.md`.
 
+- **P0.3 Dataset Reconnaissance completed (2026-09-25).**
+- Cross-dataset evaluation is not considered cross-domain until source-video overlap is ruled out.
+- CholecT50, CholecSeg8k and CholecInstanceSeg have documented Cholec80 lineage; derived dataset names must never be used as evidence of independent procedures.
+- CAMMA explicitly warns of overlap among Cholec80, CholecT50 and Endoscapes; exact video IDs must be resolved before combined experiments.
+- Full-video datasets are required for temporal/network degradation; frame-only datasets are used only for visual/spatial corruption unless sequence data are separately available.
+- Working core candidates are Cholec80 (temporal), SAR-RARP50 (human robot-assisted), Endoscapes2023 (spatial/anatomy/CVS) and PhaKIR (multicentre temporal+spatial validation).
+- HeiChole, HeiCo/ROBUST-MIS, AutoLaparo and MultiBypass140 remain high-value validation candidates; MultiBypass140 is on operational hold until its current archive issue is rechecked.
+- Dataset/article/code licences are treated separately; current access/DUA terms must be verified again at download time.
+- Final dataset selection remains gated by P0.4–P0.7.
+
 ## Update rule
 
 Only add information here when it is expected to remain useful across many future research sessions. Put current actions in `TASK.md` and dated observations in `RESEARCH_LOG.md`.

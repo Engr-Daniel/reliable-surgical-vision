@@ -1,0 +1,19 @@
+dataset_id,dataset,full_video_available,native_fps,annotation_temporality,frame_loss_suitability,jitter_sampling_suitability,visual_corruption_suitability,codec_reencode_possible,note
+DS01,Cholec80,Yes,25,Dense phase; tools 1 fps,Very strong,Very strong,Moderate,Yes,Strong baseline for phase + temporal corruption
+DS02,CholecT50,Source video yes; released frames 1 fps,1 annotated fps,Dense 1-fps triplets,Moderate,Moderate,Moderate,"Yes, if source videos obtained",Overlap reduces independent validation value
+DS03,CholecSeg8k,No independent full-video release,Sparse sequences,Dense masks on selected frames,Limited,Limited,Very strong,No,Visual corruption only
+DS04,CholecInstanceSeg,Mixed source,Mixed,Dense masks by partition,Limited–moderate,Limited,Very strong,Only through source datasets,Provenance complexity
+DS05,Endoscapes2023,Sequence-derived sampled frames; full-video use must be verified,5-s CVS sampling; sparse dense labels,Rich spatial/safety labels,Moderate,Limited–moderate unless raw sequence available,Very strong,Uncertain,"Best spatial/safety candidate, not assumed full network emulator source"
+DS06,PhaKIR,Yes,25,Phase every frame; keypoint/masks 1 fps,Very strong,Very strong,Very strong,Yes,Small but uniquely combines temporal + spatial + centre shift
+DS07,HeiChole,Yes,25–50 centre-dependent,Framewise workflow/action/instrument labels,Very strong,Very strong,Moderate,Yes,Excellent multicentre temporal validation
+DS08,MultiBypass140,Yes,25,Phase/step labels with official metadata,Very strong,Very strong,Limited,Yes,Excellent cross-centre temporal dataset if download repaired
+DS09,AutoLaparo,Yes,25,Workflow + spatial subsets,Very strong,Very strong,Strong,Yes,Good cross-procedure test
+DS10,SAR-RARP50,Yes,High-rate robotic source,Action + segmentation,Strong,Strong,Very strong,Yes,Best direct human robot-assisted candidate in shortlist
+DS11,ESAD,Session video/frames,Challenge-dependent,Action boxes,Moderate,Moderate,Strong,Partial,Too few procedures for broad shift study
+DS12,JIGSAWS,Yes,Dataset-specific,Gesture + kinematics,Very strong,Very strong,Limited,Yes,"Useful for telemetry/multimodal method development, not clinical domain"
+DS13,HeiCo/ROBUST-MIS,Yes/clips,~25 fps clip structure,One annotated frame per 10-s clip in ROBUST-MIS setup,Strong,Moderate,Very strong,Yes/clips,Natural procedure-gap benchmark
+DS14,CaDIS,No (frame subset),Sparse,Dense semantic masks,Limited,Limited,Very strong,No,Spatial only; current access unresolved
+DS15,CATARACTS,Yes,Video,Tool usage,Strong,Strong,Limited,Yes,Different optical modality
+DS16,EndoVis2017,Sequence data,Sequence,Dense instrument masks,Moderate,Moderate,Very strong,Sequence-level,Legacy porcine robotic
+DS17,EndoVis2018,Sequence data,Sequence,Dense scene masks,Moderate,Moderate,Very strong,Sequence-level,Legacy porcine robotic
+DS18,SurgVU,Yes,60,Task/tool labels + challenge subsets,Very strong,Very strong,Strong,Yes,"Massive scale, but porcine training domain"

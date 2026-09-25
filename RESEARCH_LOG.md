@@ -38,3 +38,40 @@ P0.2 passes its exit criteria. Suggested tag after commit/review: `v0.0.2`.
 
 ### Next
 P0.3 — Dataset Reconnaissance.
+
+## 2026-09-25 — P0.3 Dataset Reconnaissance completed
+
+### Scope
+Audited candidate surgical-video datasets for access, licensing, provenance, overlap, split integrity, annotation structure, temporal/network suitability, natural-shift value and operational feasibility.
+
+### Method
+Seeded candidates from P0.2 and re-verified against official dataset/project pages, institutional repositories, peer-reviewed dataset papers, official challenge documentation and live access-status information. The detailed registry contains 18 datasets supported by 36 retained evidence sources.
+
+### Key findings
+- Dataset-name diversity can hide source-video reuse. CholecT50 contains 45 Cholec80 videos; CholecSeg8k derives from 17 Cholec80 videos; CholecInstanceSeg combines multiple Cholec80-family sources.
+- CAMMA explicitly warns about overlap among Cholec80, CholecT50 and Endoscapes; exact video-ID overlap must be resolved before cross-dataset evaluation.
+- CaDIS derives from the CATARACTS training videos and is not an independent external domain.
+- Full-video availability is required for later frame-loss/jitter/re-encoding experiments; sparse-frame segmentation sets are primarily visual-corruption resources.
+- Multicentre candidates include PhaKIR, HeiChole and MultiBypass140; ROBUST-MIS/HeiCo offers explicit procedure-domain gap.
+- SAR-RARP50 provides a comparatively manageable, directly accessible human robot-assisted segmentation/action benchmark.
+- Current access terms vary materially: request forms, CC BY-NC-SA, challenge registration, controlled access and PhysioNet DUA.
+- MultiBypass140 is scientifically attractive but has a current unresolved archive-integrity issue and a very large storage burden.
+- CaDIS' official page currently does not expose a live download link.
+
+### Working shortlist
+Development/core candidates: Cholec80, SAR-RARP50, Endoscapes2023, PhaKIR.
+
+High-value validation candidates: HeiChole, HeiCo/ROBUST-MIS, AutoLaparo, MultiBypass140 when operationally available.
+
+### Decision
+No final Phase 1 dataset is selected. P0.4–P0.7 remain mandatory gates.
+
+### Status
+P0.3 passes its exit criteria.
+
+### Suggested milestone
+`v0.0.3 — Dataset Feasibility Map`
+
+### Next
+P0.4 — Distribution-Shift Literature Reconnaissance.
+

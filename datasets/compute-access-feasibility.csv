@@ -1,0 +1,19 @@
+dataset_id,dataset,storage_scale,access_friction,compute_burden,immediate_operational_feasibility,p0_3_status
+DS01,Cholec80,~85.2 GB extracted; ~166 GB free recommended during prep,Request approval + download,Moderate,Feasible on workstation/cloud,Working candidate
+DS02,CholecT50,Moderate,Request approval,Moderate,Feasible,Secondary
+DS03,CholecSeg8k,Low–moderate,Canonical access/licence re-check,Low,Feasible after terms verified,Hold for provenance
+DS04,CholecInstanceSeg,Moderate + source datasets,Synapse + source downloads,Moderate,Feasible but setup complex,Secondary
+DS05,Endoscapes2023,Moderate,PhysioNet registration + DUA,Moderate,Feasible after governance setup,Working spatial candidate
+DS06,PhaKIR,Moderate,Controlled access request,Moderate,Feasible; small N,Working validation candidate
+DS07,HeiChole,~156.21 GB OPARA bundle,Large download,High,Feasible with storage planning,Natural-shift validation
+DS08,MultiBypass140,Hundreds of GB; visible major archives >365 GB combined,Current archive issue,Very high,Hold until download integrity verified,High-value but operational hold
+DS09,AutoLaparo,Moderate–high,Request approval,Moderate,Feasible,Secondary cross-procedure
+DS10,SAR-RARP50,~25.1 GB train + ~6.15 GB test,Direct download,Low–moderate,Immediately feasible,Working robotic candidate
+DS11,ESAD,Low–moderate,Challenge registration,Low,Feasible,Small-cohort secondary
+DS12,JIGSAWS,Low–moderate,Request,Low,Feasible,Methodological secondary
+DS13,HeiCo/ROBUST-MIS,Moderate,Synapse account,Moderate,Feasible,Robustness validation
+DS14,CaDIS,Low,Official download currently unresolved,Low,Not cleanly feasible today,Access hold
+DS15,CATARACTS,Moderate,IEEE DataPort/challenge,Moderate,Feasible with terms,Secondary external modality
+DS16,EndoVis2017,Low,Challenge access,Low,Feasible,Legacy
+DS17,EndoVis2018,Low,Challenge access,Low,Feasible,Legacy
+DS18,SurgVU,Very high (>840 h video),Direct public large download,Very high,Requires substantial storage/compute,Pretraining/secondary

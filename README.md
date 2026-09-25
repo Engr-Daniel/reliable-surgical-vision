@@ -23,10 +23,11 @@ These are research tracks, not predetermined publications. Tracks may be refined
 **Phase 0 — Research Foundation**
 
 - P0.1 Toumai architecture reconnaissance — **complete** (`v0.0.1`)
-- P0.2 Surgical computer-vision landscape — **complete**
-- P0.3 Dataset reconnaissance — **next**
+- P0.2 Surgical computer-vision landscape — **complete** (`v0.0.2`)
+- P0.3 Dataset reconnaissance — **complete**
+- P0.4 Distribution-shift literature — **next**
 
-P0.2 maps the field but does not select a final dataset/model or establish novelty.
+P0.3 establishes a feasibility/provenance map and a working dataset shortlist. No final dataset, shift protocol, reliability method, model, or novelty claim is fixed yet.
 
 ## Research principles
 
