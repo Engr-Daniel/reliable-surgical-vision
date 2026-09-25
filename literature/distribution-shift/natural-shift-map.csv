@@ -1,0 +1,13 @@
+shift_id,shift_axis,class,tasks,examples,evaluation_design,evidence_strength,main_caution,source_ids
+N01,Hospital/centre,Compound natural,Phase/step; segmentation; keypoints,MultiBypass140; PhaKIR; inter-hospital phase transfer,Cross-centre holdout/external evaluation,Strong,"Bundles workflow, devices, surgeons, patients and preprocessing; causal attribution limited",SH03;SH04;SH05
+N02,Recording/camera system,Acquisition,Instrument segmentation,Kitaguchi dataset,Same procedure/tool but different laparoscopic recording system,Strong,Device differences may correlate with image processing and color,SH02
+N03,Instrument morphology/version,Object appearance,Instrument segmentation; phase shortcuts,Kitaguchi; inter-hospital phase transfer,Changed forceps/version/manufacturer cues,Strong,Can be entangled with site/vendor,SH02;SH05
+N04,Procedure/surgical background,Clinical/workflow,Instrument segmentation; phase/step,ROBUST-MIS; Kitaguchi,Train/test across surgery type/procedure stage,Strong,"May alter anatomy, instruments and workflow jointly",SH01;SH02
+N05,Workflow/technique,Temporal/clinical,Phase/step recognition,MultiBypass140,Centre-specific procedural sequence,Strong,Phase ontology alignment required,SH03
+N06,Patient/anatomy/pathology,Clinical,Scene understanding/segmentation,Multicentre studies,External cohorts,Moderate,Often underreported/confounded with centre,SH06
+N07,Temporal external cohort,Calendar drift,Instrument segmentation,Endoscopic spine cohorts,Internal vs later temporal external test,Strong recent evidence,Equipment/workflow drift may be unknown,SH08
+N08,Cross-dataset endoscopic approach,Acquisition/procedure,Instrument segmentation,SNUBH biportal vs SEA uniportal,Cross-dataset external evaluation,Strong recent evidence,Changes both approach and acquisition,SH08
+N09,Inter-institutional color,Photometric natural,Instrument segmentation,Endoscopic-spine internal/external cohorts,CIELAB color-distribution comparison,Strong,Color is measurable but may proxy other site factors,SH07
+N10,Simulation/VR → clinical,Source-generation,Segmentation/action recognition,Simulation+real; SurgVisDom,UDA / hard-soft domain adaptation,Strong method precedent,Adaptation setting differs from unseen target DG,SH12;SH15
+N11,Cross modality/domain,Modality,Instrument segmentation,EndoVis2017; CaDIS; PASO-SIS,Evaluate across very different surgical imaging domains,Moderate–Strong,Label/task harmonization is difficult,SH23
+N12,Single-source → unseen centre,Unseen-domain DG,Scene segmentation,CholecSeg8k → HeiCholSeg (preprint),"Train one source, test unseen centre",Emerging,Preprint and target set not yet mature,SH24

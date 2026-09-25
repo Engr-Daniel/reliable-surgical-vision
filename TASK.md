@@ -15,36 +15,44 @@
 **Milestone:** `v0.0.2 — Surgical Computer-Vision Landscape`
 
 ### P0.3 Dataset reconnaissance — COMPLETE
-- [x] Audit 18 candidate datasets.
-- [x] Record procedure, modality, annotations, provenance and overlap.
-- [x] Audit current access/licence/DUA/redistribution constraints.
-- [x] Audit official splits and procedure-level leakage risk.
-- [x] Map full-video suitability for temporal/network degradation.
-- [x] Map visual-corruption and natural-shift suitability.
-- [x] Audit storage/download/current availability constraints.
-- [x] Produce working, non-final dataset shortlist.
-- [x] Produce `datasets/rq-answer-matrix.md`.
-- [x] Produce `P0.3_COMPLETION_REPORT.md`.
+- [x] Access, provenance, split, licensing and feasibility audit complete.
+- [x] RQ answer matrix: `datasets/rq-answer-matrix.md`.
+- [x] Completion report: `task-completion-report/P0.3_COMPLETION_REPORT.md`.
 
-**Suggested milestone after commit/review:** `v0.0.3 — Dataset Feasibility Map`
+**Milestone:** `v0.0.3 — Dataset Feasibility Map`
 
-### P0.4 Distribution-shift literature — READY TO START
-- [ ] Map surgical-CV domain shift, domain generalisation, robustness, corruption and OOD evaluation.
-- [ ] Build natural/synthetic shift taxonomy.
-- [ ] Audit corruption protocols and severity definitions.
-- [ ] Identify work on temporal/video degradation and compound shifts.
-- [ ] Produce evidence-linked RQ answers and update candidate experimental shifts.
+### P0.4 Distribution-shift literature — COMPLETE
+- [x] Map natural centre/device/instrument/procedure shifts.
+- [x] Map surgical visual corruptions and severity practices.
+- [x] Map temporal/video shift evidence and negative evidence.
+- [x] Map representative UDA/DG/robustness strategies.
+- [x] Document compound-shift precedent.
+- [x] Define defensible evaluation/reporting rules.
+- [x] Produce non-final working shift protocol.
+- [x] Produce `literature/distribution-shift/rq-answer-matrix.md`.
+- [x] Produce `task-completion-report/P0.4_COMPLETION_REPORT.md`.
 
-### P0.5 Reliable-inference literature
-- [ ] Map calibration, uncertainty, OOD detection, selective prediction and conformal prediction.
+**Suggested milestone after commit/review:** `v0.0.4 — Distribution-Shift Evidence Map`
+
+### P0.5 Reliable-inference literature — READY TO START
+- [ ] Map calibration under distribution shift.
+- [ ] Map uncertainty quantification for surgical/medical visual inference.
+- [ ] Map OOD detection and failure prediction.
+- [ ] Map selective prediction / abstention.
+- [ ] Map conformal prediction and coverage assumptions under shift.
+- [ ] Map task-specific reliability metrics for classification/temporal prediction/segmentation.
+- [ ] Stress-test Track B and identify methods that can be paired with P0.4 shifts.
+- [ ] Produce evidence-linked RQ answers.
 
 ### P0.6 Telesurgery/network literature
 - [ ] Map latency, jitter, packet loss, bandwidth, compression, frame loss and redundancy.
+- [ ] Map network → codec/decoder → received-video mechanisms.
 - [ ] Identify work connecting network conditions to downstream visual inference.
 
 ### P0.7 Intersection analysis
 - [ ] Build task × dataset × shift × reliability × network evidence matrix.
-- [ ] Stress-test Track A–C novelty and revise research questions.
+- [ ] Stress-test Track A–C novelty.
+- [ ] Revise/finalize candidate research questions before experimental commitment.
 
 ## Phase milestone
 

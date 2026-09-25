@@ -1,0 +1,11 @@
+shift_id,shift,category,evidence_scope,current_evidence,interpretation,source_ids
+T01,Uniform subsampling / lower analysis fps,Sampling,Common preprocessing in phase recognition,Not inherently a robustness test,Do not call routine 1-fps sampling a deployment shift without a clean-rate comparison,P0.2 workflow literature; context
+T02,Prediction volatility,Output temporal instability,Pituitary workflow recognition,Volatility metric + smoothing,"Important reliability symptom, not an input shift",SH20
+T03,Temporal-consistency training,Model temporal stability,Pituitary workflow recognition,Consistency loss + unlabeled video,Mitigation for unstable predictions; not network degradation,SH21
+T04,Temporal constraints in segmentation,Model observability,Robot tool segmentation,TC-CaRTS uses temporal relation/regularization,Shows value of time but not dropped-frame robustness,SH11
+T05,Single-frame loss / missing observations,Input temporal corruption,Conventional surgical CV,No mature standardized benchmark identified in retained conventional-task literature,Candidate P0.6/P0.7 protocol only after decoder/network mapping,P0.4 negative evidence
+T06,Burst frame loss / packet-loss-like corruption,Input temporal/network-derived,Temporal VLM surgical/endoscopy,Endo-C6 packet-loss bursts,"Direct emerging evidence, but recent and task-specific",SH18
+T07,Freeze / frame duplication,Input temporal corruption,Surgical CV,No standardized retained benchmark,Plausible decoded-stream behavior; requires P0.6 evidence,P0.4 negative evidence
+T08,Irregular inter-frame intervals / jitter-inspired sampling,Timing,Surgical CV,No standardized retained benchmark,Do not map network jitter directly to frame timing before P0.6,P0.4 negative evidence
+T09,Temporal context truncation,Sequence context,Workflow/VLM,Implicitly relevant to temporal models,Needs explicit controlled protocol if used,SH18;SH20;SH21
+T10,Frame reordering,Transport/decoder dependent,Surgical CV,No direct retained benchmark,Likely transport/decoder-handled; only simulate with P0.6 justification,P0.4 negative evidence

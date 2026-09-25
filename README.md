@@ -24,10 +24,11 @@ These are research tracks, not predetermined publications. Tracks may be refined
 
 - P0.1 Toumai architecture reconnaissance — **complete** (`v0.0.1`)
 - P0.2 Surgical computer-vision landscape — **complete** (`v0.0.2`)
-- P0.3 Dataset reconnaissance — **complete**
-- P0.4 Distribution-shift literature — **next**
+- P0.3 Dataset reconnaissance — **complete** (`v0.0.3`)
+- P0.4 Distribution-shift literature reconnaissance — **complete**
+- P0.5 Reliable-inference literature reconnaissance — **next**
 
-P0.3 establishes a feasibility/provenance map and a working dataset shortlist. No final dataset, shift protocol, reliability method, model, or novelty claim is fixed yet.
+P0.4 narrows the shift problem substantially: cross-centre/device/procedure failures, surgical smoke/blood/low-light corruption, UDA/DG, compound image corruption, and emerging packet-loss video corruption already have precedent. No final novelty or experiment is fixed yet.
 
 ## Research principles
 

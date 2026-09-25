@@ -1,0 +1,36 @@
+record_id,title_or_category,decision,reason
+SH01,Comparative validation of multi-instance instrument segmentation in endoscopy: Results of the ROBUST-MIS 2019 challenge,retain,A canonical surgical robustness/generalization benchmark; performance worsens as domain gap increases.
+SH02,Limited generalizability of single deep neural network for surgical instrument segmentation in different surgical environments,retain,"Generalization falls even under seemingly modest changes in camera system, instrument or procedure."
+SH03,Challenges in multi-centric generalization: phase and step recognition in Roux-en-Y gastric bypass surgery,retain,Mono-centre models generalize poorly cross-centre; multicentre training improves generalization.
+SH04,"Comparative validation of surgical phase recognition, instrument keypoint estimation, and instrument instance segmentation in endoscopy: Results of the PhaKIR 2024 challenge",retain,Methods show poor cross-centre generalizability across all three evaluated tasks.
+SH05,Inter-hospital transferability of AI: A case study on phase recognition in cholecystectomy,retain,Public-only models transferred poorly to the local centre; diverse + site-specific data improved transfer.
+SH06,Optimizing latent graph representations of surgical scenes for unseen domain generalization,retain,Object-centric scene representations are investigated to reduce unseen-centre domain sensitivity.
+SH07,Overcoming color domain shift in endoscopic spine surgery: robust instrument segmentation via aggressive photometric augmentation,retain,Baseline external DSC drops markedly; aggressive photometric augmentation restores strong external performance and reduces feature-domain discrepancy.
+SH08,Benchmarking deep learning pipelines for surgical instrument segmentation in endoscopic spine surgery: cross-dataset evaluation under deployment-realistic conditions,retain,Cross-dataset performance can be detector-limited even for foundation-model pipelines; broader domain training substantially improves external results.
+SH09,SegSTRONG-C: Segmenting Surgical Tools Robustly On Non-adversarial Generated Corruptions — An EndoVis'24 Challenge,retain,Direct surgical benchmark showing plausible non-adversarial corruptions materially challenge tool segmentation.
+SH10,CaRTS: Causality-Driven Robot Tool Segmentation from Vision and Kinematics Data,retain,Kinematics-informed causal segmentation preserves performance better than image-only baselines under counterfactual visual changes.
+SH11,Rethinking causality-driven robot tool segmentation with temporal constraints,retain,Temporal observability improves CaRTS convergence and maintains performance across tested domains.
+SH12,Simulation-to-real domain adaptation with teacher–student learning for endoscopic instrument segmentation,retain,Unlabeled real target frames improve sim-to-real segmentation over pure simulation training.
+SH13,Graph-Based Surgical Instrument Adaptive Segmentation via Domain-Common Knowledge,retain,Representative surgical UDA work showing target-domain adaptation is already well established as a method family.
+SH14,Generalizing Surgical Instruments Segmentation to Unseen Domains with One-to-Many Synthesis,retain,Synthetic data diversification can improve unseen-domain surgical instrument segmentation.
+SH15,SDA-CLIP: surgical visual domain adaptation using video and text labels,retain,Video-text semantic alignment improves hard and soft cross-domain surgical action recognition.
+SH16,Few-shot learning for surgical phase recognition: Performance and generalization in cholecystectomy,retain,Performance declines as training domain moves farther from surgical target; domain-specific support remains important.
+SH17,Robustness evaluation of deep neural networks for endoscopic image analysis: Insights and strategies,retain,"Provides a strong severity-calibration and compound-corruption protocol precedent transferable as methodology, not surgical evidence."
+SH18,On the Robustness of Temporal Vision-Language Models for Surgical Endoscopy Videos,retain,Emerging direct evidence that packet-loss-like and visual corruptions can collapse temporal VLM performance.
+SH19,Performance and Non-adversarial Robustness of the Segment Anything Model 2 in Surgical Video Segmentation,retain,Foundation video segmentation is also evaluated under surgical non-adversarial corruptions; temporal prompting can affect robustness.
+SH20,Reducing prediction volatility in the surgical workflow recognition of endoscopic pituitary surgery,retain,Temporal prediction instability is clinically relevant and can be reduced by smoothing.
+SH21,SurgflowNet: Leveraging unannotated video for consistent endoscopic pituitary surgery workflow recognition,retain,Consistency-focused training reduces unstable workflow predictions.
+SH22,ROBUST-MIPS: A Combined Skeletal Pose and Instance Segmentation Dataset for Laparoscopic Surgical Instruments,retain,Extends the established robustness dataset to pose estimation and richer tool localization.
+SH23,Domain-agnostic weakly supervised surgical instrument segmentation,retain,"A domain-agnostic, weakly supervised foundation-model pipeline is evaluated across diverse surgical modalities."
+SH24,RobustSurg: Tackling domain generalisation for out-of-distribution surgical scene segmentation,retain,Shows active work specifically targeting surgical OOD scene segmentation from one source domain.
+SH25,CholecInstanceSeg: A Tool Instance Segmentation Dataset for Laparoscopic Surgery,retain,Provides direct evidence that several proposed visual-shift factors occur in real laparoscopic data.
+X01,General natural-image corruption benchmarks such as ImageNet-C,defer-background,Useful implementation precedent but not surgical-specific evidence.
+X02,Radiology/pathology domain-shift literature,exclude-scope,Different imaging/data-generation process.
+X03,Pure calibration/OOD/conformal papers,defer-P0.5,Reliable-inference methods belong to P0.5.
+X04,Pure telesurgery network/QoS studies,defer-P0.6,Network evidence belongs to P0.6 unless it directly perturbs surgical-CV inputs.
+X05,Simple augmentation papers without shifted evaluation,deprioritize,Augmentation alone does not establish robustness.
+X06,Dataset papers with no shift/robustness relevance,deprioritize,Already covered by P0.3.
+X07,Third-party benchmark mirrors without source provenance,exclude-quality,Primary challenge/paper preferred.
+X08,Model papers claiming 'robust' only from i.i.d. accuracy,exclude-evidence,Robustness must be evaluated under a changed distribution.
+X09,Pure adversarial-attack literature,defer,P0.4 prioritizes non-adversarial deployment shifts.
+X10,Network packet-loss studies without downstream CV evaluation,defer-P0.6,"Needed for mechanistic mapping, not P0.4 visual-inference evidence."

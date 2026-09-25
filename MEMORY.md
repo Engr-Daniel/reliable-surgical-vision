@@ -62,6 +62,17 @@ The programme is in **Phase 0: Research Foundation**. No paper title, novelty cl
 - Dataset/article/code licences are treated separately; current access/DUA terms must be verified again at download time.
 - Final dataset selection remains gated by P0.4–P0.7.
 
+- **P0.4 Distribution-Shift Literature Reconnaissance completed (2026-09-25).**
+- Surgical-CV distribution shift is established across centre, recording system, instrument version, procedure/workflow, modality and sim-to-real settings.
+- Smoke, bleeding/blood and low-light robustness are already directly benchmarked in surgical tool segmentation; they must not be framed as untouched novelty.
+- UDA, DG, strong augmentation, synthetic data, causal vision+kinematics, temporal consistency and foundation-model domain-robustness strategies already exist.
+- Natural centre shift is usually compound and should not be interpreted as one causal factor.
+- Adjacent GI-endoscopy work provides clinically calibrated corruption severity/compound methodology, but surgical severity values require re-calibration.
+- Temporal prediction consistency is not the same as input/network degradation.
+- Endo-C6 (2026) provides emerging surgical/endoscopy temporal-VLM evidence including packet-loss bursts; broad packet-loss robustness is therefore not a safe novelty claim.
+- The working P0.4 shift set retains natural centre/device/procedure shifts, core visual smoke/blood/low-light, blur/color/compression/resolution, and temporal/compound candidates whose network parameters remain blocked until P0.6.
+- Final Track A/C novelty remains gated by P0.6/P0.7.
+
 ## Update rule
 
 Only add information here when it is expected to remain useful across many future research sessions. Put current actions in `TASK.md` and dated observations in `RESEARCH_LOG.md`.

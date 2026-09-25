@@ -1,0 +1,19 @@
+source_id,experiment,metric,reported_value,shift_interpretation,source_short
+SH02,Same-condition instrument segmentation,mAP / mIoU,0.941 / 0.887,Reference condition,Kitaguchi 2022
+SH02,Different laparoscopic recording system,mAP / mIoU,0.866 / 0.671,Acquisition-device shift,Kitaguchi 2022
+SH02,Slightly different target forceps,mAP / mIoU,0.772 / 0.676,Instrument-morphology shift,Kitaguchi 2022
+SH02,Different surgery type,mAP / mIoU,0.588 / 0.395,Procedure/background shift,Kitaguchi 2022
+SH07,Baseline best internal → external,DSC,0.962 → 0.784,Inter-institutional color shift,Rhee 2026
+SH07,Photometric-augmentation peak external,DSC,0.975,External cohort after robust training,Rhee 2026
+SH08,Foundation pipeline cross-dataset external,DSC,0.776 (0.737 strict empty-mask convention),Biportal-trained → uniportal external,Mun 2026
+SH08,DeepLabV3+ cross-dataset external,DSC,0.865,Same cross-dataset test,Mun 2026
+SH08,Foundation segmentor with ground-truth box prompt,DSC,0.946,Oracle upper-bound exposes detector domain mismatch,Mun 2026
+SH10,CaRTS clean → counterfactual,Dice,93.4 → 91.8,Low brightness/smoke/blood/background counterfactual set,Ding 2022
+SH10,Image-based comparator clean → counterfactual,Dice,95.0 → 86.7,Same controlled counterfactual shift,Ding 2022
+SH15,SDA-CLIP hard domain adaptation,weighted F1,65.9% (+18.9 points vs cited challenge winner),VR-only source → clinical target,Li 2023
+SH15,SDA-CLIP soft domain adaptation,weighted F1,84.4% (+4.4 points),VR + clinical-like source → clinical target,Li 2023
+SH16,Few-shot split 1 / 2 / 3,Accuracy,89.0% / 75.4% / 49.1%,Increasing domain mismatch in study-defined splits,Bajraktari 2026
+SH17,Average performance decline under clinically calibrated degradations,Performance drop,11.6% ± 1.5,Adjacent GI-endoscopy protocol,Jaspers 2024
+SH17,Decline with advanced architecture/in-domain pretraining,Performance drop,7.7% ± 2.03,Adjacent GI-endoscopy mitigation result,Jaspers 2024
+SH20,Pituitary workflow baseline 3-phase / 7-step,weighted F1,0.84 / 0.74,Temporal prediction-volatility study,Das 2022
+SH20,After threshold smoothing 3-phase / 7-step,weighted F1,0.86 / 0.75,Reduced volatility + performance improvement,Das 2022

@@ -1,0 +1,17 @@
+corruption_id,corruption,group,evidence_domain,example_sources,implementation_style,severity_status,evidence_assessment,source_ids
+C01,Low brightness / underexposure,Illumination,Surgical direct,SegSTRONG-C; CaRTS,Photo-realistic challenge / counterfactual,Ordinal/challenge-specific; no universal scale,High,SH09;SH10
+C02,Overexposure,Illumination,Adjacent endoscopy + plausible surgical,Jaspers robustness,Clinically calibrated synthetic,10 levels; levels 1–5 calibrated realistic in adjacent endoscopy,Moderate transfer,SH17
+C03,Smoke / cautery smoke,Medium/occlusion,Surgical direct,SegSTRONG-C; CaRTS; Endo-C6,Photo-realistic / controlled test shift,Challenge-specific or fixed high severity,High,SH09;SH10;SH18
+C04,Blood / over-bleeding,Occlusion/appearance,Surgical direct,SegSTRONG-C; CaRTS,Photo-realistic / counterfactual,Challenge/domain-specific,High,SH09;SH10
+C05,Motion blur,Blur,Surgical/adjacent direct,Endo-C6; Jaspers; real hard cases,Controlled synthetic,Protocol-specific,High plausibility; moderate standardized surgery,SH18;SH17;SH25
+C06,Defocus / lens blur,Blur,Surgical emerging + adjacent,Endo-C6; Jaspers,Controlled synthetic,Protocol-specific,Moderate,SH18;SH17
+C07,Brightness/gamma sweep,Illumination,Adjacent + natural color-shift evidence,Jaspers; endoscopic spine,Controlled + natural,Clinically calibrated protocol can guide surgical re-calibration,Moderate–Strong,SH17;SH07
+C08,Hue/saturation/white balance,Color,Natural + controlled adjacent,Endoscopic spine; Jaspers,Natural CIELAB + synthetic transforms,No surgical universal severity,Strong color-shift evidence,SH07;SH17
+C09,Contrast/sharpness,Post-processing,Adjacent endoscopy,Jaspers,Controlled,Clinically calibrated adjacent protocol,Methodological precedent,SH17
+C10,Resolution reduction / pixelation,Sampling,Adjacent endoscopy,Jaspers,Controlled,10-level adjacent protocol,Methodological precedent; network cause unproven,SH17
+C11,JPEG / JPEG2000,Compression,Adjacent endoscopy,Jaspers,Controlled image compression,10-level adjacent protocol,Strong adjacent evidence; not video codec,SH17
+C12,Shot/sensor noise,Noise,Surgical emerging,Endo-C6,Controlled,Fixed high severity in Endo-C6,Emerging,SH18
+C13,Haze,Medium,Surgical/endoscopy emerging,Endo-C6,Controlled,Fixed high severity,Emerging,SH18
+C14,Specular reflection,Optical artifact,Observed surgical hard case,CholecInstanceSeg annotation context,Natural occurrence,No standard severity,Contextual evidence,SH25
+C15,Lens contamination/dirtiness/liquid,Optical obstruction,Observed surgical hard case,CholecInstanceSeg,Natural occurrence,No standard severity,Contextual evidence,SH25
+C16,Background/style alteration,Style/content,Controlled robot surgery,CaRTS,Counterfactual background,Discrete altered domain,Strong controlled precedent,SH10

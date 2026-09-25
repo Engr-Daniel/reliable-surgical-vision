@@ -75,3 +75,36 @@ P0.3 passes its exit criteria.
 ### Next
 P0.4 — Distribution-Shift Literature Reconnaissance.
 
+## 2026-09-25 — P0.4 Distribution-Shift Literature Reconnaissance completed
+
+### Scope
+Mapped natural surgical-CV domain shift, controlled non-adversarial corruption, temporal/video robustness, compound shift, and representative UDA/DG/robustness methods.
+
+### Method
+Focused evidence reconnaissance across peer-reviewed multicentre/generalization studies, robustness challenges, surgical UDA/DG work, recent 2026 external-validation studies, and current accepted/preprint evidence where it materially changed the landscape. Final audit: 25 retained sources/resources and 10 excluded/deferred categories.
+
+### Key findings
+- Cross-centre, recording-system, instrument-version and procedure/workflow shifts are already directly demonstrated in surgical CV.
+- ROBUST-MIS, MultiBypass140 and PhaKIR provide structured evidence that performance degrades as natural domain gap increases.
+- SegSTRONG-C directly benchmarks surgical smoke, over-bleeding and low-brightness corruption for robot-tool segmentation.
+- CaRTS/TC-CaRTS already combine visual evidence with robot kinematics for robust segmentation under counterfactual surgical visual domains.
+- UDA, DG, synthetic diversification, photometric augmentation, object-centric models, video-text adaptation and foundation-model strategies are established method families.
+- Adjacent GI-endoscopy work provides a strong clinically calibrated severity/compound-corruption methodology, but its numeric severity values cannot be assumed valid for surgery.
+- Temporal prediction volatility/consistency is established; controlled conventional surgical-CV frame-loss/jitter benchmarks remain sparse.
+- Endo-C6 (2026) materially narrows the gap by explicitly including packet-loss bursts in a temporal surgical/endoscopy VLM corruption benchmark.
+- Therefore neither broad “compound shift” nor broad “packet-loss robustness” can be treated as untouched territory.
+
+### Track implications
+- Track A is narrowed from generic compound shift toward interaction-aware, mechanistically grounded visual × temporal/network reliability.
+- Track B gains stronger motivation but requires P0.5 method/assumption review.
+- Track C remains plausible, but multimodal robustness and packet-loss corruption precedents mean network telemetry must show added reliability value beyond received-video evidence.
+
+### Decision
+P0.4 passes its exit criteria. No final novelty claim is made.
+
+### Suggested milestone
+`v0.0.4 — Distribution-Shift Evidence Map`
+
+### Next
+P0.5 — Reliable-Inference Literature Reconnaissance.
+

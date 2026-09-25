@@ -17,8 +17,8 @@ The phase is complete only when the provisional research tracks have been stress
 | P0.1 | Toumai Technical Literature & Architecture Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.2 | Surgical Computer-Vision Landscape Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.3 | Dataset Reconnaissance | **COMPLETE — 2026-09-25** |
-| P0.4 | Distribution-Shift Literature Reconnaissance | **READY TO START** |
-| P0.5 | Reliable-Inference Literature Reconnaissance | Not started |
+| P0.4 | Distribution-Shift Literature Reconnaissance | **COMPLETE — 2026-09-25** |
+| P0.5 | Reliable-Inference Literature Reconnaissance | **READY TO START** |
 | P0.6 | Telesurgery / Network Literature Reconnaissance | Not started |
 | P0.7 | Intersection Analysis & Novelty Stress-Test | Not started |
 
@@ -125,7 +125,7 @@ Claims were classified as independently documented, regulatory technical-review 
 ### Programme Updates
 - `literature/literature-map.csv`
 - `literature/references.bib`
-- `P0.1_COMPLETION_REPORT.md`
+- `task-completion-report/P0.1_COMPLETION_REPORT.md`
 - `TASK.md`
 - `RESEARCH_LOG.md`
 - `MEMORY.md`
@@ -618,7 +618,7 @@ Update:
 Mark P0.2 complete only when its exit criteria are satisfied.
 
 ### A15 — P0.2 Completion Report
-`P0.2_COMPLETION_REPORT.md`
+`task-completion-report/P0.2_COMPLETION_REPORT.md`
 
 Must document:
 - scope;
@@ -689,7 +689,7 @@ P0.2 is complete when:
 - [x] `RESEARCH_LOG.md` has been updated;
 - [x] `TASK.md` has been updated;
 - [x] all required P0.2 artifacts have been produced;
-- [x] `P0.2_COMPLETION_REPORT.md` has been produced.
+- [x] `task-completion-report/P0.2_COMPLETION_REPORT.md` has been produced.
 
 - [x] all P0.2 RQs have evidence-linked answers in `literature/surgical-vision/rq-answer-matrix.md`.
 
@@ -994,7 +994,7 @@ Answer every P0.3 RQ and preserve unresolved questions for P0.4–P0.7.
 - `RESEARCH_LOG.md`
 - `MEMORY.md`
 - `README.md`
-- `P0.3_COMPLETION_REPORT.md`
+- `task-completion-report/P0.3_COMPLETION_REPORT.md`
 
 ---
 
@@ -1043,7 +1043,7 @@ P0.3 is complete when:
 - [x] unresolved questions for P0.4–P0.7 have been recorded;
 - [x] global literature/reference records have been updated;
 - [x] `TASK.md`, `RESEARCH_LOG.md`, `MEMORY.md`, and `README.md` have been updated;
-- [x] `P0.3_COMPLETION_REPORT.md` has been produced.
+- [x] `task-completion-report/P0.3_COMPLETION_REPORT.md` has been produced.
 
 ---
 
@@ -1067,7 +1067,330 @@ P0.4 should determine which natural/synthetic shifts have already been studied a
 
 ## P0.4 — Distribution-Shift Literature Reconnaissance
 
-Map surgical-CV robustness, domain shift, domain generalisation, corruption, and OOD evaluation literature.
+## Status
+
+`COMPLETE — 2026-09-25`
+
+## 1. Purpose
+
+Establish an evidence-backed map of **distribution shift and robustness in surgical computer vision** before fixing any experimental shift protocol or novelty claim.
+
+P0.4 separates:
+
+- natural external-domain shift;
+- controlled visual corruption;
+- temporal/video degradation;
+- compound shift;
+- domain adaptation;
+- domain generalization;
+- robustness mitigation and evaluation.
+
+The task asks:
+
+> **What kinds of distribution shift have already been demonstrated in surgical CV, how are they evaluated and mitigated, and which shift families remain scientifically justified for later reliable-inference experiments?**
+
+P0.4 does **not** determine the final novelty of Track A, B or C.
+
+---
+
+## 2. Scope Boundaries
+
+### In scope
+
+- hospital/centre shift;
+- acquisition/device shift;
+- instrument morphology/vendor shift;
+- procedure/workflow shift;
+- temporal/calendar external cohorts;
+- modality and sim-to-real shift;
+- smoke, blood, illumination, blur and colour corruption;
+- compression/resolution as visual robustness factors;
+- temporal/video instability and controlled temporal corruption where directly studied;
+- UDA, DG, augmentation, synthetic data and multimodal robustness methods;
+- compound natural or synthetic shift;
+- shift-evaluation methodology.
+
+### Out of scope
+
+- calibration/conformal/selective-prediction method review → **P0.5**;
+- detailed network/QoS/codec transport mechanisms → **P0.6**;
+- final novelty judgement → **P0.7**;
+- adversarial attacks as the principal deployment shift;
+- non-surgical medical-imaging shift except clearly labelled adjacent methodological evidence.
+
+---
+
+## 3. Research Questions
+
+### RQ1 — Shift Taxonomy
+What natural, synthetic, temporal and compound shifts are documented in surgical computer vision?
+
+### RQ2 — Natural Shift Evaluation
+How are real deployment shifts operationalized?
+
+Investigate:
+
+- centre/institution;
+- camera/recording system;
+- instrument vendor/version;
+- procedure;
+- workflow;
+- temporal external cohort;
+- imaging modality;
+- simulation/VR-to-clinical.
+
+### RQ3 — Controlled Corruption
+Which controlled non-adversarial corruptions have been used?
+
+Investigate:
+
+- low illumination / exposure;
+- smoke;
+- blood / bleeding;
+- motion blur;
+- defocus;
+- colour / white balance / contrast;
+- noise;
+- haze;
+- compression;
+- resolution;
+- optical obstruction / lens contamination;
+- background/style changes.
+
+Determine whether severity is arbitrary, challenge-defined, clinically calibrated or physically defined.
+
+### RQ4 — Task / Dataset Coverage
+Which surgical-CV tasks and benchmark ecosystems have actually been evaluated under shift?
+
+### RQ5 — Mitigation Methods
+Which robustness, augmentation, UDA and DG strategies are already established?
+
+### RQ6 — Evaluation Practice
+How should clean vs shifted performance, severity, external validation and worst-case robustness be reported?
+
+### RQ7 — Temporal and Compound Shift
+What evidence exists for:
+
+- temporal prediction instability;
+- missing frames;
+- packet-loss-like corruption;
+- frame-rate/sampling changes;
+- compound image corruption;
+- visual + temporal/network combinations?
+
+### RQ8 — Working Shift Set
+Which shift families should be carried forward to P0.5–P0.7 without prematurely fixing exact experimental parameters?
+
+---
+
+## 4. Evidence Strategy
+
+Priority:
+
+1. peer-reviewed surgical robustness/generalization benchmarks;
+2. multicentre external-validation studies;
+3. peer-reviewed surgical UDA/DG studies;
+4. EndoVis/MICCAI robustness challenges;
+5. recent peer-reviewed 2026 external-domain evidence;
+6. accepted/preprint evidence where it materially changes the current landscape;
+7. adjacent GI-endoscopy robustness methodology, explicitly labelled as adjacent.
+
+A paper was not retained merely because it used the word “robust.” It had to evaluate a changed distribution or propose a method specifically tested across domains/corruptions.
+
+---
+
+## 5. Work Packages
+
+### WP1 — Shift-Literature Discovery
+Identify natural-shift, corruption, robustness, UDA/DG and temporal-robustness evidence.
+
+**Output:** source registry and screening trail.
+
+### WP2 — Shift Taxonomy
+Construct a surgical-CV taxonomy separating natural, controlled visual, temporal/video and compound shift.
+
+**Output:** `shift-taxonomy.md`
+
+### WP3 — Natural-Shift Mapping
+Map external centre/device/procedure/modality evidence.
+
+**Output:** `natural-shift-map.csv`
+
+### WP4 — Controlled-Corruption Mapping
+Map visual corruption operators, severity conventions and direct surgical precedent.
+
+**Output:** `synthetic-corruption-map.csv`
+
+### WP5 — Temporal / Video Shift Mapping
+Separate ordinary temporal modelling from actual temporal-input degradation.
+
+**Output:** `temporal-video-shift-map.csv`
+
+### WP6 — Mitigation / Method Mapping
+Map augmentation, adaptation, DG, causal/multimodal and foundation-model strategies.
+
+**Output:** `method-baseline-map.csv`
+
+### WP7 — Evaluation and Compound-Shift Analysis
+Document defensible evaluation practice and stress-test the broad Track A framing.
+
+**Outputs:**
+- `evaluation-practices.md`
+- `compound-shift-evidence.md`
+- `quantitative-evidence.csv`
+
+### WP8 — Working Protocol and RQ Closure
+Produce a non-final shift protocol and answer every RQ.
+
+**Outputs:**
+- `candidate-shift-protocol.md`
+- `rq-answer-matrix.md`
+- `open-questions.md`
+
+---
+
+## 6. Required Artifacts
+
+### A1 — Search Protocol
+`literature/distribution-shift/search-protocol.md`
+
+### A2 — Source Screening Log
+`literature/distribution-shift/source-screening-log.csv`
+
+### A3 — Source Index / Audit
+- `literature/distribution-shift/source-index.md`
+- `literature/distribution-shift/source-audit.md`
+
+### A4 — Distribution-Shift Literature Map
+`literature/distribution-shift/distribution-shift-literature-map.csv`
+
+### A5 — Narrative Landscape
+`literature/distribution-shift/distribution-shift-landscape.md`
+
+### A6 — Shift Taxonomy
+`literature/distribution-shift/shift-taxonomy.md`
+
+### A7 — Natural Shift Map
+`literature/distribution-shift/natural-shift-map.csv`
+
+### A8 — Controlled Corruption Map
+`literature/distribution-shift/synthetic-corruption-map.csv`
+
+### A9 — Temporal / Video Shift Map
+`literature/distribution-shift/temporal-video-shift-map.csv`
+
+### A10 — Method / Baseline Map
+`literature/distribution-shift/method-baseline-map.csv`
+
+### A11 — Quantitative Evidence
+`literature/distribution-shift/quantitative-evidence.csv`
+
+### A12 — Evaluation Practices
+`literature/distribution-shift/evaluation-practices.md`
+
+### A13 — Compound-Shift Evidence
+`literature/distribution-shift/compound-shift-evidence.md`
+
+### A14 — Working Shift Protocol
+`literature/distribution-shift/candidate-shift-protocol.md`
+
+### A15 — Research Question Answer Matrix
+`literature/distribution-shift/rq-answer-matrix.md`
+
+### A16 — Open Questions
+`literature/distribution-shift/open-questions.md`
+
+### A17 — References
+`literature/distribution-shift/references.bib`
+
+Relevant non-duplicate entries are also merged into:
+
+`literature/references.bib`
+
+### A18 — Programme Updates
+- `literature/literature-map.csv`
+- `TASK.md`
+- `RESEARCH_LOG.md`
+- `MEMORY.md`
+- `README.md`
+- `phase-task-files/phase0.md`
+- `task-completion-report/P0.4_COMPLETION_REPORT.md`
+
+---
+
+## 7. Quality Requirements
+
+### Shift specificity
+Do not use “OOD” as a substitute for naming the changed factor/domain.
+
+### Natural vs controlled
+A real external centre and a synthetic brightness transform answer different questions and must be reported separately.
+
+### Adaptation-setting fidelity
+Distinguish:
+
+- DG — no target data;
+- UDA — unlabeled target data;
+- supervised/few-shot adaptation — labeled target data;
+- test-time adaptation — target deployment stream affects the model.
+
+### Network-mechanism fidelity
+Do not call frame dropping or compression “network-induced” until P0.6 establishes the network/codec/decoder mechanism.
+
+### Severity fidelity
+Do not copy ImageNet-C or adjacent GI-endoscopy severity values and label them clinically realistic for surgery without surgical calibration.
+
+### Provenance integrity
+P0.3 source-video overlap rules remain active for all cross-dataset shift claims.
+
+### No novelty overreach
+Existing evidence for:
+- multicentre generalization;
+- smoke/blood/low-light robustness;
+- UDA/DG;
+- compound image corruption;
+- emerging packet-loss video corruption
+
+must be reflected when later formulating novelty.
+
+---
+
+## 8. P0.4 Exit Criteria
+
+P0.4 is complete when:
+
+- [x] natural shift types are mapped;
+- [x] controlled surgical visual corruptions are mapped;
+- [x] temporal/video shift evidence and negative evidence are mapped;
+- [x] compound-shift precedent is documented;
+- [x] representative UDA/DG/robustness methods are mapped;
+- [x] multicentre/device/procedure shift evidence is documented;
+- [x] direct surgical corruption evidence is distinguished from adjacent endoscopy evidence;
+- [x] severity-calibration practices are documented;
+- [x] shift evaluation/reporting rules are documented;
+- [x] selected quantitative evidence is extracted;
+- [x] all P0.4 RQs have evidence-linked answers;
+- [x] a non-final candidate shift protocol has been produced;
+- [x] P0.5/P0.6/P0.7 open questions have been recorded;
+- [x] global literature/reference records are updated;
+- [x] programme status files are updated;
+- [x] `task-completion-report/P0.4_COMPLETION_REPORT.md` is produced.
+
+---
+
+## 9. P0.4 Completion Milestone
+
+P0.4 completed on **2026-09-25** after final evidence audit.
+
+Suggested repository milestone after commit/review:
+
+**`v0.0.4 — Distribution-Shift Evidence Map`**
+
+The next active task is:
+
+**P0.5 — Reliable-Inference Literature Reconnaissance**
+
+P0.5 must determine whether calibration, uncertainty, selective prediction and conformal methods remain reliable under the shift families retained by P0.4.
 
 ## P0.5 — Reliable-Inference Literature Reconnaissance
 
@@ -1098,7 +1421,7 @@ Phase 0 is complete when:
 - [x] Toumai architecture reconnaissance is complete;
 - [x] surgical-CV landscape is mapped;
 - [x] candidate datasets are mapped and feasibility-audited;
-- [ ] distribution-shift literature is mapped;
+- [x] distribution-shift literature is mapped;
 - [ ] reliable-inference literature is mapped;
 - [ ] telesurgery/network literature is mapped;
 - [ ] the intersection evidence matrix is complete;
