@@ -1,0 +1,26 @@
+record_id,title_or_category,decision,reason
+S01,MT-1000 Endoscopic Surgical System — Medical Device Product Registration Technical Review Report (Acceptance No. CQZ2100611),retain,Defines MT-1000 composition and master–slave working principle.
+S02,Toumai MT-1000 Endoscopic Surgical System product page,retain,Corroborates MT-1000 component model names and current approved specialties.
+S03,Evaluation of the Toumai robotic system in partial nephrectomy and key system features,retain,"Best peer-reviewed technical description of control response, haptics, instruments and vision features."
+S04,Application of 5G Remote Robotic-assisted Laparoscopy in Urological Surgery: A Small Sample Analysis,retain,"14 Toumai 5G urologic cases with throughput, latency extrema and packet-loss data."
+S05,The safety and feasibility of telerobotic cholecystectomy via a 5G network: a prospective controlled clinical trial,retain,"20 remote Toumai cholecystectomies; detailed latency, jitter, throughput and packet-loss measurements."
+S06,The era of telesurgery: insights from ultra-long-distance Asia to Middle East human telesurgery robotic assisted radical prostatectomy,retain,"~7000 km human Toumai RARP with RTT, primary/backup links, cloud/VPN/firewall details and bedside takeover capability."
+S07,Current perspectives of telesurgery applications among different specialties: first multicentric and multispecialty retrospective study,retain,66 Toumai telesurgeries across specialties; distances and mean delay by specialty.
+S08,Pioneering telesurgery in gynecology: the first European case of total hysterectomy,retain,"~20 km European deployment with mean latency and jitter, high image quality, no connection issues and standby surgeon."
+S09,"Safety and feasibility of robot-assisted remote radical gastrectomy for gastric cancer based on 5G communication technology (FUTURE-04): a prospective, single-arm clinical trial",retain,"27 remote Toumai radical gastrectomies; total delay, network RTT and packet loss."
+S10,Telerobotic partial nephrectomy and radical prostatectomy using a hybrid network: A single-center prospective experience,retain,13 Toumai PN/RP cases over 25 km comparing fiber and 5G latency.
+S11,Feasibility and Safety of Cross-Regional 5G-Enabled Remote Robot-Assisted Laparoscopic Surgery: A Retrospective Case Series of 21 Patients,retain,"Best detailed public network architecture: triple-carrier redundancy, QoS, thresholds, stress testing, jitter/max latency, interruptions and takeover plan."
+S12,Early clinical experience with the Toumai robotic system in general surgery: a systematic review of short-term outcomes and telesurgical applications,retain,Cross-checks early general-surgery evidence and documents the 3-second signal interruption triggering automatic standby in Yang et al.
+S13,Toumai Tele-Robotic Surgical System Becomes First Globally Approved For Commercial Use,retain,"Describes tele-surgical communication stack claims, supported network types and manufacturer latency claims."
+S14,Toumai Performs World’s First LEO Satellite-Based Remote Robotic Surgery Using Mobile Platform,retain,Documents manufacturer-reported LEO satellite use and <60 ms one-way latency.
+S15,"500 Kilometres, Zero Shakes: Inside West Africa’s First Tele-Robotic Surgery",retain,"Reports RHV–Nisa deployment, Starlink primary and MTN backup."
+S16,Toumai supports Nigeria’s first tele-robotic surgery,retain,"Corroborates Toumai, Starlink, approximate distance and procedure."
+X01,ResearchGate mirrors of retained papers,exclude-duplicate,Duplicate versions; primary journal/PubMed sources retained.
+X02,General 5G robotic-surgery reviews not Toumai-specific,deprioritize,Useful background but not needed to establish Toumai architecture.
+X03,Chen 2026 remote pancreaticoduodenectomy in mixed-platform HPB cohort,exclude-platform-specific,"The completely remote case was performed with a related MP2000 platform, not Toumai."
+X04,Secondary Chinese summaries of the CMDE report,deprioritize,Regulatory report mirror retained as the stronger source.
+X05,Commercial equipment reseller pages,deprioritize,Duplicate product composition; official/regulatory sources stronger.
+X06,China medical-robotics database summaries,deprioritize,Secondary summaries; manufacturer/primary sources retained.
+X07,Additional Nigerian news rewrites,exclude-duplicate,Channels/Premium Times/other originals provided sufficient deployment context; repeated rewrites add no technical telemetry.
+X08,MicroPort social reposts duplicating official news releases,exclude-duplicate,Official manufacturer release retained.
+X09,Urologic Toumai systematic review/meta-analysis (2025),deprioritize,Useful clinical context but does not materially improve P0.1 architecture reconstruction.

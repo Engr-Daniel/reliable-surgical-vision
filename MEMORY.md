@@ -43,6 +43,12 @@ The programme is in **Phase 0: Research Foundation**. No paper title, novelty cl
 - Research tracks may merge, split, change direction, or be abandoned based on evidence.
 - Reproducibility, provenance, and negative-result reporting are first-class requirements.
 
+- **P0.1 Toumai architecture reconnaissance completed (2026-09-25).**
+- Public evidence supports the MT-1000 component architecture, high-level master–slave control chain, 3D/FPGA vision path, and multiple human telesurgery network deployments.
+- Latency definitions must remain separated: imaging latency, network RTT, study-reported delay, total delay and master–slave response are not interchangeable.
+- Public evidence does not establish codec/adaptive streaming internals, exact failover thresholds/state machine, frame-aligned QoS API, or Nigerian raw network telemetry.
+- The pathway `network/system state → received video distribution → CV reliability` is a research hypothesis to be stress-tested in later phases, not an established conclusion.
+
 ## Update rule
 
 Only add information here when it is expected to remain useful across many future research sessions. Put current actions in `TASK.md` and dated observations in `RESEARCH_LOG.md`.

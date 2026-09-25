@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100">
+<rect width="1800" height="1100" fill="white"/>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#111"/></marker>
+  <style>
+    .title{font:700 34px Arial,sans-serif;fill:#111}
+    .h{font:700 24px Arial,sans-serif;fill:#111}
+    .t{font:19px Arial,sans-serif;fill:#111}
+    .s{font:15px Arial,sans-serif;fill:#333}
+    .box{fill:#fff;stroke:#111;stroke-width:2.5}
+    .site{fill:#fff;stroke:#111;stroke-width:3}
+    .dash{fill:#fff;stroke:#555;stroke-width:2.5;stroke-dasharray:10 8}
+    .arrow{stroke:#111;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    .dasharrow{stroke:#555;stroke-width:2.5;fill:none;stroke-dasharray:8 7;marker-end:url(#arrow)}
+  </style>
+</defs>
+
+<text x="900" y="50" text-anchor="middle" class="title">Toumai MT-1000 / Tele-Robotic Surgery — P0.1 Evidence Architecture</text>
+<text x="900" y="82" text-anchor="middle" class="s">Solid: documented at systems level • Dashed: deployment-specific / proprietary implementation boundary</text>
+
+<rect x="70" y="130" width="500" height="720" rx="18" class="site"/>
+<text x="320" y="175" text-anchor="middle" class="h">REMOTE SURGEON SITE</text>
+
+<rect x="130" y="230" width="380" height="150" rx="12" class="box"/>
+<text x="320" y="270" text-anchor="middle" class="h">Surgeon Console — MSS810</text>
+<text x="320" y="305" text-anchor="middle" class="t">master manipulators • pedals • stereoscopic display</text>
+<text x="320" y="335" text-anchor="middle" class="s">joint-angle sensing → kinematics / master–slave mapping</text>
+<text x="320" y="360" text-anchor="middle" class="s">haptics / operator-view protection reported</text>
+
+<rect x="130" y="490" width="380" height="165" rx="12" class="dash"/>
+<text x="320" y="530" text-anchor="middle" class="h">Remote Communications</text>
+<text x="320" y="565" text-anchor="middle" class="t">5G • fiber • broadband • satellite</text>
+<text x="320" y="595" text-anchor="middle" class="s">redundancy/QoS may be site-specific</text>
+<text x="320" y="620" text-anchor="middle" class="s">codec • buffering • failover state machine not public</text>
+
+<rect x="1230" y="130" width="500" height="720" rx="18" class="site"/>
+<text x="1480" y="175" text-anchor="middle" class="h">PATIENT SITE</text>
+
+<rect x="1290" y="225" width="380" height="150" rx="12" class="box"/>
+<text x="1480" y="265" text-anchor="middle" class="h">Patient Platform — SSS800</text>
+<text x="1480" y="300" text-anchor="middle" class="t">4-arm cart • wristed instruments • 7 DoF</text>
+<text x="1480" y="330" text-anchor="middle" class="s">reference joint states → closed-loop joint-position control</text>
+<text x="1480" y="355" text-anchor="middle" class="s">collision detection / instrument actuation</text>
+
+<rect x="1290" y="460" width="380" height="175" rx="12" class="box"/>
+<text x="1480" y="500" text-anchor="middle" class="h">Vision Platform — VSS820</text>
+<text x="1480" y="535" text-anchor="middle" class="t">3D endoscope → image processor / FPGA</text>
+<text x="1480" y="565" text-anchor="middle" class="s">dual-fiber internal transport • reported image latency &lt;50 ms</text>
+<text x="1480" y="590" text-anchor="middle" class="s">vascular enhancement + intelligent smoke removal reported</text>
+<text x="1480" y="615" text-anchor="middle" class="s">algorithm reliability not objectively quantified in S03</text>
+
+<rect x="1290" y="700" width="380" height="100" rx="12" class="box"/>
+<text x="1480" y="740" text-anchor="middle" class="h">Patient + Bedside Team</text>
+<text x="1480" y="772" text-anchor="middle" class="s">anesthesia • instruments • emergency takeover / conversion</text>
+
+<path d="M510 300 C760 230,1040 230,1290 300" class="arrow"/>
+<text x="900" y="210" text-anchor="middle" class="h">Control path</text>
+<text x="900" y="245" text-anchor="middle" class="s">master sensing → kinematics/mapping → remote transport → patient-side control</text>
+
+<path d="M1290 545 C1070 690,730 690,510 545" class="arrow"/>
+<text x="900" y="710" text-anchor="middle" class="h">Visual feedback path</text>
+<text x="900" y="745" text-anchor="middle" class="s">operative scene → endoscope/processing → remote transport → surgeon display</text>
+
+<path d="M1480 375 L1480 460" class="arrow"/>
+<path d="M1480 635 L1480 700" class="arrow"/>
+
+<rect x="610" y="820" width="580" height="205" rx="15" class="dash"/>
+<text x="900" y="862" text-anchor="middle" class="h">Reliable Visual Inference Research Interface</text>
+<text x="900" y="900" text-anchor="middle" class="t">clinical/optical shift + platform processing + communication state</text>
+<text x="900" y="935" text-anchor="middle" class="t">↓</text>
+<text x="900" y="968" text-anchor="middle" class="t">received-video distribution → CV performance / calibration / uncertainty</text>
+<text x="900" y="1000" text-anchor="middle" class="s">This causal chain is a research hypothesis, not an established Toumai failure mechanism.</text>
+
+<path d="M900 655 L900 820" class="dasharrow"/>
+<text x="80" y="1070" class="s">Evidence cutoff: 25 Sep 2026. Unknown/proprietary details are intentionally left unresolved rather than inferred.</text>
+</svg>

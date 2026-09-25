@@ -1,7 +1,4 @@
-# Phase 0 — Research Foundation
-
-## Current Phase
-
+# phase-task-files/phase0.md — P0.1 status patch
 
 
 ## Active Task
@@ -10,7 +7,7 @@
 
 ### Status
 
-`READY TO START`
+`COMPLETE — 2026-09-25`
 
 ---
 
@@ -478,33 +475,42 @@ Missing technical information is explicitly reported rather than guessed.
 
 P0.1 is complete when:
 
-- [ ] Toumai-specific literature has been systematically identified.
-- [ ] Relevant sources have been screened.
-- [ ] Technical claims have been extracted.
-- [ ] Evidence classifications have been assigned.
-- [ ] The system architecture has been reconstructed from evidence.
-- [ ] The visual pipeline has been documented.
-- [ ] The teleoperation pipeline has been documented.
-- [ ] Communications architecture has been documented where evidence permits.
-- [ ] Reliability and safety mechanisms have been mapped.
-- [ ] Unknown technical details have been explicitly recorded.
-- [ ] Relevance to reliable visual inference has been analysed without unsupported novelty claims.
-- [ ] All required artifacts have been produced.
-- [ ] `TASK.md` has been updated.
-- [ ] `RESEARCH_LOG.md` has been updated.
+- [x] Toumai-specific literature has been systematically identified.
+- [x] Relevant sources have been screened.
+- [x] Technical claims have been extracted.
+- [x] Evidence classifications have been assigned.
+- [x] The system architecture has been reconstructed from evidence.
+- [x] The visual pipeline has been documented.
+- [x] The teleoperation pipeline has been documented.
+- [x] Communications architecture has been documented where evidence permits.
+- [x] Reliability and safety mechanisms have been mapped.
+- [x] Unknown technical details have been explicitly recorded.
+- [x] Relevance to reliable visual inference has been analysed without unsupported novelty claims.
+- [x] All required artifacts have been produced.
+- [x] `TASK.md` has been updated.
+- [x] `RESEARCH_LOG.md` has been updated.
 
 ---
 
 # 9. Completion Milestone
 
-Successful completion of P0.1 establishes the first technical foundation of the Reliable Surgical Vision programme.
+### Completion record
 
-Suggested repository milestone:
+P0.1 completed on 2026-09-25 after a final evidence audit.
 
-**`v0.0.1` — Toumai Architecture Reconnaissance**
+Core completion artifacts:
+- `docs/architecture/toumai-system-architecture.md`
+- `docs/architecture/toumai-architecture.svg`
+- `literature/toumai/search-protocol.md`
+- `literature/toumai/source-screening-log.csv`
+- `literature/toumai/toumai-literature-map.csv`
+- `literature/toumai/toumai-network-metrics.csv`
+- `literature/toumai/toumai-evidence-table.md`
+- `literature/toumai/source-audit.md`
+- `literature/toumai/open-technical-questions.md`
+- `literature/toumai/references.bib`
+
 
 The next planned task is:
 
 **P0.2 — Surgical Computer-Vision Landscape Reconnaissance**
-
-P0.2 should begin only after P0.1 artifacts have been reviewed for completeness and evidence quality.

@@ -5,11 +5,17 @@ This file is the concise execution queue. Keep completed work in the Research Lo
 ## Phase 0 — Research Foundation
 
 ### P0.1 Toumai architecture reconnaissance
-- [ ] Identify primary Toumai system/technical publications.
-- [ ] Map surgeon console, patient cart, vision platform, communications, and safety mechanisms.
-- [ ] Separate independently reported specifications from manufacturer claims.
-- [ ] Extract reported latency, bandwidth, jitter, packet-loss, fail-safe, and video-processing information.
-- [ ] Document unknown or proprietary components.
+### P0.1 Toumai architecture reconnaissance — COMPLETE
+- [x] Identify primary Toumai system/technical publications.
+- [x] Map surgeon console, patient cart, vision platform, communications, and safety mechanisms.
+- [x] Separate independent/regulatory evidence from manufacturer claims.
+- [x] Extract reported latency, bandwidth, jitter, packet-loss, fail-safe, and video-processing information.
+- [x] Document unknown or proprietary components.
+- [x] Produce reproducible search/screening protocol and claim-level evidence audit.
+
+**Milestone:** `v0.0.1 — Toumai Architecture Reconnaissance`
+
+**Next:** P0.2 — Surgical computer-vision landscape.
 
 ### P0.2 Surgical computer-vision landscape
 - [ ] Map major tasks: phase recognition, instrument detection/segmentation, anatomy recognition, semantic segmentation, action recognition, and related tasks.
