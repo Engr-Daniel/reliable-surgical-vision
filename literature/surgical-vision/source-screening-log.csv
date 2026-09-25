@@ -1,0 +1,46 @@
+record_id,title_or_category,decision,reason
+SV01,Surgical data science – from concepts toward clinical translation,retain,"Field framing, datasets, translation barriers"
+SV02,"Deep learning for surgical workflow analysis: a survey of progresses, limitations, and trends",retain,"Workflow methods, datasets, metrics and limitations"
+SV03,Deep learning in surgical process modeling: A systematic review of workflow recognition,retain,Temporal modeling and annotation/dataset limitations
+SV04,"Artificial intelligence in the operating room: A systematic review of AI models for surgical phase, instruments and anatomical structure identification",retain,Cross-task OR perspective
+SV05,Methods and datasets for segmentation of minimally invasive surgical instruments in endoscopic images and videos: A review of the state of the art,retain,Instrument segmentation field/dataset map
+SV06,Deep learning approaches to surgical video segmentation and object detection: A scoping review,retain,Broad segmentation/detection and real-time evidence
+SV07,BIAS: Transparent reporting of biomedical image analysis challenges,retain,Challenge reproducibility standard
+SV08,EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos,retain,Foundational Cholec80 workflow benchmark
+SV09,TeCNO: Surgical Phase Recognition with Multi-Stage Temporal Convolutional Networks,retain,Causal temporal baseline
+SV10,Trans-SVNet: Accurate Phase Recognition from Surgical Videos via Hybrid Embedding Aggregation Transformer,retain,Transformer-era phase baseline
+SV11,LoViT: Long Video Transformer for surgical phase recognition,retain,Long-video transformer
+SV12,AutoLaparo: A New Dataset of Integrated Multi-tasks for Image-guided Surgical Automation in Laparoscopic Hysterectomy,retain,Integrated multitask human dataset
+SV13,Comparative validation of machine learning algorithms for surgical workflow and skill analysis with the HeiChole benchmark,retain,Multicentre generalisation benchmark
+SV14,"Comparative validation of surgical phase recognition, instrument keypoint estimation, and instrument instance segmentation in endoscopy: Results of the PhaKIR 2024 challenge",retain,Cross-centre evidence across three tasks
+SV15,"Video dataset for surgical phase, keypoint, and instrument recognition in laparoscopic surgery (PhaKIR)",retain,Multicentre public dataset descriptor
+SV16,A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery,retain,Canonical robotic video+kinematics benchmark
+SV17,Rendezvous: Attention mechanisms for the recognition of surgical action triplets in endoscopic videos,retain,Fine-grained action benchmark
+SV18,ESAD: Endoscopic Surgeon Action Detection Dataset,retain,Robotic action localisation
+SV19,SAR-RARP50: Segmentation of surgical instrumentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge,retain,Robotic procedure benchmark
+SV20,2017 Robotic Instrument Segmentation Challenge,retain,Canonical robotic instrument segmentation
+SV21,2018 Robotic Scene Segmentation Challenge,retain,Robotic scene segmentation
+SV22,Comparative validation of multi-instance instrument segmentation in endoscopy: Results of the ROBUST-MIS 2019 challenge,retain,Explicit domain-gap robustness benchmark
+SV23,CaDIS: Cataract dataset for surgical RGB-image segmentation,retain,Dense anatomy+instrument segmentation
+SV24,CholecSeg8k: A Semantic Segmentation Dataset for Laparoscopic Cholecystectomy Based on Cholec80,retain,Common scene segmentation subset
+SV25,"Endoscapes, a critical view of safety and surgical scene segmentation dataset for laparoscopic cholecystectomy",retain,Anatomy/instrument/safety-state benchmark
+SV26,CholecInstanceSeg: A Tool Instance Segmentation Dataset for Laparoscopic Surgery,retain,Large human tool-instance dataset
+SV27,SurgicalSAM: Efficient Class Promptable Surgical Instrument Segmentation,retain,Foundation-model adaptation
+SV28,Learning multi-modal representations by watching hundreds of surgical video lectures,retain,Emerging surgical video-language representation
+SV29,Surgical Visual Understanding (SurgVU) Dataset,retain,Very large robotic training-video resource
+SV30,Cataract-101: Video Dataset of 101 Cataract Surgeries,retain,Non-laparoscopic workflow benchmark
+SV31,CATARACTS: Challenge on Automatic Tool Annotation for Cataract Surgery,retain,Tool-recognition benchmark
+SV32,Metrics Matter in Surgical Phase Recognition,retain,Metric-protocol comparability warning
+SV33,Endoscopic Vision (EndoVis) challenge and dataset ecosystem,retain,Benchmark ecosystem index
+X01,Duplicate preprints with retained peer-reviewed versions,exclude-duplicate,Use peer-reviewed version.
+X02,Generic radiology/pathology CV reviews,exclude-scope,Not intraoperative surgical video.
+X03,Pure telesurgery networking papers,defer-P0.6,Networking belongs to P0.6.
+X04,Calibration/conformal/OOD papers without landscape role,defer-P0.5,Reliable inference belongs to P0.5.
+X05,Domain-adaptation/corruption papers beyond benchmark context,defer-P0.4,Shift review belongs to P0.4.
+X06,Dataset mirrors/blogs/Kaggle summaries,exclude-secondary,Prefer primary papers/official resources.
+X07,Purely synthetic surgical datasets,deprioritize,Representative real surgical/robotic data prioritized.
+X08,VQA-only surgical LLM papers,deprioritize,Emerging direction represented without exhaustive VLM review.
+X09,3D reconstruction/depth-only papers,deprioritize,Outside core target taxonomy.
+X10,Robot-control papers without visual inference,exclude-scope,Not surgical CV.
+X11,Leaderboards without stable methodology,exclude-quality,Insufficient provenance.
+X12,Clinical outcome papers without explicit CV model,exclude-scope,Do not inform task/model/benchmark map.

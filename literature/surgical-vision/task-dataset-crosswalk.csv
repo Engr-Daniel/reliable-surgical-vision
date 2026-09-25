@@ -1,0 +1,21 @@
+dataset,procedure,modality,supported_tasks,scale_or_scope,source_id
+Cholec80,laparoscopic cholecystectomy,video,phase; tool presence,80 human videos,SV08
+M2CAI16 Workflow,laparoscopic cholecystectomy,video,phase,41 videos reported in AutoLaparo source,SV09;SV12
+AutoLaparo,laparoscopic hysterectomy,full video,workflow; camera motion; instrument/key-anatomy segmentation,21 videos; >23 h,SV12
+HeiChole,laparoscopic cholecystectomy,full video,phase; action; tool; skill,33 videos; 3 centres; 22 h,SV13
+PhaKIR challenge,laparoscopic cholecystectomy,full video,phase; keypoints; instance segmentation,13 videos; 3 institutions in challenge,SV14
+PhaKIR public release,laparoscopic cholecystectomy,full video,phase; keypoints; instance segmentation,8 complete videos; 3 centres,SV15
+JIGSAWS,robotic training,stereo video + kinematics,gesture; skill,8 subjects; 101 trials across 3 tasks,SV16
+CholecT50,laparoscopic cholecystectomy,video,instrument–verb–target triplets,50 videos; 100 triplet classes,SV17
+ESAD/MESAD,robot-assisted radical prostatectomy,frames/video,action detection,real + phantom; 21 real action classes reported,SV18
+SAR-RARP50,robot-assisted radical prostatectomy,robotic video,instrument segmentation; action recognition,50-video/clip challenge resource,SV19
+EndoVis 2017,robotic/porcine,robotic video,instrument segmentation,small porcine benchmark,SV20
+EndoVis 2018,robotic/porcine,robotic video,scene segmentation,porcine benchmark,SV21
+ROBUST-MIS,colorectal laparoscopy,frames/clips,binary/instance segmentation; detection,"10,040 annotated images; 30 procedures; 3 surgery types",SV22
+CaDIS,cataract,RGB frames,semantic segmentation,"4,670 images; 36 classes",SV23
+CholecSeg8k,laparoscopic cholecystectomy,RGB frames,semantic segmentation,"8,080 frames from 17 Cholec80 videos",SV24
+Endoscapes2023,laparoscopic cholecystectomy,videos + sampled frames,detection; scene segmentation; CVS,201 videos with annotated subsets,SV25
+CholecInstanceSeg,laparoscopic cholecystectomy,RGB frames,tool instance segmentation,"41,933 frames; 85 procedures; 64.4k tool instances",SV26
+SurgVU,da Vinci training exercises,long robotic video,tool/task visual understanding,280 videos/155 sessions; >840 h; >18M frames,SV29
+Cataract-101,cataract surgery,video,workflow/video analysis,101 surgeries,SV30
+CATARACTS,cataract surgery,video,tool presence/usage,challenge video set,SV31

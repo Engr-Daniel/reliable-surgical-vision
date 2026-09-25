@@ -15,8 +15,8 @@ The phase is complete only when the provisional research tracks have been stress
 | Task | Title | Status |
 |---|---|---|
 | P0.1 | Toumai Technical Literature & Architecture Reconnaissance | **COMPLETE — 2026-09-25** |
-| P0.2 | Surgical Computer-Vision Landscape Reconnaissance | **READY TO START** |
-| P0.3 | Dataset Reconnaissance | Not started |
+| P0.2 | Surgical Computer-Vision Landscape Reconnaissance | **COMPLETE — 2026-09-25** |
+| P0.3 | Dataset Reconnaissance | **READY TO START** |
 | P0.4 | Distribution-Shift Literature Reconnaissance | Not started |
 | P0.5 | Reliable-Inference Literature Reconnaissance | Not started |
 | P0.6 | Telesurgery / Network Literature Reconnaissance | Not started |
@@ -120,6 +120,7 @@ Claims were classified as independently documented, regulatory technical-review 
 - `literature/toumai/source-index.md`
 - `literature/toumai/open-technical-questions.md`
 - `literature/toumai/references.bib`
+- `literature/toumai/rq-answer-matrix.md`
 
 ### Programme Updates
 - `literature/literature-map.csv`
@@ -156,7 +157,7 @@ Claims were classified as independently documented, regulatory technical-review 
 
 ## Status
 
-`READY TO START`
+`COMPLETE — 2026-09-25`
 
 ## 1. Purpose
 
@@ -628,6 +629,16 @@ Must document:
 - scientific boundary;
 - next task.
 
+### A16 — Research Question Answer Matrix
+`literature/surgical-vision/rq-answer-matrix.md`
+
+For every P0.2 research question, this file contains:
+- a concise evidence-backed answer;
+- supporting source IDs;
+- links to detailed artifacts;
+- remaining uncertainty;
+- explicit separation of conclusion from hypothesis.
+
 ## 8. Quality Requirements
 
 P0.2 is not complete merely because papers have been collected.
@@ -662,37 +673,39 @@ Weak data availability, poor annotation quality, limited reproducibility, or lac
 
 P0.2 is complete when:
 
-- [ ] major surgical-CV task families have been identified and clearly defined;
-- [ ] foundational and representative recent literature has been screened;
-- [ ] a reproducible P0.2 search protocol has been documented;
-- [ ] source-screening decisions have been recorded;
-- [ ] representative datasets have been mapped to tasks at reconnaissance level;
-- [ ] representative model/baseline families have been mapped;
-- [ ] standard task-specific evaluation metrics have been documented;
-- [ ] common benchmark/evaluation practices have been documented;
-- [ ] real-time/deployment-facing evidence has been identified where available;
-- [ ] task suitability for later reliability research has been assessed without making final paper selections;
-- [ ] unresolved questions for P0.3–P0.7 have been recorded;
-- [ ] `literature/references.bib` has been updated;
-- [ ] `literature/literature-map.csv` has been updated;
-- [ ] `RESEARCH_LOG.md` has been updated;
-- [ ] `TASK.md` has been updated;
-- [ ] all required P0.2 artifacts have been produced;
-- [ ] `P0.2_COMPLETION_REPORT.md` has been produced.
+- [x] major surgical-CV task families have been identified and clearly defined;
+- [x] foundational and representative recent literature has been screened;
+- [x] a reproducible P0.2 search protocol has been documented;
+- [x] source-screening decisions have been recorded;
+- [x] representative datasets have been mapped to tasks at reconnaissance level;
+- [x] representative model/baseline families have been mapped;
+- [x] standard task-specific evaluation metrics have been documented;
+- [x] common benchmark/evaluation practices have been documented;
+- [x] real-time/deployment-facing evidence has been identified where available;
+- [x] task suitability for later reliability research has been assessed without making final paper selections;
+- [x] unresolved questions for P0.3–P0.7 have been recorded;
+- [x] `literature/references.bib` has been updated;
+- [x] `literature/literature-map.csv` has been updated;
+- [x] `RESEARCH_LOG.md` has been updated;
+- [x] `TASK.md` has been updated;
+- [x] all required P0.2 artifacts have been produced;
+- [x] `P0.2_COMPLETION_REPORT.md` has been produced.
+
+- [x] all P0.2 RQs have evidence-linked answers in `literature/surgical-vision/rq-answer-matrix.md`.
 
 ## 10. P0.2 Completion Milestone
 
-Successful completion of P0.2 will establish the surgical-computer-vision field map needed for dataset and reliability-method decisions.
+P0.2 completed on **2026-09-25** after a final evidence audit.
 
-Suggested repository milestone:
+Suggested repository milestone after commit/review:
 
 **`v0.0.2 — Surgical Computer-Vision Landscape`**
 
-The next planned task is:
+The next active task is:
 
 **P0.3 — Dataset Reconnaissance**
 
-P0.3 should begin only after the P0.2 landscape artifacts have been reviewed for completeness and evidence quality.
+P0.3 should audit dataset access, licensing, provenance, source-video overlap, split integrity, domain/site structure and experimental feasibility before any final dataset selection.
 
 ---
 
@@ -733,7 +746,7 @@ Expected outputs include:
 Phase 0 is complete when:
 
 - [x] Toumai architecture reconnaissance is complete;
-- [ ] surgical-CV landscape is mapped;
+- [x] surgical-CV landscape is mapped;
 - [ ] candidate datasets are mapped and feasibility-audited;
 - [ ] distribution-shift literature is mapped;
 - [ ] reliable-inference literature is mapped;

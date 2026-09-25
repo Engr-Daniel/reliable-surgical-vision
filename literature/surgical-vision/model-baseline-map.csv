@@ -1,0 +1,19 @@
+task,model_family,representative_model,dataset,baseline_rationale,source_id
+phase,CNN multitask + temporal workflow,EndoNet,Cholec80,Foundational phase/tool baseline,SV08
+phase,causal multi-stage temporal convolution,TeCNO,Cholec80; M2CAI16,Reproducible online temporal baseline,SV09
+phase,hybrid temporal Transformer,Trans-SVNet,Cholec80; M2CAI16,Representative Transformer-era phase model,SV10
+phase,long-video Transformer,LoViT,Cholec80; AutoLaparo,Modern long-context temporal model,SV11
+workflow/multitask,task-specific reference models,AutoLaparo baselines,AutoLaparo,"Connects workflow, camera motion and segmentation",SV12
+phase/action/instrument/skill,challenge submissions,HeiChole benchmark,HeiChole,Multicentre generalisation reference,SV13
+phase/keypoint/instance segmentation,challenge submissions,PhaKIR benchmark,PhaKIR,Cross-centre benchmark across complementary tasks,SV14
+gesture,sequence models on video/kinematics,JIGSAWS benchmarks,JIGSAWS,Canonical robotic multimodal reference,SV16
+action triplet,attention/Transformer-inspired,Rendezvous,CholecT50,Canonical fine-grained interaction baseline,SV17
+action detection,object/action detector families,ESAD baselines,ESAD/MESAD,Robotic action-localisation reference,SV18
+instrument segmentation,challenge model families,EndoVis 2017/2018,EndoVis 2017/2018,Canonical robotic segmentation reference,SV20;SV21
+instance segmentation/detection,challenge submissions,ROBUST-MIS,ROBUST-MIS,Explicit domain-gap robustness reference,SV22
+semantic segmentation,encoder–decoder CNN,U-Net family,CaDIS; CholecSeg8k; AutoLaparo,Simple widely reproducible segmentation baseline,SV06;SV23;SV24
+semantic segmentation,dilated/ASPP CNN,DeepLabv3 family,CaDIS; other surgical sets,Common strong classical segmentation baseline,SV06
+instance segmentation,two-stage detector/mask,Mask R-CNN family,CholecInstanceSeg; Endoscapes,Standard instance-segmentation reference,SV25;SV26
+instrument segmentation,foundation model adaptation,SurgicalSAM,EndoVis 2017/2018,Representative SAM adaptation,SV27
+scene/safety assessment,multi-task detection/segmentation/classification,Endoscapes baselines,Endoscapes2023,Clinically meaningful scene/safety benchmark,SV25
+video-language,contrastive video-language pretraining,SurgVLP,"1,400 lectures + downstream sets",Representative emerging multimodal model,SV28

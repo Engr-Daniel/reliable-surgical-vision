@@ -10,29 +10,31 @@ Created a single research repository with three provisional research tracks rath
 ### Rationale
 The tracks share literature, datasets, reliability methods, evaluation infrastructure, and likely code. Their eventual publication boundaries should be determined by evidence rather than repository structure.
 
-## 2026-09-25 — P0.1 Toumai Technical Literature & Architecture Reconnaissance completed
+### Current state
+Phase 0 — Research Foundation.
 
-### Scope
-Completed a focused public-evidence technical reconnaissance of Toumai MT-1000 and its tele-robotic deployments.
+### Next action
+Conduct Toumai technical-literature and architecture reconnaissance.
+
+## 2026-09-25 — P0.2 Surgical Computer-Vision Landscape Reconnaissance completed
 
 ### Method
-Used reproducible query families across peer-reviewed databases/journals, regulatory technical-review material, official manufacturer sources, and current Nigerian deployment reporting. A final audit screening set of 25 unique records/categories was documented: 16 retained and 9 excluded/deprioritized. Claims were classified by evidence type and extracted into a claim-level evidence table.
+Focused evidence-backed field reconnaissance across peer-reviewed reviews, primary model/dataset papers, EndoVis/MICCAI challenge reports and official benchmark resources. Final audit: 45 records/categories, 33 retained and 12 excluded/deferred.
 
 ### Key findings
-- Regulatory evidence identifies MSS810 surgeon console, SSS800 patient platform and VSS820 vision platform and describes the master–slave kinematic/closed-loop control principle.
-- Peer-reviewed literature reports 4000 Hz master–slave response, 250 μs response time, force feedback to 0.1 N, FPGA image processing, dual-fiber image transport, <50 ms imaging latency, 3D endoscopy and image-enhancement algorithms.
-- The same paper states that force-feedback precision and image-algorithm reliability were not objectively quantified.
-- Toumai human telesurgery has been reported over multiple network architectures; no single universal network topology should be assumed.
-- Detailed clinical network evidence now includes delay/RTT, jitter, packet loss, throughput, multi-carrier redundancy, QoS thresholds, stress testing and emergency-disconnection drills.
-- The Nigerian RHV–Nisa case is confirmed as a >500-km Toumai deployment with Starlink primary and MTN backup, but no public raw telemetry was identified by the evidence cutoff.
-- Codec, adaptive-streaming logic, failover thresholds/state machine and frame-aligned network telemetry remain unresolved/proprietary.
-- `network state → received-video characteristics → CV reliability` remains a hypothesis for later phases, not a P0.1 conclusion.
+- The field spans workflow/phase, action/gesture/triplets, instrument presence/detection/keypoints/segmentation, anatomy/scene perception, safety state, skill and emerging video-language models.
+- Public benchmarks are heavily concentrated in laparoscopic cholecystectomy; derived datasets may share source procedures.
+- Workflow is intrinsically temporal; segmentation/detection provide complementary spatial failure modes.
+- HeiChole and PhaKIR show important cross-centre generalisation limitations; PhaKIR reports poor cross-centre generalisability across all three of its tasks.
+- ROBUST-MIS explicitly evaluates increasing domain gap and observes degradation.
+- Metric implementations/protocols must be pinned; identical metric names do not ensure comparable results.
+- Online/high-FPS benchmark capability is not clinical reliability.
 
 ### Decision
-P0.1 passes its exit criteria at the focused public-evidence reconnaissance level.
+Phase/workflow recognition and instrument/anatomy segmentation/detection remain credible candidate task families. Final selection is deferred to P0.3–P0.7.
 
-### Milestone
-Tag after repository integration/review: `v0.0.1`.
+### Status
+P0.2 passes its exit criteria. Suggested tag after commit/review: `v0.0.2`.
 
 ### Next
-P0.2 — Surgical Computer-Vision Landscape Reconnaissance.
+P0.3 — Dataset Reconnaissance.

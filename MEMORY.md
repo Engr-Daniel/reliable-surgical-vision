@@ -43,11 +43,14 @@ The programme is in **Phase 0: Research Foundation**. No paper title, novelty cl
 - Research tracks may merge, split, change direction, or be abandoned based on evidence.
 - Reproducibility, provenance, and negative-result reporting are first-class requirements.
 
-- **P0.1 Toumai architecture reconnaissance completed (2026-09-25).**
-- Public evidence supports the MT-1000 component architecture, high-level master–slave control chain, 3D/FPGA vision path, and multiple human telesurgery network deployments.
-- Latency definitions must remain separated: imaging latency, network RTT, study-reported delay, total delay and master–slave response are not interchangeable.
-- Public evidence does not establish codec/adaptive streaming internals, exact failover thresholds/state machine, frame-aligned QoS API, or Nigerian raw network telemetry.
-- The pathway `network/system state → received video distribution → CV reliability` is a research hypothesis to be stress-tested in later phases, not an established conclusion.
+- **P0.2 Surgical Computer-Vision Landscape Reconnaissance completed (2026-09-25).**
+- Keep workflow/phase, action/gesture/triplets, detection/keypoints, semantic/instance segmentation, anatomy/scene and skill as distinct task structures.
+- Workflow recognition is intrinsically temporal; segmentation/detection provide complementary spatial failure modes.
+- Surgical-CV public data are concentrated in laparoscopic cholecystectomy; dataset provenance/overlap must be audited before cross-dataset claims.
+- Multicentre HeiChole and PhaKIR show that strong single-centre/i.i.d. scores do not imply cross-centre generalisation.
+- Metric implementation/protocol details must be pinned; identical metric names do not guarantee comparable results.
+- Phase/workflow recognition and instrument/anatomy segmentation/detection are candidate families only; final selection remains gated by P0.3–P0.7.
+- Every completed Phase 0 task should include an `rq-answer-matrix.md`.
 
 ## Update rule
 

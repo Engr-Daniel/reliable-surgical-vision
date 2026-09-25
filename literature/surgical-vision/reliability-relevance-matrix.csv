@@ -1,0 +1,12 @@
+task,public_data,ground_truth_clarity,framewise_suitability,temporal_dependence,corruption_suitability,network_degradation_suitability,uncertainty_suitability,abstention_suitability,conformal_suitability,clinical_telesurgical_relevance,notes
+phase/workflow,High,Medium,Medium,Very high,High,Very high,High,High,Medium–High,High,Temporal task directly exposed to frame loss/context shifts.
+action/gesture,Medium,Medium,Low–Medium,Very high,High,Very high,High,High,Medium,High,Rich semantics but label imbalance/ambiguity complicate reliability.
+triplets,Medium–High,Medium,High,Medium–High,High,High,High,High,Medium,High,Fine-grained; multi-label association increases complexity.
+instrument presence,High,High,Very high,Low–Medium,High,Medium–High,High,High,High,Medium–High,Simple calibration/abstention pilot task.
+instrument detection,High,High,Very high,Low–Medium,Very high,High,High,High,Medium–High,High,Clear outputs and visual-corruption sensitivity.
+instrument segmentation,Very high,High,Very high,Medium,Very high,High,High,High,Medium–High,Very high,Strong spatial candidate; mature metrics and robustness benchmarks.
+keypoints,Medium,High,Very high,Medium,Very high,High,Medium–High,Medium,Low–Medium,High,PhaKIR provides multicentre evidence.
+anatomy/scene segmentation,Medium–High,Medium–High,Very high,Medium,Very high,High,Very high,High,Medium,Very high,Clinically meaningful; small structures/labels need care.
+CVS/safety state,Medium,Medium,High,Medium–High,Very high,High,Very high,Very high,Medium,Very high,High value but safety/label complexity suggests later validated use.
+skill assessment,Medium,Low–Medium,Low,Very high,Medium,Medium,Medium,Medium,Low,Medium,Less directly aligned with remote visual reliability.
+video-language/VLM,Emerging,Low–Medium,Medium,Very high,High,High,Medium,Medium,Low–Medium,Medium–High,Evaluation/reliability semantics still immature.
