@@ -4,7 +4,6 @@ This file is the concise execution queue. Keep completed work in the Research Lo
 
 ## Phase 0 — Research Foundation
 
-### P0.1 Toumai architecture reconnaissance
 ### P0.1 Toumai architecture reconnaissance — COMPLETE
 - [x] Identify primary Toumai system/technical publications.
 - [x] Map surgeon console, patient cart, vision platform, communications, and safety mechanisms.
