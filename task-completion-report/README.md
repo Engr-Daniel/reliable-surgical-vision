@@ -25,3 +25,4 @@ Current reports:
 - `P0.4_COMPLETION_REPORT.md`
 
 Detailed evidence remains in the corresponding `literature/`, `datasets/`, `docs/`, and programme-level files.
+- `P0.5_COMPLETION_REPORT.md`

@@ -22,36 +22,39 @@
 **Milestone:** `v0.0.3 — Dataset Feasibility Map`
 
 ### P0.4 Distribution-shift literature — COMPLETE
-- [x] Map natural centre/device/instrument/procedure shifts.
-- [x] Map surgical visual corruptions and severity practices.
-- [x] Map temporal/video shift evidence and negative evidence.
-- [x] Map representative UDA/DG/robustness strategies.
-- [x] Document compound-shift precedent.
-- [x] Define defensible evaluation/reporting rules.
-- [x] Produce non-final working shift protocol.
-- [x] Produce `literature/distribution-shift/rq-answer-matrix.md`.
-- [x] Produce `task-completion-report/P0.4_COMPLETION_REPORT.md`.
+- [x] Natural/controlled/temporal/compound shift evidence mapped.
+- [x] Candidate shift protocol and RQ answer matrix produced.
+- [x] Completion report: `task-completion-report/P0.4_COMPLETION_REPORT.md`.
 
-**Suggested milestone after commit/review:** `v0.0.4 — Distribution-Shift Evidence Map`
+**Milestone:** `v0.0.4 — Distribution-Shift Evidence Map`
 
-### P0.5 Reliable-inference literature — READY TO START
-- [ ] Map calibration under distribution shift.
-- [ ] Map uncertainty quantification for surgical/medical visual inference.
-- [ ] Map OOD detection and failure prediction.
-- [ ] Map selective prediction / abstention.
-- [ ] Map conformal prediction and coverage assumptions under shift.
-- [ ] Map task-specific reliability metrics for classification/temporal prediction/segmentation.
-- [ ] Stress-test Track B and identify methods that can be paired with P0.4 shifts.
+### P0.5 Reliable-inference literature — COMPLETE
+- [x] Separate calibration, uncertainty, OOD, failure detection, selective prediction and conformal prediction.
+- [x] Map surgical and medical-imaging UQ/calibration evidence.
+- [x] Map direct surgical OOD/open-set/failure-monitor evidence.
+- [x] Map selective prediction / abstention for classification and segmentation.
+- [x] Map conformal prediction, risk control and shift-aware variants.
+- [x] Document exchangeability, class/group and calibration-size limitations.
+- [x] Define phase/segmentation reliability metrics and abstention units.
+- [x] Stress-test Track B against direct 2023–2026 surgical reliability literature.
+- [x] Produce `literature/uncertainty-reliability/rq-answer-matrix.md`.
+- [x] Produce `task-completion-report/P0.5_COMPLETION_REPORT.md`.
+
+**Suggested milestone after commit/review:** `v0.0.5 — Reliable-Inference Evidence Map`
+
+### P0.6 Telesurgery/network literature — READY TO START
+- [ ] Map network latency, jitter, packet loss, bandwidth, QoS and redundancy evidence.
+- [ ] Map surgical video encoding/decoding, bitrate, GOP, buffering, retransmission/FEC and concealment mechanisms where evidence permits.
+- [ ] Map network → decoded-video transformations rather than assuming packet loss equals frame loss.
+- [ ] Identify network/video quality metrics that can be synchronized with AI predictions.
+- [ ] Audit direct work connecting communication conditions to downstream surgical visual inference.
+- [ ] Define a defensible non-final network/video impairment protocol.
 - [ ] Produce evidence-linked RQ answers.
-
-### P0.6 Telesurgery/network literature
-- [ ] Map latency, jitter, packet loss, bandwidth, compression, frame loss and redundancy.
-- [ ] Map network → codec/decoder → received-video mechanisms.
-- [ ] Identify work connecting network conditions to downstream visual inference.
 
 ### P0.7 Intersection analysis
 - [ ] Build task × dataset × shift × reliability × network evidence matrix.
 - [ ] Stress-test Track A–C novelty.
+- [ ] Decide whether tracks remain separate, merge, split or are discontinued.
 - [ ] Revise/finalize candidate research questions before experimental commitment.
 
 ## Phase milestone

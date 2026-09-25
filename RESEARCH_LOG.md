@@ -108,3 +108,38 @@ P0.4 passes its exit criteria. No final novelty claim is made.
 ### Next
 P0.5 — Reliable-Inference Literature Reconnaissance.
 
+## 2026-09-25 — P0.5 Reliable-Inference Literature Reconnaissance completed
+
+### Scope
+Mapped calibration, uncertainty quantification, OOD/open-set detection, prediction-failure monitoring, selective prediction/abstention, conformal prediction and risk control for surgical/medical visual inference.
+
+### Method
+Focused evidence reconnaissance across direct surgical reliability papers, medical-imaging UQ/segmentation literature, clinical conformal/selective work under shift, and foundational reliability methodology. Final audit: 36 retained sources/resources and 12 excluded/deferred categories.
+
+### Key findings
+- Calibration, uncertainty, OOD detection, failure prediction, selective prediction and conformal coverage are distinct reliability questions.
+- In-distribution calibration cannot be assumed to survive the P0.4 distribution shifts.
+- Direct surgical UQ/calibration already includes FGRM scene-segmentation uncertainty, calibrated phase confidence, surgical VQA uncertainty decomposition and emerging phase-diffusion uncertainty.
+- OpenMIBOOD includes a PhaKIR benchmark with smoke covariate shift plus near/far OOD; direct open-set surgical phase recognition also exists.
+- Selective prediction is established in classification and increasingly mature in medical segmentation through post-hoc image-level confidence, Soft Dice Confidence and pixel-level learning-to-abstain.
+- Direct surgical conformal evidence exists in MICCAI 2025 instrument-trajectory forecasting.
+- Recent TCSR-Monitor work directly targets confident surgical segmentation failures under acquisition degradation using confidence, geometry, temporal consistency, image-quality cues and Mondrian conformal calibration.
+- TCSR-Monitor's strong within-corruption failure AUROC does not eliminate operational false alarms, reinforcing the need to evaluate monitors as decision systems rather than scores.
+- Vanilla split conformal coverage is marginal and depends on exchangeability; recent medical evidence shows class imbalance, distribution shift and limited calibration size can produce practically poor subgroup/conditional behavior.
+- Weighted, class-conditional/Mondrian and adaptive conformal variants already exist; their assumptions and target-data access must be explicit.
+
+### Track implications
+- Track B remains motivated but broad novelty around uncertainty, calibration, OOD, abstention or surgical conformal prediction is no longer defensible.
+- A narrower question remains: how reliability mechanisms themselves degrade under natural, visual and mechanistically grounded network/video shifts, and whether selective/conformal behavior remains useful.
+- TCSR-Monitor creates strong overlap pressure for a generic corrupted-surgical-segmentation failure-monitor paper.
+- P0.6 is now critical for determining whether network telemetry adds information beyond received-video/temporal failure signals.
+
+### Decision
+P0.5 passes its exit criteria. No final reliability method or novelty claim is fixed.
+
+### Suggested milestone
+`v0.0.5 — Reliable-Inference Evidence Map`
+
+### Next
+P0.6 — Telesurgery / Network Literature Reconnaissance.
+

@@ -1,0 +1,13 @@
+source_id,experiment,metric,reported_value,p0_5_interpretation
+RI15,Surgical VQA SG-UD,Accuracy,63.58%,Direct surgical calibrated selective inference
+RI15,Surgical VQA SG-UD,ECE,16.97%,Calibration remains imperfect even after method
+RI15,Surgical VQA SG-UD,Risk-Coverage AUC,0.0861,Selective-answering evaluation
+RI25,"Conformal selective sepsis triage, ID at 80% coverage",Retained-case error reduction,49.6%,Clinical adjacent combined CP + deferral
+RI25,"Conformal selective sepsis triage, OOD at 80% coverage",Retained-case error reduction,46.7%,Temporal-shift selective performance
+RI25,Temperature-scaled triage ID / OOD,ECE,0.016 / 0.030,Example of calibration monitored under shift
+RI33,Marginal CP minority MS class at 1.5T shift,Coverage,16.9%,Marginal population guarantee can hide class collapse
+RI33,Marginal CP controls at 1.5T shift,Coverage,95.2%,Strong class imbalance contrast
+RI33,Class-conditional CP MS at 1.5T shift,Coverage,77.5%,Large improvement but still below nominal target
+RI34,TCSR within corrupted frames,Failure AUROC,0.946,Controls against merely detecting corrupted images
+RI34,Entropy within corrupted frames,Failure AUROC,0.594,Confidence baseline fails to identify actual segmentation failure well
+RI34,TCSR moderate corruption severity,False alarm on correctly segmented frames,up to 40.4%,Shows operational cost despite strong discrimination

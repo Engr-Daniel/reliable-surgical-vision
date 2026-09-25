@@ -18,8 +18,8 @@ The phase is complete only when the provisional research tracks have been stress
 | P0.2 | Surgical Computer-Vision Landscape Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.3 | Dataset Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.4 | Distribution-Shift Literature Reconnaissance | **COMPLETE — 2026-09-25** |
-| P0.5 | Reliable-Inference Literature Reconnaissance | **READY TO START** |
-| P0.6 | Telesurgery / Network Literature Reconnaissance | Not started |
+| P0.5 | Reliable-Inference Literature Reconnaissance | **COMPLETE — 2026-09-25** |
+| P0.6 | Telesurgery / Network Literature Reconnaissance | **READY TO START** |
 | P0.7 | Intersection Analysis & Novelty Stress-Test | Not started |
 
 ---
@@ -1394,7 +1394,402 @@ P0.5 must determine whether calibration, uncertainty, selective prediction and c
 
 ## P0.5 — Reliable-Inference Literature Reconnaissance
 
-Map uncertainty, calibration, OOD detection, selective prediction, conformal prediction, and abstention in surgical/medical visual inference.
+## Status
+
+`COMPLETE — 2026-09-25`
+
+## 1. Purpose
+
+Establish an evidence-backed map of **reliable inference** for surgical/medical visual AI before fixing the final Track B method or claiming that uncertainty, abstention, OOD detection, or conformal prediction is novel in surgery.
+
+P0.5 separates and connects:
+
+- confidence calibration;
+- predictive uncertainty;
+- epistemic and aleatoric uncertainty;
+- OOD/open-set detection;
+- prediction-failure monitoring;
+- selective prediction / rejection / abstention;
+- conformal prediction;
+- risk-controlling prediction;
+- reliability evaluation under the distribution shifts retained by P0.4.
+
+The task asks:
+
+> **How can a surgical-CV system know when its output may be unreliable, what do existing methods actually guarantee, how do those guarantees change under shift, and which reliability mechanisms remain scientifically defensible for later experiments?**
+
+---
+
+## 2. Scope Boundaries
+
+### In scope
+
+- calibration and calibration metrics;
+- uncertainty estimation;
+- medical/surgical UQ;
+- OOD/open-set detection;
+- error/failure prediction;
+- selective classification;
+- selective semantic segmentation;
+- AI abstention / deferral;
+- conformal classification;
+- conformal segmentation / trajectory forecasting;
+- class/group-conditional conformal methods;
+- covariate-shift / adaptive conformal inference;
+- risk-controlling prediction sets;
+- reliability under P0.4 natural/controlled shifts;
+- task-specific reliability for phase recognition and segmentation.
+
+### Out of scope
+
+- full network/QoS/codec mechanisms → **P0.6**;
+- final task × dataset × shift × reliability design → **P0.7**;
+- final novelty claim → **P0.7**;
+- uncertainty used only for pseudo-label filtering unless it directly informs deployment inference;
+- adversarial-only detection;
+- pure explainability without reliability evaluation;
+- clinical autonomous-action policy.
+
+---
+
+## 3. Research Questions
+
+### RQ1 — Reliability Taxonomy
+
+What concepts constitute reliable inference and how do they differ?
+
+Distinguish:
+
+- confidence;
+- calibration;
+- uncertainty estimation;
+- OOD detection;
+- open-set recognition;
+- failure prediction;
+- selective prediction;
+- abstention/deferral;
+- conformal prediction;
+- conformal risk control.
+
+### RQ2 — Calibration Under Shift
+
+How should calibration be measured, and what happens when the deployment distribution differs from the calibration distribution?
+
+Investigate:
+
+- temperature scaling;
+- probability calibration;
+- NLL;
+- Brier score;
+- ECE and its limitations;
+- classwise/adaptive calibration;
+- calibration degradation under dataset shift.
+
+### RQ3 — Uncertainty Estimation
+
+Which UQ methods are established and practical for surgical/medical visual inference?
+
+Map:
+
+- maximum probability / entropy;
+- MC dropout;
+- deep ensembles;
+- Bayesian/aleatoric–epistemic methods;
+- evidential methods;
+- task-aware confidence estimators;
+- direct surgical UQ methods.
+
+### RQ4 — OOD vs Failure Detection
+
+What is the relationship between:
+
+- OOD detection;
+- covariate-shift detection;
+- open-set recognition;
+- actual prediction-error/failure monitoring?
+
+Determine whether an OOD score is sufficient for a deployment safety signal.
+
+### RQ5 — Selective Prediction / Abstention
+
+When should the model withhold its output?
+
+Investigate:
+
+- confidence thresholding;
+- integrated reject options;
+- risk–coverage;
+- AURC;
+- image/frame-level abstention;
+- pixel/region/object-level abstention;
+- cost-aware human deferral.
+
+In this programme, abstention means **withholding AI assistance**, not stopping surgery.
+
+### RQ6 — Conformal Prediction and Shift
+
+What does conformal prediction guarantee?
+
+Investigate:
+
+- split CP;
+- APS/RAPS;
+- Mondrian/class-conditional CP;
+- importance-weighted CP;
+- adaptive conformal inference;
+- risk-controlling prediction sets;
+- structured/segmentation CP;
+- surgical CP precedent;
+- exchangeability and calibration-set-size limitations.
+
+### RQ7 — Task-Specific Reliable Inference
+
+How should reliable inference differ between:
+
+- phase/workflow recognition;
+- instrument/anatomy segmentation;
+- action recognition;
+- trajectory forecasting;
+- surgical VQA/safety-state outputs?
+
+Define the appropriate calibration, failure and abstention units.
+
+### RQ8 — Track B / Working Protocol
+
+Which reliability methods should be carried into P0.6–P0.7 as transparent baselines, and how does current evidence narrow Track B?
+
+This is a **method suitability assessment**, not a final method selection.
+
+---
+
+## 4. Evidence Strategy
+
+Priority:
+
+1. direct peer-reviewed surgical reliability evidence;
+2. direct surgical benchmark/open-set/conformal evidence;
+3. very recent surgical preprints/workshops only when they materially change the novelty landscape;
+4. peer-reviewed medical-imaging UQ/calibration/selective/conformal evidence;
+5. clinical selective/conformal work under shift;
+6. general foundational methodology needed to interpret guarantees and metrics.
+
+P0.5 does not infer surgical evidence from radiology/general ML without labelling it as adjacent or foundational.
+
+---
+
+## 5. Work Packages
+
+### WP1 — Reliability-Literature Discovery
+Identify direct surgical, medical-imaging and foundational reliable-inference literature.
+
+**Output:** search/screening/source registry.
+
+### WP2 — Reliability Taxonomy
+Define the canonical distinction among calibration, UQ, OOD, failure prediction, selective inference and conformal methods.
+
+**Output:** `reliability-taxonomy.md`
+
+### WP3 — Calibration / UQ Mapping
+Map practical baseline families and their computational/assumption trade-offs.
+
+**Output:** `uncertainty-method-map.csv`
+
+### WP4 — OOD / Failure-Monitor Mapping
+Separate distribution novelty from actual prediction failure.
+
+**Output:** `ood-failure-detection-map.csv`
+
+### WP5 — Selective Prediction Mapping
+Map rejection granularity, risk–coverage evaluation and direct surgical/medical precedents.
+
+**Output:** `selective-prediction-map.csv`
+
+### WP6 — Conformal / Risk-Control Mapping
+Map conformal variants, structured outputs, assumptions and distribution-shift limitations.
+
+**Output:** `conformal-prediction-map.csv`
+
+### WP7 — Task / Metrics / Assumptions
+Define task-specific reliability metrics and an explicit assumption ledger.
+
+**Outputs:**
+- `task-reliability-crosswalk.csv`
+- `calibration-metrics-guide.md`
+- `assumptions-and-failure-modes.md`
+- `quantitative-evidence.csv`
+
+### WP8 — Working Protocol / Track B Stress-Test
+Synthesize a non-final reliability protocol and answer every P0.5 RQ.
+
+**Outputs:**
+- `candidate-reliability-protocol.md`
+- `reliable-inference-landscape.md`
+- `rq-answer-matrix.md`
+- `open-questions.md`
+
+---
+
+## 6. Required Artifacts
+
+### A1 — Search Protocol
+`literature/uncertainty-reliability/search-protocol.md`
+
+### A2 — Screening Log
+`literature/uncertainty-reliability/source-screening-log.csv`
+
+### A3 — Source Index / Audit
+- `literature/uncertainty-reliability/source-index.md`
+- `literature/uncertainty-reliability/source-audit.md`
+
+### A4 — Reliable-Inference Literature Map
+`literature/uncertainty-reliability/reliable-inference-literature-map.csv`
+
+### A5 — Narrative Landscape
+`literature/uncertainty-reliability/reliable-inference-landscape.md`
+
+### A6 — Reliability Taxonomy
+`literature/uncertainty-reliability/reliability-taxonomy.md`
+
+### A7 — Calibration / Metrics Guide
+`literature/uncertainty-reliability/calibration-metrics-guide.md`
+
+### A8 — UQ Method Map
+`literature/uncertainty-reliability/uncertainty-method-map.csv`
+
+### A9 — OOD / Failure Map
+`literature/uncertainty-reliability/ood-failure-detection-map.csv`
+
+### A10 — Selective Prediction Map
+`literature/uncertainty-reliability/selective-prediction-map.csv`
+
+### A11 — Conformal Prediction Map
+`literature/uncertainty-reliability/conformal-prediction-map.csv`
+
+### A12 — Task Reliability Crosswalk
+`literature/uncertainty-reliability/task-reliability-crosswalk.csv`
+
+### A13 — Assumptions and Failure Modes
+`literature/uncertainty-reliability/assumptions-and-failure-modes.md`
+
+### A14 — Quantitative Evidence
+`literature/uncertainty-reliability/quantitative-evidence.csv`
+
+### A15 — Working Reliability Protocol
+`literature/uncertainty-reliability/candidate-reliability-protocol.md`
+
+### A16 — RQ Answer Matrix
+`literature/uncertainty-reliability/rq-answer-matrix.md`
+
+### A17 — Open Questions
+`literature/uncertainty-reliability/open-questions.md`
+
+### A18 — References
+`literature/uncertainty-reliability/references.bib`
+
+Relevant non-duplicate references are also merged into:
+`literature/references.bib`
+
+### A19 — Programme Updates
+- `literature/literature-map.csv`
+- `TASK.md`
+- `RESEARCH_LOG.md`
+- `MEMORY.md`
+- `README.md`
+- `phase-task-files/phase0.md`
+- `task-completion-report/P0.5_COMPLETION_REPORT.md`
+
+---
+
+## 7. Quality Requirements
+
+### Conceptual fidelity
+Do not collapse:
+- confidence;
+- uncertainty;
+- OOD;
+- failure;
+- abstention;
+- conformal coverage
+
+into one word.
+
+### Calibration fidelity
+ECE alone is insufficient. Probability quality should include proper scoring rules and class/shift diagnostics.
+
+### Failure specificity
+If a monitor claims safety relevance, test whether it predicts **actual model failure**, not merely image corruption/OOD.
+
+### Selective-policy fidelity
+Thresholds must be chosen on training/calibration data, never the final shifted test set.
+
+### Conformal-assumption fidelity
+Every conformal result must state:
+- calibration population;
+- exchangeability/shift assumption;
+- nominal alpha;
+- coverage unit;
+- actual coverage;
+- efficiency/set size;
+- class/group/shift diagnostics where relevant.
+
+### Small-sample fidelity
+Procedure-level calibration-set size and repeated-split variability must be reported.
+
+### Task fidelity
+Phase-label reliability and segmentation-mask reliability require different abstention/coverage units.
+
+### Clinical interpretation
+AI abstention means the AI suppresses/defers unreliable assistance while the surgeon remains in control.
+
+### No novelty overreach
+Direct surgical evidence already exists for:
+- segmentation UQ;
+- calibrated phase confidence;
+- open-set phase recognition;
+- selective surgical VQA;
+- conformal instrument forecasting;
+- conformal/temporal surgical segmentation failure monitoring.
+
+---
+
+## 8. P0.5 Exit Criteria
+
+P0.5 is complete when:
+
+- [x] calibration/UQ/OOD/failure/selective/conformal concepts are clearly separated;
+- [x] foundational and medical-imaging reliability methods are mapped;
+- [x] direct surgical reliability evidence is mapped;
+- [x] calibration under distribution shift is documented;
+- [x] OOD detection is distinguished from prediction-failure monitoring;
+- [x] selective prediction and abstention granularities are mapped;
+- [x] conformal assumptions and shift-aware variants are documented;
+- [x] task-specific phase/segmentation reliability metrics are defined;
+- [x] small calibration-set and class-conditional coverage limitations are documented;
+- [x] direct surgical conformal precedents are documented;
+- [x] selected quantitative evidence is extracted;
+- [x] all P0.5 RQs have evidence-linked answers;
+- [x] a non-final candidate reliability protocol is produced;
+- [x] Track B has been stress-tested without a novelty claim;
+- [x] P0.6/P0.7 open questions are recorded;
+- [x] global literature/reference records are updated;
+- [x] programme status files are updated;
+- [x] `task-completion-report/P0.5_COMPLETION_REPORT.md` is produced.
+
+---
+
+## 9. P0.5 Completion Milestone
+
+P0.5 completed on **2026-09-25** after final reliability-method and assumption audit.
+
+Suggested repository milestone after commit/review:
+
+**`v0.0.5 — Reliable-Inference Evidence Map`**
+
+The next active task is:
+
+**P0.6 — Telesurgery / Network Literature Reconnaissance**
+
+P0.6 must establish the physical/network/codec/decoder mechanisms connecting telesurgical communication conditions to the received video stream before any “network-induced shift” experiment is finalized.
 
 ## P0.6 — Telesurgery / Network Literature Reconnaissance
 
@@ -1422,7 +1817,7 @@ Phase 0 is complete when:
 - [x] surgical-CV landscape is mapped;
 - [x] candidate datasets are mapped and feasibility-audited;
 - [x] distribution-shift literature is mapped;
-- [ ] reliable-inference literature is mapped;
+- [x] reliable-inference literature is mapped;
 - [ ] telesurgery/network literature is mapped;
 - [ ] the intersection evidence matrix is complete;
 - [ ] Track A–C novelty has been stress-tested;

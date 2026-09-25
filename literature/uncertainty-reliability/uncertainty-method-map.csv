@@ -1,0 +1,11 @@
+id,method,family,task_fit,inference_passes,compute_burden,extra_data_training,best_use,main_caution,source_ids
+U01,Maximum softmax probability / entropy,Deterministic post-hoc,Classification/phase,1,Very low,No,Baseline confidence/error/OOD ranking,Can be confidently wrong under shift,RI18;RI34
+U02,Temperature scaling,Post-hoc calibration,Classification/phase,1,Very low,Calibration set,Probability calibration baseline,Does not fix ranking; one ID temperature may fail under shift,RI01;RI02;RI13
+U03,MC dropout,Sampling-based approximate Bayesian,Classification/segmentation,Many stochastic passes,Medium,No special retraining if dropout present,Epistemic/predictive uncertainty,Runtime cost; approximation/calibration task dependent,RI04;RI06
+U04,Deep ensembles,Model-marginalizing,Classification/segmentation,N models,High,Independent training seeds/models,Strong predictive UQ baseline under shift,Training/storage/inference cost,RI03;RI02;RI06
+U05,Aleatoric + epistemic Bayesian model,Probabilistic training,Segmentation/regression,Multiple/parameterized,Medium–High,Model modification,Separate data/model uncertainty signals,Decomposition may not be identifiable in practice,RI05
+U06,Evidential learning / FGRM,Single-pass evidential,Surgical segmentation,1,Low at inference,Special training/fine-tuning,Direct surgical calibrated uncertainty,Method-specific; evidence under all P0.4 shifts not established,RI12
+U07,Diffusion-derived confidence,Generative uncertainty,Online surgical phase,Multiple diffusion steps/model,High,Special model,Fine-grained frame uncertainty,Preprint; heavier than simple post-hoc baselines,RI16
+U08,Scene-graph uncertainty decomposition,Structured/multimodal,Surgical VQA,1 pipeline,Medium,Special architecture,Object/relation/scene uncertainty + selective answering,VQA-specific pipeline,RI15
+U09,Soft Dice Confidence,Post-hoc task-aligned confidence,Semantic segmentation,1 + posterior processing,Low,Marginal posterior estimates,Ranks images by expected Dice for selective segmentation,Image-level; depends on probability estimates,RI23
+U10,TCSR-Monitor,Post-hoc learned failure monitor,Surgical segmentation,1 + temporal/quality features,Low–Medium,Monitor training/calibration,Detects confident segmentation failures using complementary observable cues,Recent; transfer and false-alarm limitations,RI34

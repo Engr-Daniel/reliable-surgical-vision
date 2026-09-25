@@ -1,0 +1,8 @@
+id,method_or_benchmark,question_answered,task,metrics,strength,caution,source_ids
+O01,Maximum softmax / entropy,Error + OOD baseline,General classification; phase,AUROC/AUPR/FPR95; error-detection AUROC,Simple common baseline,OOD and wrongness are distinct; confident failures remain,RI18
+O02,Energy score,OOD detection,Classification,AUROC/AUPR/FPR95,Stronger general post-hoc baseline,Must be verified in medical/surgical domains,RI19
+O03,OpenMIBOOD post-hoc benchmark,Medical OOD detection,PhaKIR endoscopy + histology/MRI,AUROC/FPR95/AUPR,Direct benchmark of cs-ID/near/far OOD; 24 methods,Natural-image method rankings do not reliably transfer,RI17
+O04,Open-set phase recognition / GEAR,Open-set class recognition,Surgical phase,Open-set/OOD metrics + classification,Direct surgical unknown-class evidence,Unknown classes differ from covariate shift of known phases,RI14
+O05,Spectral feature OOD,Medical segmentation OOD,Segmentation,OOD discrimination,Feature-map spectral signatures identify dataset/modality novelty,Novelty of input does not equal failed mask,RI10
+O06,Bayesian failure detection,Prediction error detection,Medical classification,Failure AUROC / uncertainty,Explicitly models likely mistakes,Task-specific and non-surgical,RI11
+O07,TCSR-Monitor,Failure detection under shift,Surgical instrument segmentation,AUROC/AUPRC + severity miss/false alarm,Targets failed mask rather than just degraded image; circularity control,Requires a task failure threshold; recent evidence,RI34

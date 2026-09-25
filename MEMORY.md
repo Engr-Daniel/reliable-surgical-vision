@@ -73,6 +73,18 @@ The programme is in **Phase 0: Research Foundation**. No paper title, novelty cl
 - The working P0.4 shift set retains natural centre/device/procedure shifts, core visual smoke/blood/low-light, blur/color/compression/resolution, and temporal/compound candidates whose network parameters remain blocked until P0.6.
 - Final Track A/C novelty remains gated by P0.6/P0.7.
 
+- **P0.5 Reliable-Inference Literature Reconnaissance completed (2026-09-25).**
+- Calibration, uncertainty estimation, OOD detection, prediction-failure monitoring, selective prediction and conformal coverage are treated as distinct concepts throughout the programme.
+- In-distribution calibration must not be assumed to survive distribution shift.
+- Direct surgical reliability precedents now include FGRM surgical segmentation UQ, calibrated phase confidence, open-set surgical phase recognition, selective surgical VQA, conformal surgical instrument-trajectory forecasting, and recent conformal/temporal surgical segmentation failure monitoring.
+- OpenMIBOOD/PhaKIR establishes direct surgical-relevant OOD benchmarking, including smoke covariate shift.
+- TCSR-Monitor (2026) creates strong novelty overlap for generic surgical segmentation failure monitoring under acquisition degradation using confidence + temporal/image-quality cues + conformal calibration.
+- AI abstention means withholding/defering AI assistance while the surgeon/standard clinical workflow remains in control.
+- Vanilla split conformal prediction gives marginal finite-sample coverage under exchangeability; it does not guarantee per-phase, per-centre, per-severity or per-case coverage.
+- Class-conditional/Mondrian, importance-weighted and adaptive conformal methods are established but require explicit assumptions/data-access settings.
+- P0.5 working baselines favor transparent reliability ladders: max probability/entropy, temperature scaling, ensemble/MC-dropout, explicit failure detection, risk–coverage/AURC, and task-appropriate conformal/risk control.
+- Final Track B method and novelty remain gated by P0.6/P0.7.
+
 ## Update rule
 
 Only add information here when it is expected to remain useful across many future research sessions. Put current actions in `TASK.md` and dated observations in `RESEARCH_LOG.md`.

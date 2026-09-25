@@ -1,0 +1,9 @@
+id,method,abstention_granularity,task,evaluation,strength,caution,source_ids
+S01,Confidence thresholding,Post-hoc frame/case rejection,Classification/phase,coverage; selective risk; AURC,Transparent/simple; no retraining,Threshold must be chosen without test leakage; confidence can fail under shift,RI20;RI13
+S02,SelectiveNet,Integrated reject option,Classification/regression,risk–coverage,Jointly optimizes coverage and prediction,Requires retraining; not task-structured segmentation,RI21
+S03,Post-hoc selective semantic segmentation under shift,Image-level rejection,Medical segmentation,Dice-based risk–coverage,Direct distribution-shift selective segmentation evidence,Medical not surgical; workshop-stage precedent,RI22
+S04,Soft Dice Confidence,Image-level segmentation abstention,Medical segmentation,selective Dice; risk–coverage/AURC,Task-aligned confidence estimator; OOD tests,Whole-image rejection may be too coarse intraoperatively,RI23
+S05,Learning to Abstain,Pixel-level rejection,Medical segmentation,Dice vs pixel coverage,Explicit selective segmentation training,Pixel abstention needs a clear visual/human interface,RI24
+S06,SG-UD selective answering,Answer-level abstention,Surgical VQA,risk–coverage AUC; calibration metrics,Direct surgical calibrated selective output,Different task/output structure,RI15
+S07,Cost-aware conformal triage,Case-level deferral,Clinical classification,error at coverage; expected cost,"Combines calibration, CP and explicit human-review cost under temporal shift","Clinical tabular, not surgical imaging",RI25
+S08,TCSR-Monitor alarm,Failure-monitoring/defer trigger,Surgical segmentation,AUROC/AUPRC; miss and false-alarm rates,Directly addresses confident errors and severity-aware alarms,Alarm is not equivalent to conformal prediction set; false alarms substantial,RI34
