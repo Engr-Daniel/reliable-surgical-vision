@@ -1,8 +1,8 @@
-# PHASE0_TASK.md
+# Phase 0 — Research Foundation
 
 ## Current Phase
 
-**Phase 0 — Research Foundation**
+
 
 ## Active Task
 
