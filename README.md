@@ -26,10 +26,11 @@ These are research tracks, not predetermined publications. Tracks may be refined
 - P0.2 Surgical computer-vision landscape — **complete** (`v0.0.2`)
 - P0.3 Dataset reconnaissance — **complete** (`v0.0.3`)
 - P0.4 Distribution-shift literature reconnaissance — **complete** (`v0.0.4`)
-- P0.5 Reliable-inference literature reconnaissance — **complete**
-- P0.6 Telesurgery / network literature reconnaissance — **next**
+- P0.5 Reliable-inference literature reconnaissance — **complete** (`v0.0.5`)
+- P0.6 Telesurgery / network literature reconnaissance — **complete**
+- P0.7 Intersection Analysis & Novelty Stress-Test — **next**
 
-P0.5 narrows Track B substantially: surgical uncertainty, calibration, OOD/open-set recognition, abstention, conformal trajectory forecasting, and recent conformal failure monitoring already have direct precedents. The remaining question is reliability **under the programme's specific natural, visual and mechanistically grounded network/video shifts**, not generic uncertainty estimation.
+P0.6 establishes the explicit network→transport/recovery→codec/decoder→received-video pathway and narrows Track C to the incremental value of network/system telemetry for downstream surgical-CV reliability. No final novelty or Phase 1 experiment has been fixed.
 
 ## Research principles
 

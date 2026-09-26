@@ -85,6 +85,17 @@ The programme is in **Phase 0: Research Foundation**. No paper title, novelty cl
 - P0.5 working baselines favor transparent reliability ladders: max probability/entropy, temperature scaling, ensemble/MC-dropout, explicit failure detection, risk–coverage/AURC, and task-appropriate conformal/risk control.
 - Final Track B method and novelty remain gated by P0.6/P0.7.
 
+- **P0.6 Telesurgery / Network Literature Reconnaissance completed (2026-09-26).**
+- No universal safe network latency is assumed; one-way/RTT/network/encode-decode/display/total latency definitions remain separate.
+- Bandwidth capacity and encoded video bitrate are different variables; required bandwidth is platform/codec/traffic specific.
+- Raw packet loss is not equivalent to decoded frame loss, and network jitter is not equivalent to AI-input timing jitter after recovery/buffering.
+- Network→video effects are mediated by packetization, FEC/RTX, redundancy, congestion control, encoder adaptation, buffers and decoder concealment.
+- Combined latency/bandwidth/jitter/loss effects are already directly studied in telesurgery (Heemeyer 2026), so broad compound-network novelty is unsafe.
+- Packet-loss-burst corruption is already present in surgical/endoscopy AI robustness (Endo-C6 2026); broad packet-loss-AI novelty is unsafe.
+- Track C is narrowed to whether network/system telemetry adds incremental reliability/failure-prediction or selective-inference value beyond received-video evidence.
+- The preferred future design distinguishes decoded-video abstraction from mechanistic network+codec experiments.
+- Final task/dataset/shift/reliability/network choice and all novelty claims remain gated by P0.7.
+
 ## Update rule
 
 Only add information here when it is expected to remain useful across many future research sessions. Put current actions in `TASK.md` and dated observations in `RESEARCH_LOG.md`.

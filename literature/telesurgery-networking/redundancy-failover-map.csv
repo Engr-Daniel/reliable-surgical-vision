@@ -1,0 +1,7 @@
+mechanism_id,mechanism,context,implementation,evidence,limitation,source_ids
+R01,Dual independent links + duplicate packets,main + backup commercial fiber,Packet duplicated; receiver/decoder uses available/fast arrival,Random line shutdown/restoration tested; 175 switches in 16 pig surgeries,Can mask path failure; path delay asymmetry still matters,NW13
+R02,Multi-carrier 5G backup,China Telecom primary + China Mobile/Unicom backup,Hot-standby / planned switching,No switching needed in 21 stable clinical cases; drills performed,Availability evidence stronger than failover-under-surgery evidence,NW16
+R03,Automatic VPN/tunnel recovery,5G SA/NSA validation,Dynamic rerouting/reconnection,5–11 s VPN reconnection in simulated failures,Seconds can be clinically important despite no reboot,NW11
+R04,QoS / traffic prioritization,5G Wide / SA,Prioritize surgical traffic over competing users,Without QoS packet loss/video degradation at lower cross-traffic; with QoS stable at much higher load in reported validation,Public/mobile links require resource assurance,NW11;NW12
+R05,Bedside local takeover,multiple clinical programmes,Human fallback,On-site robotic surgeon/team can assume local control/convert,Not a network recovery method but a safety layer,NW16;NW21
+R06,Robot standby on signal interruption,Toumai telecholecystectomy,Safe state,~3-s interruption reported to trigger standby in later review,Exact state machine/threshold remains platform-specific,NW22

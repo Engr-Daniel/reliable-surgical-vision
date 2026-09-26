@@ -19,8 +19,8 @@ The phase is complete only when the provisional research tracks have been stress
 | P0.3 | Dataset Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.4 | Distribution-Shift Literature Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.5 | Reliable-Inference Literature Reconnaissance | **COMPLETE — 2026-09-25** |
-| P0.6 | Telesurgery / Network Literature Reconnaissance | **READY TO START** |
-| P0.7 | Intersection Analysis & Novelty Stress-Test | Not started |
+| P0.6 | Telesurgery / Network Literature Reconnaissance | **COMPLETE — 2026-09-26** |
+| P0.7 | Intersection Analysis & Novelty Stress-Test | **READY TO START** |
 
 ---
 
@@ -1793,7 +1793,128 @@ P0.6 must establish the physical/network/codec/decoder mechanisms connecting tel
 
 ## P0.6 — Telesurgery / Network Literature Reconnaissance
 
-Map communication and video-transport factors relevant to remote surgical systems, including latency, jitter, packet loss, bandwidth, compression, temporal/frame degradation, redundancy, failover, and links to downstream vision.
+## Status
+`COMPLETE — 2026-09-26`
+
+## 1. Purpose
+Establish the evidence-backed technical chain connecting telesurgical network conditions to the video/data actually received by a downstream surgical-AI system.
+
+> **How do latency, jitter, packet loss, capacity, transport recovery, codec adaptation, buffering and failover interact to determine what a remote surgeon—and a downstream CV model—actually receives?**
+
+P0.6 prevents unsupported shortcuts such as equating packet loss with frame loss.
+
+## 2. Scope Boundaries
+### In scope
+- network architecture and traffic classes;
+- one-way/RTT/processing/display/total latency;
+- jitter, packet loss, frame loss, capacity, throughput and video bitrate;
+- compression/adaptive media behavior;
+- RTP packetization, retransmission, FEC, jitter buffering and decoder concealment;
+- QoS, redundancy, failover and safe-state mechanisms;
+- fiber/OTN, 5G, best-effort/public, LEO/GEO satellite and hybrid links;
+- clinical/preclinical network evidence;
+- direct/indirect evidence linking network/video degradation to surgical AI.
+
+### Out of scope
+- final clinical safety threshold;
+- proprietary Toumai codec/control internals without evidence;
+- final task/dataset/shift/reliability selection → **P0.7**;
+- final novelty claim → **P0.7**;
+- cybersecurity threat modelling except where it materially changes transport latency/availability.
+
+## 3. Research Questions
+### RQ1 — Network Architecture
+What traffic classes, paths and access technologies make up contemporary telesurgical communication systems?
+
+### RQ2 — QoS Metrics
+How should latency, RTT, processing/display delay, jitter, packet loss, frame loss, bandwidth, throughput and bitrate be distinguished?
+
+### RQ3 — Threshold Evidence
+What quantitative operating ranges are reported, and can any be generalized across systems?
+
+### RQ4 — Network-to-Video Mechanism
+Through what transport, codec, recovery, buffering and decoder mechanisms can a network impairment alter received video?
+
+### RQ5 — Redundancy and Failover
+What QoS, multi-link, packet-duplication, switching, recovery and human-fallback strategies are established?
+
+### RQ6 — Access Technologies
+What evidence exists for dedicated fiber/OTN, 5G, best-effort/public networks, LEO/GEO satellite and hybrid architectures?
+
+### RQ7 — Downstream Surgical AI
+What directly links network/video degradation to downstream surgical-CV performance/reliability?
+
+### RQ8 — Working Experimental Abstraction
+Which network/system variables and experimental layers can be carried into P0.7 without overstating network realism?
+
+## 4. Evidence Strategy
+Priority: human randomized/clinical evidence → current guidelines/consensus → clinical case series → animal/system validation → IETF standards → generic codec evidence → direct surgical-AI impairment evidence.
+
+## 5. Work Packages
+- **WP1:** network/guideline literature discovery.
+- **WP2:** QoS metric/latency taxonomy.
+- **WP3:** clinical/system metric extraction.
+- **WP4:** transport/codec/recovery mechanism reconstruction.
+- **WP5:** redundancy/failover/access-technology mapping.
+- **WP6:** downstream surgical-AI evidence audit.
+- **WP7:** candidate impairment protocol and Track C boundary.
+- **WP8:** RQ closure and P0.7 handoff.
+
+## 6. Required Artifacts
+- `literature/telesurgery-networking/search-protocol.md`
+- `source-screening-log.csv`
+- `source-index.md`
+- `source-audit.md`
+- `telesurgery-network-literature-map.csv`
+- `telesurgery-network-landscape.md`
+- `network-architecture.md`
+- `qos-metric-taxonomy.csv`
+- `latency-decomposition.md`
+- `network-to-video-mechanism.md`
+- `codec-transport-recovery-map.csv`
+- `clinical-network-metrics.csv`
+- `network-threshold-evidence.csv`
+- `redundancy-failover-map.csv`
+- `access-technology-map.csv`
+- `downstream-vision-evidence.md`
+- `candidate-network-impairment-protocol.md`
+- `rq-answer-matrix.md`
+- `open-questions.md`
+- `references.bib`
+- `task-completion-report/P0.6_COMPLETION_REPORT.md`
+
+## 7. Quality Requirements
+- keep latency definitions explicit;
+- separate network packet loss from decoded frame loss;
+- separate bandwidth/capacity from video bitrate;
+- identify recovery/adaptation layers;
+- label generic codec standards as mechanism evidence, not surgical performance evidence;
+- treat guideline thresholds and system observations as context-specific;
+- preserve negative evidence and unknown proprietary behavior;
+- do not make Track C novelty claims before P0.7.
+
+## 8. Exit Criteria
+- [x] architecture/traffic classes mapped;
+- [x] QoS metric taxonomy complete;
+- [x] latency decomposition complete;
+- [x] quantitative clinical/system evidence extracted;
+- [x] threshold evidence compared without false universalization;
+- [x] network→transport→codec→decoder mechanism mapped;
+- [x] FEC/RTX/buffer/concealment/redundancy mapped;
+- [x] access technologies compared;
+- [x] downstream surgical-AI evidence audited;
+- [x] working impairment protocol produced;
+- [x] all P0.6 RQs answered;
+- [x] P0.7 questions recorded;
+- [x] programme status/evidence records updated;
+- [x] completion report produced.
+
+## 9. P0.6 Completion Milestone
+P0.6 completed on **2026-09-26**.
+
+Suggested milestone: **`v0.0.6 — Telesurgery / Network Evidence Map`**
+
+Next active task: **P0.7 — Intersection Analysis & Novelty Stress-Test**.
 
 ## P0.7 — Intersection Analysis & Novelty Stress-Test
 
@@ -1818,7 +1939,7 @@ Phase 0 is complete when:
 - [x] candidate datasets are mapped and feasibility-audited;
 - [x] distribution-shift literature is mapped;
 - [x] reliable-inference literature is mapped;
-- [ ] telesurgery/network literature is mapped;
+- [x] telesurgery/network literature is mapped;
 - [ ] the intersection evidence matrix is complete;
 - [ ] Track A–C novelty has been stress-tested;
 - [ ] candidate research questions have been revised from evidence;

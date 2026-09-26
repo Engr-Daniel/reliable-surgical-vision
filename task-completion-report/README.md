@@ -23,6 +23,7 @@ Current reports:
 - `P0.2_COMPLETION_REPORT.md`
 - `P0.3_COMPLETION_REPORT.md`
 - `P0.4_COMPLETION_REPORT.md`
+- `P0.5_COMPLETION_REPORT.md`
+- `P0.6_COMPLETION_REPORT.md`
 
 Detailed evidence remains in the corresponding `literature/`, `datasets/`, `docs/`, and programme-level files.
-- `P0.5_COMPLETION_REPORT.md`

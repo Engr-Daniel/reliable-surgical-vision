@@ -1,0 +1,10 @@
+threshold_id,source,evidence_type,metric_definition,reported_target_or_observation,context,p0_6_interpretation,source_id
+TH01,Japan Surgical Society 2026,Guideline,network RTT + newly generated encode/decode processing,≤100 ms maximum,Telesurgical support,Normative programme guideline,NW01
+TH02,CRSA 2026,Consensus,total teleoperation latency,<300 ms optimal; ideally <200 ms,Remote robotic surgery,Consensus target,NW03
+TH03,Nankaku 2022,Experiment,defined total delay including network + codec in delayed configs,≤100 ms comparatively acceptable in tested dynamic tasks,Prototype robot/dynamic tasks,"Empirical, task/operator specific",NW07
+TH04,Kumcu 2017,Experiment,added video latency,significant deterioration at 105 ms added,Laparoscopic trainer,"Video-lag experiment, not robot control",NW08
+TH05,Takahashi 2023,Animal experiment,inserted delay,30–50 ms rated feasible; 100–150 ms lower,hinotori pig surgery,Subjective+objective system-specific,NW06
+TH06,Chinese preclinical 2024,Animal experiment,total latency,operations completed to 320 ms; workload increased,3000-km system,Authors’ system-specific upper acceptable range,NW09
+TH07,Toumai cross-regional 2026,Clinical programme protocol,RTT,target <100 ms; stated minimum safe <200 ms,3700-km Toumai deployment,"Local protocol, not manufacturer-universal",NW16
+TH08,APSTAR-6D 2025,Clinical feasibility,end-to-end,632 ms observed,Specialized high-delay control,"Demonstrates controller compensation, not ordinary safe threshold",NW20
+TH09,CRSA 2026 uptime,Consensus,network availability,99.999%,Surgical-grade network,Availability target does not define micro-outage behavior,NW03

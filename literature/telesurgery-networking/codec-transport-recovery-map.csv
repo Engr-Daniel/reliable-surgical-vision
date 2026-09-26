@@ -1,0 +1,13 @@
+mechanism_id,mechanism,layer,trigger,effect,evidence,source_ids
+TR01,RTP sequence/timestamp + RTCP reports,Measurement,loss; timing variation,Exposes packet sequence/loss and interarrival jitter; does not repair media,RFC 3550,NW26
+TR02,H.264 RTP NAL fragmentation,Packetization,packet loss,Loss of one FU can invalidate remaining fragments of the same NAL unit; downstream damage depends on frame/reference structure,RFC 6184,NW27
+TR03,HEVC bitrate / temporal-layer adaptation,Encoder adaptation,congestion/capacity,Reduce quantization quality or omit enhancement layers to reduce bitrate,RFC 7798,NW28
+TR04,NACK + RTP retransmission (RTX),Reactive recovery,packet loss,Can recover packet at cost of extra RTT/bandwidth; only useful before playout deadline,RFC 4588,NW29
+TR05,Forward error correction,Proactive recovery,packet loss,Adds redundancy to recover without waiting RTT; consumes capacity and can worsen congestion,RFC 8854,NW30
+TR06,Jitter/playout buffer,Receiver timing,jitter/late packets,Smooths moderate arrival variation but adds delay and may still discard too-late media,RFC 8836,NW31
+TR07,Congestion-controlled media rate,Rate adaptation,queueing/loss/capacity,Changes media bitrate in response to network feedback/queue state,SCReAM / RFC 8298,NW32
+TR08,Decoder spatial/temporal concealment,Decoder recovery,lost/corrupted coded data,Reconstructs damaged content from spatial/temporal context; output can differ even at same packet-loss rate,Video coding literature,NW33;NW34
+TR09,Dual-path packet duplication,Path redundancy,path interruption/loss,Send duplicate data over independent lines and use fastest/valid arrival,Telesurgery redundant-link study,NW13
+TR10,Hot-standby / multi-carrier path switching,Path redundancy,outage/congestion,Switch traffic to backup carrier/path; transition time and path-delay mismatch matter,Guidelines/clinical systems,NW01;NW11;NW16
+TR11,QoS prioritization,Network scheduling,cross traffic/congestion,Prioritize control/video traffic so competing users do not induce loss/queueing,5G validation,NW11;NW12
+TR12,Adaptive image compression,Application/encoder adaptation,reduced bandwidth,Lower image bitrate/clarity to stay within capacity and limit latency/loss,Preclinical telesurgery,NW05;NW09;NW10

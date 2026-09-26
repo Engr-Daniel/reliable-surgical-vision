@@ -143,3 +143,30 @@ P0.5 passes its exit criteria. No final reliability method or novelty claim is f
 ### Next
 P0.6 — Telesurgery / Network Literature Reconnaissance.
 
+## 2026-09-26 — P0.6 Telesurgery / Network Literature Reconnaissance completed
+
+### Scope
+Mapped network architecture, latency/jitter/loss/bandwidth, codec/transport/recovery mechanisms, redundancy/failover, access technologies and the downstream surgical-AI bridge.
+
+### Method
+Focused evidence reconnaissance using current clinical/technical guidelines, randomized and observational clinical studies, preclinical/system experiments, 2026 multidimensional network research, IETF media-transport standards, generic video-codec mechanism evidence and direct surgical-AI packet-loss corruption evidence. Final audit: 35 retained sources/resources and 12 excluded/deferred categories.
+
+### Key findings
+- No universal safe latency exists across platforms/tasks; latency definitions must remain explicit.
+- Bandwidth requirement is system/codec/traffic specific; low capacity can cause queueing/loss or trigger video adaptation.
+- Packet loss does not map one-to-one to frame loss; FEC/RTX, NAL dependencies, buffering and concealment mediate decoder output.
+- Jitter may be hidden by playout buffering at the cost of latency.
+- Redundancy/QoS can prevent a degraded path from producing visible video failure.
+- 5G behavior depends on SA/NSA/QoS/congestion; satellite links require tail-variability analysis, not mean latency alone.
+- The latest 2026 multidimensional telesurgery study directly demonstrates interactions among latency, bandwidth, jitter and packet loss, narrowing broad compound-network novelty.
+- Endo-C6 provides direct surgical/endoscopy AI evidence for packet-loss-burst corruption, so broad packet-loss-AI novelty is unsafe.
+- A mature network+codec+decoder → standard surgical-CV reliability benchmark with telemetry incremental-value analysis was not established by the retained evidence.
+
+### Decision
+P0.6 passes its exit criteria. Track C remains plausible only in a narrower form: determine whether network/system telemetry adds reliable failure-prediction or selective-inference value beyond received-video evidence.
+
+### Suggested milestone
+`v0.0.6 — Telesurgery / Network Evidence Map`
+
+### Next
+P0.7 — Intersection Analysis & Novelty Stress-Test.

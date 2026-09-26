@@ -1,0 +1,19 @@
+metric_id,metric,unit,definition,p0_6_caution
+Q01,One-way latency,ms,sender→receiver transport/processing direction,Useful only when clocks are synchronized; not interchangeable with RTT.
+Q02,Round-trip time (RTT),ms,request/packet round trip across defined endpoints,Endpoint definition matters; network RTT may exclude encode/decode/display.
+Q03,Added telesurgery delay,ms,additional delay introduced by remote architecture,May include network + encode/decode; studies define differently.
+Q04,Total teleoperation latency,ms,operator action to remote response/display depending on study,"Can include control, processing, network and/or display; must preserve definition."
+Q05,Encode/decode latency,ms,video codec processing,Can be tens of milliseconds and materially change total delay.
+Q06,Display latency,ms,decoded image to visible display / measured visual path,Distinct from network RTT.
+Q07,Jitter,ms or RTP timestamp units,variation in packet/transit timing,RFC 3550 interarrival jitter is an estimator; buffers may absorb some jitter.
+Q08,Packet loss,%,network/RTP packets not delivered,Does not map one-to-one to lost frames.
+Q09,Frame loss,frames or %,decoded/display frames missing,Downstream result after transport/codec/recovery; can be much less than packet loss.
+Q10,Available bandwidth/capacity,Mbps,path capacity allocated/available,System requirement depends on codec and other flows.
+Q11,Encoded video bitrate,Mbps,encoder output target/measured rate,Can be adapted independently of physical link capacity.
+Q12,Throughput,Mbps,successfully delivered data rate,May differ from configured bandwidth/bitrate.
+Q13,Queue/buffer delay,ms,sender/network/receiver buffering,Can trade smoothness/loss against latency.
+Q14,Uptime/availability,%,fraction of service time operational,Does not describe tail delay or micro-outages.
+Q15,Interruption/failover time,ms or s,time until alternate path/service recovers,Can dominate safety despite good average QoS.
+Q16,Video resolution,pixels,decoded spatial resolution,May change through adaptation or configuration.
+Q17,Video frame rate,fps,decoded/presented temporal sampling,May be adapted or reduced; relevant to temporal AI.
+Q18,Compression/QP/quality state,codec-specific,encoder compression level,Network congestion can indirectly change this via adaptation.

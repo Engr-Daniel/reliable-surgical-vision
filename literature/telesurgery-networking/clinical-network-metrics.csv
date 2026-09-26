@@ -1,0 +1,18 @@
+source_id,study,evidence_level,distance_context,network,latency,jitter,loss_frame_loss,bandwidth_capacity,video_bitrate,video_or_failure_observation,interpretation
+NW05,hinotori bandwidth limitation,experimental,Japan inter-hospital,fiber/SINET,30–30.4 ms RTT,0–0.35 ms,3–7% at 145 Mbps,145–500 Mbps tested,120/40/20 Mbps,image degradation at 145 Mbps,System-specific minimum ≥150 Mbps conclusion
+NW06,hinotori delay/compression pig study,animal,local emulation,emulator+encoder,30/50/100/150 ms inserted,,,,120/60/30/20/10 Mbps,,Delay and codec effects manipulated separately
+NW07,Riverfield dynamic task,simulator,local emulation,network simulator,0–300 ms total; 70 ms condition≈20 RTT+50 codec,,0% by design,,,,Fixed delay; no jitter/loss
+NW09,3000-km preclinical,animal,Beijing–Sanya,dedicated/OTN,170–320 ms total,measured,frame loss measured,<1 to 15–20 Mbps,adaptive,image clarity reduced as bandwidth fell,Latency workload effect > bandwidth/clarity effect
+NW14,EDGE MP1000 phase I,human,450–2200 km,5G + dedicated,38.38±13.25 ms RTT,0.39±0.29 ms,0 frame loss,,12.77±0.57 Mbps,20.02±0.06 ms encode/decode; 21.35±3.42 display,18 patients
+NW15,multicentre RCT,human,1000–2800 km,dedicated network,20.1–47.5 ms mean RTT,,0–1.5 frames per telesurgery,60 Mbps each endpoint reported in study,,display latency monitored,32 telesurgery procedures completed
+NW16,Toumai 21-case cross-regional,human,~3700 km,redundant dedicated 5G,37.7±5.6 ms RTT,2.2±0.5 ms,0%,preset >100 Mbps,,no interruptions,Local thresholds: RTT<100; minimum safe<200; loss<1; minimum safe<2; jitter<10
+NW17,bidirectional transatlantic,human,">12,000 km",international network,~196 ms,1 ms,0.19%,,,100% uptime,System-specific clinical demonstration
+NW18,Starlink swine lung,animal,~1000 km,LEO Starlink,~130 ms RTT,,,variable,,minor image/operation disturbance about every 5 min,Satellite temporal effects suspected
+NW19,Starlink real-world telementoring,human telementoring,Japan links,LEO Starlink,34.4 ms mean day1; up to 765 ms next day,,,2.51 Mbps mean day1; 16.7% samples <2 Mbps day2,,intermittent freezing/quality deterioration in unstable sessions,Shows time variability of same setup
+NW20,APSTAR-6D liver surgery,human,Lhasa–Beijing,GEO satellite,632 ms average end-to-end,,,4.2 Mbps up / 3 Mbps down,,,Specialized high-delay control; n=2
+NW21,Toumai Shanghai–Kuwait,human,~7000 km,fiber primary + backups,181.4 ms average RTT,,,,,,Single case
+NW22,Toumai telecholecystectomy,human,70 km,5G,43.4 ms network delay,4 ms,<1%,98.3 up / 213 down,,~3-s interruption→standby reported in later review,20 cases
+NW23,FUTURE-04 gastrectomy,human,15 km,5G,31.6±3.8 ms network RTT,,<0.1%,,,226.2±4.4 ms total delay,Network RTT ≠ total delay
+NW24,Toumai hybrid PN/RP,human,~25 km,fiber + 5G,12 ms median fiber; 46 ms median 5G,,,,,,13 cases; no major disruption
+NW25,Toumai 5G urology,human,52 km,5G,20.7 ms average minimum; 129.3 ms average maximum (not RTT),,0%,216.5 down / 86.6 up,,,14 cases; latency terminology differs
+NW12,hinotori 5G SA system test,system,simulated 800-km route,4G/5G NSA/SA,5G SA sub-120 ms,,,stress cross-traffic 0–>400 Mbps,,video freezes/degradation under weaker configs/congestion,"Controlled, not clinical"
