@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="726" viewBox="0 0 1400 726" role="img" aria-label="Occupancy of the 26 research intersections">
+<title>Occupancy of the 26 research intersections</title>
+<style>
+ .t{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#0b0b0b} .s{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#52514e} .m{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#898781}
+ .title{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0b0b0b}
+ .sub{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;fill:#52514e}
+ .h{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;fill:#0b0b0b}
+ .b{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;fill:#0b0b0b} .bs{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#52514e}
+ .w{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;fill:#ffffff}
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#52514e"/></marker><marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<rect width="1400" height="726" fill="#fcfcfb"/>
+<text x="40" y="48" class="title" text-anchor="start" >Evidence landscape: 26 intersections, rated against 165 + 14 sources</text>
+<text x="40" y="76" class="sub" text-anchor="start" >Phase 0 (P0.7) occupancy ratings, updated by the Phase 1 gap-validation search (P1.1). &#x27;Not found&#x27; means not found in the retained evidence; it is not a novelty claim.</text>
+<rect x="40" y="98" width="22" height="22" rx="5" fill="#1c5cab" stroke="#1c5cab" stroke-width="2"/>
+<text x="70" y="115" class="b" text-anchor="start" >Saturated</text>
+<rect x="190" y="98" width="22" height="22" rx="5" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="220" y="115" class="b" text-anchor="start" >Occupied</text>
+<rect x="340" y="98" width="22" height="22" rx="5" fill="#86b6ef" stroke="#86b6ef" stroke-width="2"/>
+<text x="370" y="115" class="b" text-anchor="start" >Partial</text>
+<rect x="490" y="98" width="22" height="22" rx="5" fill="#ffffff" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="520" y="115" class="b" text-anchor="start" >Not found</text>
+<text x="650" y="115" class="b" text-anchor="start" >★ primary question (RQ1)</text>
+<text x="40" y="164" class="h" text-anchor="start" >Shift &amp; robustness</text>
+<rect x="40" y="172" width="318" height="62" rx="8" fill="#1c5cab" stroke="#1c5cab" stroke-width="2"/>
+<text x="54" y="198" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Segmentation × natural shift</text>
+<text x="54" y="219" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X01 · Saturated</text>
+<rect x="40" y="244" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="54" y="270" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Phase × natural shift</text>
+<text x="54" y="291" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X02 · Occupied</text>
+<rect x="40" y="316" width="318" height="62" rx="8" fill="#1c5cab" stroke="#1c5cab" stroke-width="2"/>
+<text x="54" y="342" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Segmentation × smoke/blood/light</text>
+<text x="54" y="363" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X03 · Saturated</text>
+<rect x="40" y="388" width="318" height="62" rx="8" fill="#86b6ef" stroke="#86b6ef" stroke-width="2"/>
+<text x="54" y="414" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Phase × visual corruption</text>
+<text x="54" y="435" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X04 · Partial</text>
+<rect x="40" y="460" width="318" height="62" rx="8" fill="#86b6ef" stroke="#86b6ef" stroke-width="2"/>
+<text x="54" y="486" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Compound visual corruption</text>
+<text x="54" y="507" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X05 · Partial</text>
+<rect x="40" y="532" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="54" y="558" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Phase temporal stability</text>
+<text x="54" y="579" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X06 · Occupied</text>
+<rect x="40" y="604" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="54" y="630" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Packet-loss bursts → surgical VLMs</text>
+<text x="54" y="651" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X07 · Occupied</text>
+<text x="374" y="164" class="h" text-anchor="start" >Reliability methods</text>
+<rect x="374" y="172" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="388" y="198" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Surgical calibration / UQ</text>
+<text x="388" y="219" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X12 · Occupied</text>
+<rect x="374" y="244" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="388" y="270" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Surgical OOD / open-set</text>
+<text x="388" y="291" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X13 · Occupied</text>
+<rect x="374" y="316" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="388" y="342" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Seg failure monitor + conformal</text>
+<text x="388" y="363" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X14 · Occupied</text>
+<rect x="374" y="388" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="388" y="414" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Medical selective prediction</text>
+<text x="388" y="435" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X15 · Occupied</text>
+<rect x="374" y="460" width="318" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="388" y="486" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Phase conformal sets under shift</text>
+<text x="388" y="507" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X16 · Not found · residual risk medium</text>
+<rect x="374" y="532" width="318" height="62" rx="8" fill="#86b6ef" stroke="#86b6ef" stroke-width="2"/>
+<text x="388" y="558" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Phase risk–coverage under shift</text>
+<text x="388" y="579" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X17 · Partial</text>
+<rect x="374" y="604" width="318" height="62" rx="8" fill="#86b6ef" stroke="#86b6ef" stroke-width="2"/>
+<text x="388" y="630" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Phase calibration across centres</text>
+<text x="388" y="651" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X18 · Partial</text>
+<text x="708" y="164" class="h" text-anchor="start" >Network &amp; video</text>
+<rect x="708" y="172" width="318" height="62" rx="8" fill="#1c5cab" stroke="#1c5cab" stroke-width="2"/>
+<text x="722" y="198" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Network → human operator</text>
+<text x="722" y="219" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X09 · Saturated</text>
+<rect x="708" y="244" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="722" y="270" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Compound network → human</text>
+<text x="722" y="291" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X10 · Occupied</text>
+<rect x="708" y="316" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="722" y="342" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Network → decoded video quality</text>
+<text x="722" y="363" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X11 · Occupied</text>
+<rect x="708" y="388" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="722" y="414" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Network → DNN accuracy (generic)</text>
+<text x="722" y="435" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X20 · Occupied</text>
+<rect x="708" y="460" width="318" height="62" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="2"/>
+<text x="722" y="486" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#ffffff">Telemetry → QoS forecasting</text>
+<text x="722" y="507" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#ffffff;opacity:0.85">X21 · Occupied</text>
+<rect x="708" y="532" width="318" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="722" y="558" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Surgical CV through real codec pipeline</text>
+<text x="722" y="579" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X08 · Not found · residual risk medium</text>
+<rect x="708" y="604" width="318" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="722" y="630" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Real platform telemetry + AI</text>
+<text x="722" y="651" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X26 · Not found · blocked by data access</text>
+<text x="1042" y="164" class="h" text-anchor="start" >Where the programme sits</text>
+<rect x="1042" y="172" width="318" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1056" y="198" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Phase reliability on network video</text>
+<text x="1056" y="219" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X19 · Not found · residual risk medium</text>
+<rect x="1042" y="244" width="318" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1056" y="270" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Telemetry → AI failure (any domain)</text>
+<text x="1056" y="291" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X22 · Not found · residual risk medium</text>
+<rect x="1042" y="316" width="318" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="1056" y="342" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">★ Telemetry → surgical AI failure</text>
+<text x="1056" y="363" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X23 · Not found · residual risk medium</text>
+<rect x="1042" y="388" width="318" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1056" y="414" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Telemetry-stratified conformal</text>
+<text x="1056" y="435" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X24 · Not found · residual risk medium</text>
+<rect x="1042" y="460" width="318" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1056" y="486" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:700;fill:#0b0b0b">Seg failure on network video</text>
+<text x="1056" y="507" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#0b0b0b;opacity:0.85">X25 · Not found · residual risk medium</text>
+<text x="40" y="702" class="bs" text-anchor="start" >Source: literature/intersection-analysis/intersection-map.csv (full anchors, gaps and implications per cell). Generated by figures/make_figures.py.</text>
+</svg>

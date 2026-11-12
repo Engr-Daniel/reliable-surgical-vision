@@ -27,4 +27,6 @@ All experiments must preserve source procedure/video IDs and use procedure-level
 
 **P0.3 complete — 2026-09-25.**
 
-Final dataset selection remains deferred to P0.4–P0.7.
+Final dataset selection remained deferred to P0.4–P0.7.
+
+**After P0.7:** the integrated study uses **Cholec80** (development), **PhaKIR** (external natural-shift replication, descriptive) and optionally **AutoLaparo** (cross-procedure). Desk checks for access, licence, phase-taxonomy compatibility and overlap are Phase 1 task P1.5 (`../research/integrated-study/`).

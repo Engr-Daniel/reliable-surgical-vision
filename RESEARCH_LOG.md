@@ -203,3 +203,21 @@ P0.7 passes its exit criteria. **Phase 0 complete (M0).** Suggested tag after co
 ### Next
 Phase 1 — Gap Validation, starting with P1.1 (targeted gap-validation search).
 
+
+## 2026-11-12 — Phase 1 P1.1 Targeted gap-validation search completed
+
+### Method
+Targeted search of video analytics/edge inference, teleoperated driving, semantic communication, V2X cooperative perception, MICCAI 2026 main/satellite proceedings and telesurgical video transmission. 14 retained (GV01–GV14), 8 excluded/deferred.
+
+### Findings
+- Content-based prediction of DNN accuracy from received video is established (DAO, ACM MM 2022; machine-vision-aware quality metrics; NR models predicting detector accuracy).
+- Network → AI accuracy is established in V2X cooperative perception (CooperScene 2026) and edge recognition, always acting through pixels/features.
+- Network telemetry predicts **human-perceived** video quality (Kafetzis et al.), not AI reliability.
+- The reverse direction (AI uncertainty steering transport) is common.
+- VISTA's group released LiteSC (Sept 2026), telesurgical semantic communication on CholecSeg8k, with reconstruction metrics only and no downstream AI. Watch-list group.
+
+### Decision
+Kill criterion not triggered. X22/X23 residual risk lowered from high to **medium**. V1 baseline strengthened with a learned frame-quality → phase-error predictor. Two MICCAI 2026 titles (EX18) to read before Phase 2.
+
+### Next
+P1.2 — Pre-registration.

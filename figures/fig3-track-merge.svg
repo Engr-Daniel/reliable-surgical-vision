@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560" role="img" aria-label="Track merge decision">
+<title>Track merge decision</title>
+<style>
+ .t{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#0b0b0b} .s{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#52514e} .m{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#898781}
+ .title{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0b0b0b}
+ .sub{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;fill:#52514e}
+ .h{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;fill:#0b0b0b}
+ .b{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;fill:#0b0b0b} .bs{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#52514e}
+ .w{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;fill:#ffffff}
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#52514e"/></marker><marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<rect width="1400" height="560" fill="#fcfcfb"/>
+<text x="40" y="48" class="title" text-anchor="start" >From three provisional tracks to one integrated study</text>
+<text x="40" y="76" class="sub" text-anchor="start" >Decision of the P0.7 novelty stress-test: no track dropped, none split; one pipeline, one dataset plan, one analysis plan</text>
+<rect x="40" y="120" width="420" height="118" rx="10" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
+<text x="60" y="150" class="h" text-anchor="start" >Track C · Network-Aware Inference</text>
+<rect x="60" y="164" width="110" height="26" rx="13" fill="#eb6834" stroke="#eb6834" stroke-width="1.5"/>
+<text x="115" y="182" class="w" text-anchor="middle" >PRIMARY</text>
+<text x="190" y="180" class="bs" text-anchor="start" >Open in retained evidence:</text><text x="190" y="197" class="bs" text-anchor="start" >telemetry&#x27;s incremental value over</text><text x="190" y="214" class="bs" text-anchor="start" >a strong video-only monitor</text>
+<path d="M460,179 L568,179" stroke="#eb6834" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="570" y="120" width="360" height="118" rx="10" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
+<text x="590" y="156" class="title" text-anchor="start" >RQ1</text>
+<text x="590" y="190" class="b" text-anchor="start" >Does telemetry improve failure detection</text>
+<text x="590" y="212" class="b" text-anchor="start" >and deferral beyond the pixels?</text>
+<path d="M930,179 L1006,330" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="40" y="260" width="420" height="118" rx="10" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<text x="60" y="290" class="h" text-anchor="start" >Track B · Selective Inference</text>
+<rect x="60" y="304" width="110" height="26" rx="13" fill="#2a78d6" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="115" y="322" class="w" text-anchor="middle" >NARROWED</text>
+<text x="190" y="320" class="bs" text-anchor="start" >Closed: surgical UQ, OOD, abstention,</text><text x="190" y="337" class="bs" text-anchor="start" >conformal as general ideas.</text><text x="190" y="354" class="bs" text-anchor="start" >Survives: reliability audit</text>
+<path d="M460,319 L568,319" stroke="#2a78d6" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="570" y="260" width="360" height="118" rx="10" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<text x="590" y="296" class="title" text-anchor="start" >RQ2</text>
+<text x="590" y="330" class="b" text-anchor="start" >Do calibration and conformal coverage survive</text>
+<text x="590" y="352" class="b" text-anchor="start" >network and centre shift?</text>
+<path d="M930,319 L1006,330" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="40" y="400" width="420" height="118" rx="10" fill="#ffffff" stroke="#1baf7a" stroke-width="2"/>
+<text x="60" y="430" class="h" text-anchor="start" >Track A · Compound Shift</text>
+<rect x="60" y="444" width="110" height="26" rx="13" fill="#1baf7a" stroke="#1baf7a" stroke-width="1.5"/>
+<text x="115" y="462" class="w" text-anchor="middle" >ABSORBED</text>
+<text x="190" y="460" class="bs" text-anchor="start" >Closed: smoke/blood, compound,</text><text x="190" y="477" class="bs" text-anchor="start" >packet-loss, multi-network factors.</text><text x="190" y="494" class="bs" text-anchor="start" >Survives: mechanism question</text>
+<path d="M460,459 L568,459" stroke="#1baf7a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="570" y="400" width="360" height="118" rx="10" fill="#ffffff" stroke="#1baf7a" stroke-width="2"/>
+<text x="590" y="436" class="title" text-anchor="start" >RQ3</text>
+<text x="590" y="470" class="b" text-anchor="start" >Does degradation mechanism matter</text>
+<text x="590" y="492" class="b" text-anchor="start" >at matched video quality?</text>
+<path d="M930,459 L1006,330" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="1010" y="200" width="350" height="260" rx="10" fill="#cde2fb" stroke="#1c5cab" stroke-width="2"/>
+<text x="1185" y="240" class="h" text-anchor="middle" >Integrated study</text>
+<text x="1185" y="272" class="b" text-anchor="middle" >Online surgical phase recognition</text><text x="1185" y="294" class="b" text-anchor="middle" >on network-delivered video</text><text x="1185" y="316" class="b" text-anchor="middle" ></text><text x="1185" y="338" class="b" text-anchor="middle" >Cholec80 · PhaKIR · AutoLaparo (opt.)</text><text x="1185" y="360" class="b" text-anchor="middle" >Real encoder → emulator → decoder</text><text x="1185" y="382" class="b" text-anchor="middle" >Receiver-observable telemetry</text><text x="1185" y="404" class="b" text-anchor="middle" >Pre-registered kill criteria</text>
+<text x="40" y="540" class="bs" text-anchor="start" >Reasons: shared substrate; informative even if RQ1 is negative; standalone A and B are largely occupied; one temporal task avoids dilution.</text>
+</svg>

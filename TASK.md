@@ -54,14 +54,17 @@
 
 Plan: `literature/intersection-analysis/phase1-direction.md`. No data acquisition or training until Phase 1 exits.
 
-### P1.1 Targeted gap-validation search — READY TO START (blocking)
-- [ ] Search networking/video-analytics venues (SIGCOMM, NSDI, MobiCom, MobiSys, MMSys, INFOCOM, ICC/Globecom; 2018–2026) for telemetry → AI-failure prediction (cells X22/X23).
-- [ ] Search MICCAI 2026 proceedings/workshops, IPCAI, IJCARS, MedIA, TMI (2024–2026) for phase-recognition conformal/selective reliability under corruption or network delivery (X16/X19).
-- [ ] Check related work and citing papers of Endo-C6, TCSR-Monitor and VISTA.
-- [ ] Locate deferred record EX12; verify bibliographic fields marked "verify" in P0.7 sources.
-- [ ] Record results in `literature/gap-validation/` and update C4/C5/B6/B7/A6 verdicts.
+### P1.1 Targeted gap-validation search — COMPLETE (2026-11-12)
+- [x] Search networking/video-analytics venues (SIGCOMM, NSDI, MobiCom, MobiSys, MMSys, INFOCOM, ICC/Globecom; 2018–2026) for telemetry → AI-failure prediction (cells X22/X23).
+- [x] Search MICCAI 2026 proceedings/workshops, IPCAI, IJCARS, MedIA, TMI (2024–2026) for phase-recognition conformal/selective reliability under corruption or network delivery (X16/X19).
+- [x] Check related work and citing papers of Endo-C6, TCSR-Monitor and VISTA.
+- [~] Locate deferred record EX12; verify bibliographic fields marked "verify" (IX07 confirmed; others still open).
+- [ ] Read full text of deferred MICCAI 2026 titles (EX18) before Phase 2.
 
-### P1.2 Pre-registration — PENDING P1.1
+**Outcome:** no occupying study; X22/X23 residual risk high → medium; V1 baseline strengthened with a learned pixel→error predictor.
+- [x] Record results in `literature/gap-validation/` and update C4/C5/B6/B7/A6 verdicts.
+
+### P1.2 Pre-registration — READY TO START
 - [ ] Freeze H1–H3 thresholds, failure definitions, monitors, windows, splits, bootstrap and multiplicity rules in `research/integrated-study/preregistration.md`.
 
 ### P1.3 Media-pipeline specification — PENDING

@@ -58,7 +58,7 @@ Define V0/V1/N1/N2 exactly (`revised-research-questions.md`). Prove by construct
 Choose two online phase models with public code and causal inference: one TCN-based (e.g. TeCNO, SV09) and one transformer-based (e.g. LoViT, SV11). Record the version/commit and whether evidence gating (IX03) is present, because gating may mask failures.
 
 ## Phase 1 exit criteria
-- [ ] P1.1 targeted search complete; C4/C5 verdict confirmed or the stress test re-run.
+- [x] P1.1 targeted search complete; C4/C5 verdict confirmed (2026-11-12; `literature/gap-validation/`).
 - [ ] Pre-registration frozen (hypotheses, thresholds, metrics, splits, analysis).
 - [ ] Pipeline specification reviewed; reuse/licence decision recorded.
 - [ ] Feature tiers and leakage controls specified.

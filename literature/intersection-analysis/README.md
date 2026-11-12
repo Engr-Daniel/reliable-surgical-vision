@@ -2,6 +2,8 @@
 
 P0.7 integrates P0.1–P0.6, rates where the programme's question space is occupied, stress-tests Tracks A–C, and sets the evidence-backed Phase 1 direction.
 
+![Evidence landscape](../../figures/fig2-evidence-landscape.svg)
+
 ## Start here
 1. `rq-answer-matrix.md`: concise answers to all P0.7 questions
 2. `track-decision.md`: merge decision and locked scope

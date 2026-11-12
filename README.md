@@ -2,52 +2,109 @@
 
 **Reliable Visual Inference Under Distribution Shift for Robot-Assisted and Tele-Robotic Surgery**
 
-This repository is a research programme investigating how computer-vision systems used in robot-assisted and tele-robotic surgery can maintain reliable inference—or safely abstain—when visual, clinical, hardware, and communication conditions differ from those encountered during development.
+When surgical video crosses a network to reach a remote surgeon (or an AI model), it can arrive compressed, frozen, late or damaged. This programme studies how computer-vision models used in robot-assisted and tele-robotic surgery can **stay reliable, or know when to step back**, when the conditions they see at deployment differ from those they were trained on.
 
-## Research programme
+> **Core question:** How can computer-vision systems used in robot-assisted and tele-robotic surgery maintain reliable inference, or safely abstain, when deployment conditions differ from those encountered during development?
 
-Phase 0 began with three provisional research tracks. P0.7 merged them into one integrated study (see below):
+| | |
+|---|---|
+| **Status** | Phase 0 complete (M0 — Evidence-Backed Research Map). Phase 1 (Gap Validation) in progress. |
+| **Evidence base** | 179 coded sources across surgical CV, datasets, distribution shift, reliable inference, telesurgery networking and adjacent fields |
+| **Primary question** | Does network-side information improve failure detection for surgical AI beyond what is visible in the received video? |
+| **Experiments** | None yet, by design. Experiments start after the study is pre-registered and its feasibility is checked. |
 
-- **Track A — Compound Shift:** quantify how individual and compound visual/network-induced shifts affect surgical computer-vision performance and reliability.
-- **Track B — Selective Inference:** investigate uncertainty quantification, calibration, conformal prediction, and selective prediction under surgical distribution shift.
-- **Track C — Network-Aware Inference:** investigate whether visual evidence and network telemetry can jointly identify unreliable inference in telesurgical settings.
+---
 
-These are research tracks, not predetermined publications. After P0.7 they are work packages of one integrated study:
+## The research question in one picture
 
-| Question | Role | Former track |
+![Pipeline of the primary research question](figures/fig1-research-question.svg)
+
+An online surgical **phase-recognition** model watches video that has passed through a real encoder, an emulated network and a decoder. A **reliability monitor** decides, frame by frame, whether to trust the model or defer to the surgeon. The decisive test compares two monitors:
+
+- **video-only:** model outputs (V0) + decoded-frame evidence (V1);
+- **video + network:** the same, plus receiver-side network (N1) and transport/decoder (N2) telemetry.
+
+If telemetry adds no detectable value (pre-specified: AUROC gain ≥ 0.02 with a confidence interval excluding 0), the study reports a **negative result**: *monitor the video, not the network.* That answer is useful either way.
+
+Two secondary questions use the same pipeline:
+- **RQ2:** do calibration and conformal prediction sets tuned on clean video stay valid under network-delivered and cross-centre video?
+- **RQ3:** does the *kind* of damage (freezes and frame loss versus compression) matter when overall video quality is the same?
+
+Full statement and hypotheses: [`revised-research-questions.md`](literature/intersection-analysis/revised-research-questions.md).
+
+---
+
+## What the evidence says
+
+![Evidence landscape](figures/fig2-evidence-landscape.svg)
+
+Phase 0 mapped the field and rated 26 intersections of *task × shift × reliability method × network layer*:
+
+- **Already well studied (blue):** surgical models failing across hospitals; smoke, blood and low-light robustness; surgical uncertainty, OOD detection and conformal prediction; how networks affect *human* telesurgeons and video quality; and, outside medicine, how networks affect AI accuracy.
+- **Not found in the evidence base (dashed):** using network-side telemetry to predict when a surgical AI model is wrong, tested against a strong video-only monitor. A targeted follow-up search (P1.1) across video analytics, teleoperated driving, semantic communication, V2X and MICCAI 2026 still found no occupying study.
+
+"Not found" is **not** a novelty claim. Each such cell carries a residual-risk rating; see the [intersection map](literature/intersection-analysis/intersection-map.csv) and the [gap-validation report](literature/gap-validation/gap-validation-report.md).
+
+Notable neighbouring work the programme builds on rather than repeats: **VISTA** (surgical video-streaming benchmark under network impairment, human outcomes), **Endo-C6** (packet-loss bursts degrade surgical video-language models) and **TCSR-Monitor** (video-only failure monitoring for surgical segmentation).
+
+---
+
+## How the research tracks evolved
+
+![Track merge decision](figures/fig3-track-merge.svg)
+
+The programme started with three provisional tracks. A claim-by-claim [novelty stress-test](literature/intersection-analysis/novelty-stress-test.md) showed that each overlapped heavily with existing work on its own, but that together they point to one open question. They now form **one integrated study** ([decision record](literature/intersection-analysis/track-decision.md)).
+
+---
+
+## Roadmap
+
+![Roadmap](figures/fig4-roadmap.svg)
+
+| Phase | Purpose | Status |
 |---|---|---|
-| **RQ1** | **Primary:** does receiver-observable network/transport/decoder telemetry improve failure detection and selective deferral of online surgical phase recognition on network-delivered video, beyond a strong video-only monitor? | C |
-| RQ2 | Do calibration and conformal coverage survive decoder-mediated and natural shift, and does telemetry-stratified calibration help? | B |
-| RQ3 | Does degradation mechanism matter at matched decoded-video quality? | A |
+| 0 — Research foundation | Map architecture, field, datasets, shift, reliability, networking; stress-test novelty | **Complete** (`v0.0.1`–`v0.0.6`; P0.7 suggested `v0.0.7`) |
+| 1 — Gap validation | Confirm the gap, pre-register, specify pipeline/features/datasets/power/baselines | **In progress** — see [`TASK.md`](TASK.md) |
+| 2 — Dataset & task feasibility | Acquire permitted data, verify licences, reproduce a baseline | Planned |
+| 3–7 | Baselines → shift benchmarking → reliability → network-aware reliability → validation | Planned |
 
-See `literature/intersection-analysis/revised-research-questions.md` and `research/integrated-study/`.
+---
 
-## Core research question
+## Repository guide
 
-> How can computer-vision systems used in robot-assisted and tele-robotic surgery maintain reliable inference—or safely abstain—when deployment conditions differ from those encountered during development?
+| Path | What's there |
+|---|---|
+| [`literature/`](literature/) | Evidence base: one folder per reconnaissance task, plus the global map and bibliography |
+| [`literature/intersection-analysis/`](literature/intersection-analysis/) | **Start here.** P0.7 integration, intersection map, stress-test, revised questions, Phase 1 plan |
+| [`literature/gap-validation/`](literature/gap-validation/) | Phase 1 targeted search (P1.1) |
+| [`datasets/`](datasets/) | Dataset registry, licences, provenance/overlap, splits, shortlist |
+| [`research/`](research/) | The integrated study and its three work packages (former tracks A–C) |
+| [`docs/architecture/`](docs/architecture/) | Toumai tele-robotic system architecture (public evidence) |
+| [`figures/`](figures/) | Programme figures and the script that generates them |
+| [`task-completion-report/`](task-completion-report/) | Formal closure record for every completed task |
+| [`phase-task-files/`](phase-task-files/) | Task specifications |
+| `src/`, `experiments/`, `notebooks/` | Reserved for Phase 2+ implementation |
 
-## Current research status
+Programme files: [`EXECUTION_BRIEF.md`](EXECUTION_BRIEF.md) (standards), [`ROADMAP.md`](ROADMAP.md), [`TASK.md`](TASK.md) (active tasks), [`RESEARCH_LOG.md`](RESEARCH_LOG.md) (dated decisions), [`MEMORY.md`](MEMORY.md) (durable context), [`AGENT.md`](AGENT.md) (rules for AI-assisted sessions).
 
-**Phase 0 — Research Foundation: complete (M0 reached 2026-11-12)**
-
-- P0.1 Toumai architecture reconnaissance — **complete** (`v0.0.1`)
-- P0.2 Surgical computer-vision landscape — **complete** (`v0.0.2`)
-- P0.3 Dataset reconnaissance — **complete** (`v0.0.3`)
-- P0.4 Distribution-shift literature reconnaissance — **complete** (`v0.0.4`)
-- P0.5 Reliable-inference literature reconnaissance — **complete** (`v0.0.5`)
-- P0.6 Telesurgery / network literature reconnaissance — **complete** (`v0.0.6`)
-- P0.7 Intersection Analysis & Novelty Stress-Test — **complete** (suggested `v0.0.7`)
-
-**Phase 1 — Gap Validation: next.** P1.1, a targeted search of networking/video-analytics and 2026 surgical venues, is blocking because the primary question carries high residual risk of unretrieved prior work. No novelty claim is made.
+## Reproducing the generated artefacts
+```bash
+python3 literature/intersection-analysis/build_global_evidence_matrix.py   # coded evidence matrix + coverage summary
+python3 figures/make_figures.py                                            # README figures
+```
+Both scripts use only the Python standard library.
 
 ## Research principles
-
 1. Evidence before novelty claims.
 2. Reproducibility by design.
-3. Clear separation of observation, hypothesis, experiment, and conclusion.
+3. Clear separation of observation, hypothesis, experiment and conclusion.
 4. Reliability evaluation beyond headline predictive performance.
 5. Transparent reporting of negative and inconclusive results.
 6. Safety-aware interpretation of medical-AI research.
-7. Version-controlled experiments, configurations, results, and decisions.
+7. Version-controlled experiments, configurations, results and decisions.
 
-See `EXECUTION_BRIEF.md`, `ROADMAP.md`, `AGENT.md`, `TASK.md`, `MEMORY.md`, and `literature/intersection-analysis/README.md`.
+## Scope and safety
+This is a research programme, not clinical decision support. Emulated network experiments do not establish clinical safety thresholds, and they do not describe the behaviour of any proprietary platform. No novelty or "first" claims are made ([claim audit](literature/intersection-analysis/claim-audit.md)).
+
+## Author
+Oyewale Daniel ([@Engr-Daniel](https://github.com/Engr-Daniel))

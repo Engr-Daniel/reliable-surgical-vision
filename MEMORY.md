@@ -110,6 +110,8 @@ Phase 0 is complete (M0, 2026-11-12). The programme is in **Phase 1: Gap Validat
 - "Not found in retained evidence" ≠ novel. Cells X22/X23 carry **high** residual risk; Phase 1 P1.1 targeted search is blocking.
 - No affirmative novelty/"first" claims exist in programme text; prohibited claims are listed in `literature/intersection-analysis/claim-audit.md`.
 
+- **P1.1 gap validation completed (2026-11-12):** no occupying work for telemetry → AI-failure prediction found in video analytics, teleoperated driving, semantic comms, V2X or MICCAI 2026. X22/X23 residual risk is now **medium**. The video-only comparator must include a learned pixel→AI-error predictor (DAO-style), because that idea is established. Watch list: VISTA/LiteSC (Warwick) group.
+
 ## Update rule
 
 Only add information here when it is expected to remain useful across many future research sessions. Put current actions in `TASK.md` and dated observations in `RESEARCH_LOG.md`.

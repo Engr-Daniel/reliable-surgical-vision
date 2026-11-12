@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-label="Pipeline of the primary research question">
+<title>Pipeline of the primary research question</title>
+<style>
+ .t{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#0b0b0b} .s{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#52514e} .m{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;fill:#898781}
+ .title{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0b0b0b}
+ .sub{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;fill:#52514e}
+ .h{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;fill:#0b0b0b}
+ .b{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;fill:#0b0b0b} .bs{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12.5px;fill:#52514e}
+ .w{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;fill:#ffffff}
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#52514e"/></marker><marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<rect width="1400" height="700" fill="#fcfcfb"/>
+<text x="40" y="48" class="title" text-anchor="start" >The primary question: does the network know something the pixels don&#x27;t?</text>
+<text x="40" y="76" class="sub" text-anchor="start" >Online surgical phase recognition on video delivered through an emulated telesurgical media pipeline (RQ1)</text>
+<rect x="40" y="120" width="190" height="96" rx="10" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text x="135.0" y="154" class="h" text-anchor="middle" >Surgical video</text>
+<text x="135.0" y="178" class="bs" text-anchor="middle" >Cholec80 / PhaKIR</text><text x="135.0" y="196" class="bs" text-anchor="middle" >native 25 fps</text>
+<path d="M230,168.0 L258,168.0" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="260" y="120" width="190" height="96" rx="10" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text x="355.0" y="154" class="h" text-anchor="middle" >Encoder</text>
+<text x="355.0" y="178" class="bs" text-anchor="middle" >H.264 (libx264)</text><text x="355.0" y="196" class="bs" text-anchor="middle" >GOP, rate control</text>
+<path d="M450,168.0 L478,168.0" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="480" y="120" width="190" height="96" rx="10" fill="#fbe1d6" stroke="#eb6834" stroke-width="2"/>
+<text x="575.0" y="154" class="h" text-anchor="middle" >Network</text>
+<text x="575.0" y="178" class="bs" text-anchor="middle" >delay · jitter</text><text x="575.0" y="196" class="bs" text-anchor="middle" >burst loss · capacity</text>
+<path d="M670,168.0 L698,168.0" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="700" y="120" width="190" height="96" rx="10" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text x="795.0" y="154" class="h" text-anchor="middle" >Receiver</text>
+<text x="795.0" y="178" class="bs" text-anchor="middle" >jitter buffer</text><text x="795.0" y="196" class="bs" text-anchor="middle" >NACK/RTX · FEC</text>
+<path d="M890,168.0 L918,168.0" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="920" y="120" width="190" height="96" rx="10" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text x="1015.0" y="154" class="h" text-anchor="middle" >Decoder</text>
+<text x="1015.0" y="178" class="bs" text-anchor="middle" >concealment</text><text x="1015.0" y="196" class="bs" text-anchor="middle" >freeze / frame loss</text>
+<path d="M1110,168.0 L1138,168.0" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="1140" y="120" width="190" height="96" rx="10" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text x="1235.0" y="154" class="h" text-anchor="middle" >Online phase model</text>
+<text x="1235.0" y="178" class="bs" text-anchor="middle" >causal TCN /</text><text x="1235.0" y="196" class="bs" text-anchor="middle" >transformer</text>
+<rect x="465" y="330" width="880" height="190" rx="10" fill="#ffffff" stroke="#0b0b0b" stroke-width="2"/>
+<text x="485" y="362" class="h" text-anchor="start" >Reliability monitor</text>
+<text x="485" y="384" class="bs" text-anchor="start" >predicts, frame by frame: will the online phase prediction at time t be wrong?</text>
+<rect x="500.0" y="430" width="150" height="54" rx="8" fill="#eb6834" stroke="#eb6834" stroke-width="1.5"/>
+<text x="575.0" y="453" class="w" text-anchor="middle" >N1</text>
+<text x="575.0" y="472" text-anchor="middle" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12px;fill:#ffffff">network telemetry</text>
+<path d="M575.0,216 L575.0,428" stroke="#eb6834" stroke-width="2" fill="none" marker-end="url(#ao)" stroke-dasharray="6 5"/>
+<rect x="720.0" y="430" width="150" height="54" rx="8" fill="#eb6834" stroke="#eb6834" stroke-width="1.5"/>
+<text x="795.0" y="453" class="w" text-anchor="middle" >N2</text>
+<text x="795.0" y="472" text-anchor="middle" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12px;fill:#ffffff">transport / decoder</text>
+<path d="M795.0,216 L795.0,428" stroke="#eb6834" stroke-width="2" fill="none" marker-end="url(#ao)" stroke-dasharray="6 5"/>
+<rect x="940.0" y="430" width="150" height="54" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="1015.0" y="453" class="w" text-anchor="middle" >V1</text>
+<text x="1015.0" y="472" text-anchor="middle" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12px;fill:#ffffff">decoded frames</text>
+<path d="M1015.0,216 L1015.0,428" stroke="#2a78d6" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="1160.0" y="430" width="150" height="54" rx="8" fill="#2a78d6" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="1235.0" y="453" class="w" text-anchor="middle" >V0</text>
+<text x="1235.0" y="472" text-anchor="middle" style="font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;font-size:12px;fill:#ffffff">model outputs</text>
+<path d="M1235.0,216 L1235.0,428" stroke="#2a78d6" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="685.0" y="276" class="bs" text-anchor="middle" >receiver-observable only</text>
+<text x="685.0" y="294" class="bs" text-anchor="middle" >(no emulator ground truth)</text>
+<text x="1125.0" y="276" class="bs" text-anchor="middle" >visible in the received video</text>
+<path d="M795.0,520 L795.0,558" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M1015.0,520 L1015.0,558" stroke="#52514e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="700.0" y="560" width="190" height="46" rx="10" fill="#cde2fb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="795.0" y="589" class="b" text-anchor="middle" >Accept prediction</text>
+<rect x="920.0" y="560" width="190" height="46" rx="10" fill="#ffffff" stroke="#52514e" stroke-width="1.5"/>
+<text x="1015.0" y="589" class="b" text-anchor="middle" >Defer to surgeon</text>
+<rect x="40" y="330" width="400" height="190" rx="10" fill="#ffffff" stroke="#e1e0d9" stroke-width="1.5"/>
+<text x="60" y="364" class="h" text-anchor="start" >The test (H1a / H1b)</text>
+<text x="60" y="396" class="b" text-anchor="start" >Video-only monitor:  V0 + V1</text>
+<text x="60" y="422" class="b" text-anchor="start" >Full monitor:  V0 + V1 + N1 + N2</text>
+<text x="60" y="454" class="b" text-anchor="start" >Gain ≥ 0.02 AUROC with CI excluding 0?</text>
+<text x="60" y="480" class="bs" text-anchor="start" >If not → reported as a negative result:</text>
+<text x="60" y="498" class="bs" text-anchor="start" >monitor the video, not the network.</text>
+<text x="40" y="660" class="bs" text-anchor="start" >Blue: information visible in the received video.  Orange (dashed): network-side information that is not in the pixels.</text>
+<text x="40" y="680" class="bs" text-anchor="start" >Secondary questions use the same pipeline: RQ2 conformal/calibration validity, RQ3 degradation mechanism at matched quality.</text>
+</svg>

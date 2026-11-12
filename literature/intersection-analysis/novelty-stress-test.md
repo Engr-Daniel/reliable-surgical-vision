@@ -82,6 +82,8 @@ A verdict of OPEN IN RETAINED EVIDENCE is **not** a novelty claim.
 
 **Decision:** Track C becomes the **primary** programme question (RQ1).
 
+**P1.1 update (2026-11-12):** the targeted search of video analytics, teleoperated driving, semantic communication, V2X and MICCAI 2026 found no occupying study. Residual risk for C4/C5 is lowered to **medium**. The video-only comparator must now include a learned pixel→AI-error predictor (`literature/gap-validation/gap-validation-report.md`).
+
 ---
 
 ## Cross-track claim hygiene
