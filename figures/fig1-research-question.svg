@@ -67,9 +67,10 @@
 <text x="60" y="364" class="h" text-anchor="start" >The test (H1a / H1b)</text>
 <text x="60" y="396" class="b" text-anchor="start" >Video-only monitor:  V0 + V1</text>
 <text x="60" y="422" class="b" text-anchor="start" >Full monitor:  V0 + V1 + N1 + N2</text>
-<text x="60" y="454" class="b" text-anchor="start" >Gain ≥ 0.02 AUROC with CI excluding 0?</text>
-<text x="60" y="480" class="bs" text-anchor="start" >If not → reported as a negative result:</text>
-<text x="60" y="498" class="bs" text-anchor="start" >monitor the video, not the network.</text>
+<text x="60" y="454" class="b" text-anchor="start" >AUROC gain with CI excluding 0?</text>
+<text x="60" y="468" class="bs" text-anchor="start" >(0.02 = smallest effect of interest)</text>
+<text x="60" y="492" class="bs" text-anchor="start" >If not → reported as a negative result:</text>
+<text x="60" y="508" class="bs" text-anchor="start" >monitor the video, not the network.</text>
 <text x="40" y="660" class="bs" text-anchor="start" >Blue: information visible in the received video.  Orange (dashed): network-side information that is not in the pixels.</text>
 <text x="40" y="680" class="bs" text-anchor="start" >Secondary questions use the same pipeline: RQ2 conformal/calibration validity, RQ3 degradation mechanism at matched quality.</text>
 </svg>

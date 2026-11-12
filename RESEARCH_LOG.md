@@ -221,3 +221,21 @@ Kill criterion not triggered. X22/X23 residual risk lowered from high to **mediu
 
 ### Next
 P1.2 — Pre-registration.
+
+## 2026-11-12 — Phase 1 P1.2–P1.7 completed (study pre-registered and specified)
+
+### Decisions
+- **Pre-registration v1.0 frozen, then amended to v1.1 the same day, before any data.** The P1.6 simulation showed that the v1.0 H1a criterion ("point estimate ≥ 0.02 and CI > 0") had only 0.33 power at Δ ≈ 0.02. H1a is now a superiority test with 0.02 as the smallest effect of interest and four interpretation bands; BCa bootstrap replaces the percentile bootstrap (whose null false-positive rate was 3–6% vs nominal 2.5%).
+- **VISTA reuse:** the public repository (MIT, commit 7029edd) contains only CAD files and a README, with no pipeline code. VISTA's published tier parameters are reused with citation, and the pipeline is built independently (GStreamer/x264/RTP/NetEm).
+- **Baselines:** TeCNO (GPL-3.0, causal MS-TCN) primary; Surgformer (CC BY-NC 4.0, online) replication. LoViT excluded (code unavailable for patent reasons); Trans-SVNet excluded (no licence). Neither selected model is vendored.
+- **PhaKIR** uses the same seven phases as Cholec80, so it is a direct external arm with no label mapping.
+- **Splits:** Cholec80 1–32 train, 33–40 validation/clean calibration, 41–80 test, with 5-fold procedure-level cross-fitting of monitors on the test set.
+
+### Feasibility
+40 procedures × 5 impaired tiers gives CI width ≈ 0.01 at Δ ≈ 0.02 under a heterogeneous-effect simulation. This is optimistic: monitor-training error and tier shift are not modelled. Streaming is real time: ≈ 500 h of stream time, ≈ 32 h wall-clock with 16 parallel namespaces.
+
+### Status
+Phase 1 deliverables complete; **M1 pending author sign-off**. Open items: repository LICENSE choice, two MICCAI 2026 full texts, bibliographic verification.
+
+### Next
+Phase 2 — data requests, pipeline build/validation, baseline reproduction.

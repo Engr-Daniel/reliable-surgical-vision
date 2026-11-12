@@ -64,23 +64,39 @@ Plan: `literature/intersection-analysis/phase1-direction.md`. No data acquisitio
 **Outcome:** no occupying study; X22/X23 residual risk high → medium; V1 baseline strengthened with a learned pixel→error predictor.
 - [x] Record results in `literature/gap-validation/` and update C4/C5/B6/B7/A6 verdicts.
 
-### P1.2 Pre-registration — READY TO START
-- [ ] Freeze H1–H3 thresholds, failure definitions, monitors, windows, splits, bootstrap and multiplicity rules in `research/integrated-study/preregistration.md`.
+### P1.2 Pre-registration — COMPLETE (2026-11-12)
+- [x] `research/integrated-study/preregistration.md` v1.1 (H1a amended before any data; see amendment log).
 
-### P1.3 Media-pipeline specification — PENDING
-- [ ] Encoder/RTP/NACK-FEC/emulator/jitter-buffer/decoder specification and per-frame log schema; VISTA reuse and licence decision.
+### P1.3 Media-pipeline specification — COMPLETE
+- [x] `research/integrated-study/pipeline-spec.md`: GStreamer/x264/RTP/NetEm/jitter buffer/decoder, receiver log schema, "capture once, decode deterministically", compute/storage.
+- [x] Reuse decision: VISTA repository (MIT) contains no pipeline code, so tier parameters are reused and the pipeline is built independently.
 
-### P1.4 Feature-tier and leakage specification — PENDING
-- [ ] Define V0/V1/N1/N2; prove no emulator ground truth or tier identity leaks; V1 detects pixel-visible freezes.
+### P1.4 Feature-tier and leakage specification — COMPLETE
+- [x] `research/integrated-study/feature-spec.md`: V0/V1 (incl. learned pixel→error predictor)/N1/N2; six leakage controls with tests.
 
-### P1.5 Dataset desk checks — PENDING
-- [ ] Cholec80, PhaKIR (taxonomy, overlap), AutoLaparo; derivative-storage terms.
+### P1.5 Dataset desk checks — COMPLETE
+- [x] `research/integrated-study/dataset-desk-checks.md`: Cholec80 / PhaKIR (same 7 phases) / AutoLaparo (gated).
 
-### P1.6 Feasibility and power — PENDING
-- [ ] Compute estimate; precision simulation for ΔAUROC = 0.02 with ~40 test procedures; calibration and stratum sizes.
+### P1.6 Feasibility and power — COMPLETE
+- [x] `research/integrated-study/feasibility/`: 40 procedures × 5 tiers adequate under stated (optimistic) assumptions; v1.0 joint criterion had 0.33 power, so it was amended.
 
-### P1.7 Baseline model selection — PENDING
-- [ ] One TCN-based and one transformer-based online phase model with pinned versions; note evidence gating.
+### P1.7 Baseline model selection — COMPLETE
+- [x] `research/integrated-study/baseline-selection.md`: TeCNO @0c4313f (GPL-3.0), Surgformer @5d57e46 (CC BY-NC 4.0); LoViT and Trans-SVNet excluded.
+
+### Phase 1 open items (non-blocking)
+- [ ] **Author review and sign-off** of the pre-registration and specs (marks M1).
+- [ ] Choose a LICENSE for this repository compatible with GPL-3.0 / CC BY-NC dependencies (not vendored).
+- [ ] Read full text of deferred MICCAI 2026 titles (P1.1 EX18).
+- [ ] Verify remaining "to verify" bibliographic fields (IX02, IX08, IX09, IX11, GV02–GV10, GV13–GV14).
 
 ## Phase milestone
-**M1 — Validated, pre-registered study design**
+**M1 — Validated, pre-registered study design** — deliverables complete 2026-11-12; **pending author sign-off.**
+
+---
+
+## Phase 2 — Dataset & Task Feasibility (next)
+- [ ] P2.1 Request Cholec80, PhaKIR (and AutoLaparo if gated in); re-verify terms at download.
+- [ ] P2.2 Build and validate the media pipeline (pipeline-spec §6 checks).
+- [ ] P2.3 Reproduce TeCNO and Surgformer Cholec80 baselines on the pinned split.
+- [ ] P2.4 Implement feature extraction with the leakage unit tests (feature-spec §5).
+- [ ] P2.5 Pilot: stream 2 calibration videos (33–34) through all tiers; check logs, alignment and realised loss.

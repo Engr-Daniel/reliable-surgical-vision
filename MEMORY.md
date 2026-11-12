@@ -33,7 +33,7 @@ This is a hypothesis to investigate, not an established project conclusion.
 
 ## Research status
 
-Phase 0 is complete (M0, 2026-11-12). The programme is in **Phase 1: Gap Validation**. No paper title, novelty claim, final dataset, model architecture or experimental conclusion is final.
+Phase 0 is complete (M0, 2026-11-12). Phase 1 (Gap Validation) deliverables are complete, with M1 pending author sign-off. Phase 2 (Dataset & Task Feasibility) is next. No paper title, novelty claim, final dataset, model architecture or experimental conclusion is final.
 
 ## Durable decisions
 
@@ -106,11 +106,13 @@ Phase 0 is complete (M0, 2026-11-12). The programme is in **Phase 1: Gap Validat
 - Tracks merged: **RQ1 (primary)** = incremental value of receiver-observable network/transport/decoder telemetry over a strong video-only (model-output + decoded-frame) monitor for failure detection and selective deferral in **online surgical phase recognition**; RQ2 = calibration/conformal validity under decoder-mediated and natural shift plus telemetry-stratified Mondrian calibration; RQ3 = mechanism-dependent degradation at matched VMAF.
 - Primary task is online phase recognition (per-frame labels; temporal mechanism; segmentation monitoring is occupied by TCSR-Monitor). Datasets: Cholec80 (development), PhaKIR (external, descriptive), AutoLaparo optional.
 - Monitor features must be receiver-observable; emulator ground truth and tier identity are never features; V1 must detect pixel-visible freezes.
-- Primary hypothesis has a pre-specified kill criterion (ΔAUROC ≥ 0.02 with procedure-level CI excluding 0, or AURC reduction); a negative result is reportable.
+- Primary hypothesis H1a (pre-registration v1.1): ΔAUROC > 0 by procedure-level BCa bootstrap, co-primary with ΔAURC, Holm-corrected; **0.02 is the smallest effect of interest** with four pre-specified interpretation bands. A negative result is reportable. (v1.0's "point estimate ≥ 0.02 and CI > 0" was dropped because it had ≈ 50% power at Δ = 0.02.)
 - "Not found in retained evidence" ≠ novel. Cells X22/X23 carry **high** residual risk; Phase 1 P1.1 targeted search is blocking.
 - No affirmative novelty/"first" claims exist in programme text; prohibited claims are listed in `literature/intersection-analysis/claim-audit.md`.
 
 - **P1.1 gap validation completed (2026-11-12):** no occupying work for telemetry → AI-failure prediction found in video analytics, teleoperated driving, semantic comms, V2X or MICCAI 2026. X22/X23 residual risk is now **medium**. The video-only comparator must include a learned pixel→AI-error predictor (DAO-style), because that idea is established. Watch list: VISTA/LiteSC (Warwick) group.
+
+- **Phase 1 deliverables complete (2026-11-12); M1 pending author sign-off.** The study is pre-registered at `research/integrated-study/preregistration.md` (v1.1). Durable design facts: Cholec80 1–32/33–40/41–80; PhaKIR (same 7 phases) external; tiers T0 local + VISTA's five published tiers; monitors cross-fitted over 5 procedure folds; M1 = TeCNO (GPL-3.0, not vendored), M2 = Surgformer (CC BY-NC 4.0); VISTA's pipeline code is **not** public, so the pipeline is built independently; streaming is real time (≈ 500 h total). Repository LICENSE not yet chosen.
 
 ## Update rule
 

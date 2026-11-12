@@ -119,9 +119,10 @@ def fig1():
     b.append(text(60, my + 34, "The test (H1a / H1b)", "h"))
     b.append(text(60, my + 66, "Video-only monitor:  V0 + V1", "b"))
     b.append(text(60, my + 92, "Full monitor:  V0 + V1 + N1 + N2", "b"))
-    b.append(text(60, my + 124, "Gain ≥ 0.02 AUROC with CI excluding 0?", "b"))
-    b.append(text(60, my + 150, "If not → reported as a negative result:", "bs"))
-    b.append(text(60, my + 168, "monitor the video, not the network.", "bs"))
+    b.append(text(60, my + 124, "AUROC gain with CI excluding 0?", "b"))
+    b.append(text(60, my + 142 - 4, "(0.02 = smallest effect of interest)", "bs"))
+    b.append(text(60, my + 162, "If not → reported as a negative result:", "bs"))
+    b.append(text(60, my + 178, "monitor the video, not the network.", "bs"))
     b.append(text(40, H - 40, "Blue: information visible in the received video.  Orange (dashed): network-side information that is not in the pixels.", "bs"))
     b.append(text(40, H - 20, "Secondary questions use the same pipeline: RQ2 conformal/calibration validity, RQ3 degradation mechanism at matched quality.", "bs"))
     return svg(W, H, "\n".join(b), "Pipeline of the primary research question")
@@ -248,13 +249,13 @@ def fig4():
           "P0.5 Reliable inference", "P0.6 Telesurgery networks", "P0.7 Intersection & stress-test"]
     for i, s in enumerate(p0):
         b.append(text(40 + (i % 2) * 260, 290 + (i // 2) * 22, "✓ " + s, "bs"))
-    b.append(text(600, 262, "Phase 1 — in progress", "h"))
-    p1 = [("✓", "P1.1 Targeted gap-validation search"), ("→", "P1.2 Pre-registration"), ("·", "P1.3 Media-pipeline specification"),
-          ("·", "P1.4 Feature tiers & leakage controls"), ("·", "P1.5 Dataset desk checks"), ("·", "P1.6 Feasibility & power"),
-          ("·", "P1.7 Baseline model selection")]
+    b.append(text(600, 262, "Phase 1 — deliverables complete", "h"))
+    p1 = [("✓", "P1.1 Targeted gap-validation search"), ("✓", "P1.2 Pre-registration (v1.1)"), ("✓", "P1.3 Media-pipeline specification"),
+          ("✓", "P1.4 Feature tiers & leakage controls"), ("✓", "P1.5 Dataset desk checks"), ("✓", "P1.6 Feasibility & power"),
+          ("✓", "P1.7 Baseline model selection"), ("→", "Author sign-off → M1")]
     for i, (m, s) in enumerate(p1):
         b.append(text(600 + (i % 2) * 330, 290 + (i // 2) * 22, f"{m} {s}", "bs"))
-    b.append(text(40, 400, "No data are acquired and no models trained until Phase 1 exits.", "bs"))
+    b.append(text(40, 400, "No data are acquired and no models trained until the pre-registration is signed off; Phase 2 then builds the pipeline and reproduces baselines.", "bs"))
     return svg(W, H, "\n".join(b), "Programme roadmap")
 
 

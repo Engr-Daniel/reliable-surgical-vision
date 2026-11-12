@@ -23,7 +23,7 @@ How can computer-vision systems used in robot-assisted and tele-robotic surgery 
 ## RQ1 — Primary (former Track C)
 > In online surgical phase recognition on network-delivered video, does receiver-observable network and transport/decoder telemetry improve the detection of model failure, and selective deferral, beyond a strong monitor that uses only model outputs and decoded frames?
 
-**H1a (incremental detection).** On held-out test procedures, a monitor using V0+V1+N1+N2 achieves frame-level failure-detection AUROC at least **0.02** higher than V0+V1, with the 95% procedure-level bootstrap CI of the difference excluding 0.
+**H1a (incremental detection).** On held-out test procedures, a monitor using V0+V1+N1+N2 achieves higher frame-level failure-detection AUROC than V0+V1 (95% procedure-level bootstrap CI of the difference excluding 0). **0.02 is the smallest effect of interest** and the practical-relevance benchmark. The final wording is in `research/integrated-study/preregistration.md` §7.1 (v1.1).
 
 **H1b (incremental selective value).** The same comparison reduces the area under the risk–coverage curve (AURC) of selective deferral, with the CI of the difference excluding 0.
 
@@ -33,7 +33,7 @@ How can computer-vision systems used in robot-assisted and tele-robotic surgery 
 
 **Ablations:** N1 only, N2 only, N1+N2 without V; telemetry window *W* ∈ {0.5, 1, 2} s, selected on validation only.
 
-**Rejection:** H1a and H1b both fail → telemetry adds no detectable value beyond video-only monitoring for this task and pipeline. This is reported as a primary negative result.
+**Rejection:** H1a and H1b both fail (or the ΔAUROC CI upper bound is < 0.02) → telemetry adds no detectable or practically relevant value beyond video-only monitoring for this task and pipeline. This is reported as a primary negative result.
 
 **Key confound controls:**
 - V1 must include pixel-detectable freeze/repeat detection. Otherwise telemetry would "win" simply by signalling something visible in the frames.

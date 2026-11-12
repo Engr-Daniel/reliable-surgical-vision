@@ -78,6 +78,8 @@ A verdict of OPEN IN RETAINED EVIDENCE is **not** a novelty claim.
 
 **Kill criterion (pre-specified):** On held-out procedures, if adding telemetry (N1+N2) to the video-only monitor (V0+V1) does not improve failure-detection AUROC by ≥ 0.02 with a procedure-level 95% bootstrap CI excluding 0, *and* does not reduce AURC with a CI excluding 0, then H1 is rejected and reported as a negative result. C6/C7 are then not pursued.
 
+> *Superseded wording:* the final test is in `research/integrated-study/preregistration.md` §7.1 (v1.1): a superiority test with 0.02 as the smallest effect of interest.
+
 **Pre-experimental kill:** If the Phase 1 targeted search (see `phase1-direction.md`) finds work that already tests C4/C5 against a video-only baseline, Track C is reformulated around the remaining differences or discontinued.
 
 **Decision:** Track C becomes the **primary** programme question (RQ1).

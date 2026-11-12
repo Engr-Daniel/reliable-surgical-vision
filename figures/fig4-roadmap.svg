@@ -51,13 +51,14 @@
 <text x="40" y="334" class="bs" text-anchor="start" >✓ P0.5 Reliable inference</text>
 <text x="300" y="334" class="bs" text-anchor="start" >✓ P0.6 Telesurgery networks</text>
 <text x="40" y="356" class="bs" text-anchor="start" >✓ P0.7 Intersection &amp; stress-test</text>
-<text x="600" y="262" class="h" text-anchor="start" >Phase 1 — in progress</text>
+<text x="600" y="262" class="h" text-anchor="start" >Phase 1 — deliverables complete</text>
 <text x="600" y="290" class="bs" text-anchor="start" >✓ P1.1 Targeted gap-validation search</text>
-<text x="930" y="290" class="bs" text-anchor="start" >→ P1.2 Pre-registration</text>
-<text x="600" y="312" class="bs" text-anchor="start" >· P1.3 Media-pipeline specification</text>
-<text x="930" y="312" class="bs" text-anchor="start" >· P1.4 Feature tiers &amp; leakage controls</text>
-<text x="600" y="334" class="bs" text-anchor="start" >· P1.5 Dataset desk checks</text>
-<text x="930" y="334" class="bs" text-anchor="start" >· P1.6 Feasibility &amp; power</text>
-<text x="600" y="356" class="bs" text-anchor="start" >· P1.7 Baseline model selection</text>
-<text x="40" y="400" class="bs" text-anchor="start" >No data are acquired and no models trained until Phase 1 exits.</text>
+<text x="930" y="290" class="bs" text-anchor="start" >✓ P1.2 Pre-registration (v1.1)</text>
+<text x="600" y="312" class="bs" text-anchor="start" >✓ P1.3 Media-pipeline specification</text>
+<text x="930" y="312" class="bs" text-anchor="start" >✓ P1.4 Feature tiers &amp; leakage controls</text>
+<text x="600" y="334" class="bs" text-anchor="start" >✓ P1.5 Dataset desk checks</text>
+<text x="930" y="334" class="bs" text-anchor="start" >✓ P1.6 Feasibility &amp; power</text>
+<text x="600" y="356" class="bs" text-anchor="start" >✓ P1.7 Baseline model selection</text>
+<text x="930" y="356" class="bs" text-anchor="start" >→ Author sign-off → M1</text>
+<text x="40" y="400" class="bs" text-anchor="start" >No data are acquired and no models trained until the pre-registration is signed off; Phase 2 then builds the pipeline and reproduces baselines.</text>
 </svg>

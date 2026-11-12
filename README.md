@@ -8,10 +8,10 @@ When surgical video crosses a network to reach a remote surgeon (or an AI model)
 
 | | |
 |---|---|
-| **Status** | Phase 0 complete (M0 — Evidence-Backed Research Map). Phase 1 (Gap Validation) in progress. |
+| **Status** | Phase 0 complete (M0). Phase 1 deliverables complete: gap validated, study pre-registered and specified (M1 pending author sign-off). Phase 2 next. |
 | **Evidence base** | 179 coded sources across surgical CV, datasets, distribution shift, reliable inference, telesurgery networking and adjacent fields |
 | **Primary question** | Does network-side information improve failure detection for surgical AI beyond what is visible in the received video? |
-| **Experiments** | None yet, by design. Experiments start after the study is pre-registered and its feasibility is checked. |
+| **Experiments** | None yet, by design. The study is [pre-registered](research/integrated-study/preregistration.md); data acquisition and implementation start in Phase 2. |
 
 ---
 
@@ -24,7 +24,7 @@ An online surgical **phase-recognition** model watches video that has passed thr
 - **video-only:** model outputs (V0) + decoded-frame evidence (V1);
 - **video + network:** the same, plus receiver-side network (N1) and transport/decoder (N2) telemetry.
 
-If telemetry adds no detectable value (pre-specified: AUROC gain ≥ 0.02 with a confidence interval excluding 0), the study reports a **negative result**: *monitor the video, not the network.* That answer is useful either way.
+If telemetry adds no detectable value (pre-registered: an AUROC gain whose confidence interval excludes 0; 0.02 is the smallest gain of interest), the study reports a **negative result**: *monitor the video, not the network.* That answer is useful either way.
 
 Two secondary questions use the same pipeline:
 - **RQ2:** do calibration and conformal prediction sets tuned on clean video stay valid under network-delivered and cross-centre video?
@@ -64,7 +64,7 @@ The programme started with three provisional tracks. A claim-by-claim [novelty s
 | Phase | Purpose | Status |
 |---|---|---|
 | 0 — Research foundation | Map architecture, field, datasets, shift, reliability, networking; stress-test novelty | **Complete** (`v0.0.1`–`v0.0.6`; P0.7 suggested `v0.0.7`) |
-| 1 — Gap validation | Confirm the gap, pre-register, specify pipeline/features/datasets/power/baselines | **In progress** — see [`TASK.md`](TASK.md) |
+| 1 — Gap validation | Confirm the gap, pre-register, specify pipeline/features/datasets/power/baselines | **Deliverables complete**, pending sign-off ([integrated study](research/integrated-study/)) |
 | 2 — Dataset & task feasibility | Acquire permitted data, verify licences, reproduce a baseline | Planned |
 | 3–7 | Baselines → shift benchmarking → reliability → network-aware reliability → validation | Planned |
 
@@ -78,7 +78,7 @@ The programme started with three provisional tracks. A claim-by-claim [novelty s
 | [`literature/intersection-analysis/`](literature/intersection-analysis/) | **Start here.** P0.7 integration, intersection map, stress-test, revised questions, Phase 1 plan |
 | [`literature/gap-validation/`](literature/gap-validation/) | Phase 1 targeted search (P1.1) |
 | [`datasets/`](datasets/) | Dataset registry, licences, provenance/overlap, splits, shortlist |
-| [`research/`](research/) | The integrated study and its three work packages (former tracks A–C) |
+| [`research/`](research/) | The integrated study: pre-registration, pipeline/feature specs, feasibility, and the three work packages (former tracks A–C) |
 | [`docs/architecture/`](docs/architecture/) | Toumai tele-robotic system architecture (public evidence) |
 | [`figures/`](figures/) | Programme figures and the script that generates them |
 | [`task-completion-report/`](task-completion-report/) | Formal closure record for every completed task |

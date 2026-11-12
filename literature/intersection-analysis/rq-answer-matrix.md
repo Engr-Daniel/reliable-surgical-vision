@@ -32,7 +32,7 @@
 **Detailed:** `track-decision.md`.
 
 ## RQ7 — What are the revised candidate research questions?
-**Answer:** RQ1 asks whether receiver-observable telemetry improves failure detection (ΔAUROC ≥ 0.02 with CI excluding 0) and selective deferral (AURC) beyond a V0+V1 video-only monitor in online phase recognition on network-delivered video. RQ2 asks whether clean-calibrated APS/RAPS coverage and calibration survive impairment and centre shift, and whether telemetry-stratified Mondrian calibration restores per-stratum coverage. RQ3 asks whether degradation mechanism matters at matched VMAF. Each question has explicit rejection criteria.  
+**Answer:** RQ1 asks whether receiver-observable telemetry improves failure detection (ΔAUROC with CI excluding 0; 0.02 = smallest effect of interest, final wording in pre-registration v1.1) and selective deferral (AURC) beyond a V0+V1 video-only monitor in online phase recognition on network-delivered video. RQ2 asks whether clean-calibrated APS/RAPS coverage and calibration survive impairment and centre shift, and whether telemetry-stratified Mondrian calibration restores per-stratum coverage. RQ3 asks whether degradation mechanism matters at matched VMAF. Each question has explicit rejection criteria.  
 **Detailed:** `revised-research-questions.md`.
 
 ## RQ8 — What Phase 1 direction does the evidence justify?

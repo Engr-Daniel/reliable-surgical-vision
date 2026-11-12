@@ -59,12 +59,12 @@ Choose two online phase models with public code and causal inference: one TCN-ba
 
 ## Phase 1 exit criteria
 - [x] P1.1 targeted search complete; C4/C5 verdict confirmed (2026-11-12; `literature/gap-validation/`).
-- [ ] Pre-registration frozen (hypotheses, thresholds, metrics, splits, analysis).
-- [ ] Pipeline specification reviewed; reuse/licence decision recorded.
-- [ ] Feature tiers and leakage controls specified.
-- [ ] Dataset desk checks passed or replacements selected.
-- [ ] Feasibility/power memo produced.
-- [ ] Two baseline models selected with pinned versions.
+- [x] Pre-registration frozen (v1.1; `research/integrated-study/preregistration.md`).
+- [x] Pipeline specification written; reuse decision recorded (VISTA pipeline code not released → independent build). *Author review pending.*
+- [x] Feature tiers and leakage controls specified.
+- [x] Dataset desk checks passed (PhaKIR taxonomy identical to Cholec80).
+- [x] Feasibility/power memo produced (criterion amended as a result).
+- [x] Two baseline models selected with pinned versions (TeCNO, Surgformer; LoViT excluded).
 
 ## Exclusions carried into Phase 1
 - No segmentation, TVLM, command-path or haptic experiments.
