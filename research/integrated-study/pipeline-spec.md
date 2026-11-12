@@ -79,3 +79,26 @@ Real-time streaming is the binding constraint, not GPU compute. Parallel namespa
 
 ## 8. Out of scope
 Adaptive bitrate controllers, congestion control (GCC/SCReAM), multipath/failover, command-path impairment, haptics.
+
+---
+
+## 9. Implementation notes (Phase 2, P2.2 — 2026-11-12)
+Code: `src/network/`, `src/streaming/`, `src/features/`, `scripts/run_pipeline_pilot.py`; tests in `tests/`.
+
+| Spec item | As implemented | Reason / status |
+|---|---|---|
+| NetEm backend (§2) | Kept as the production backend (`src/network/netem.py` builds the `tc` commands). **Added a seeded user-space UDP relay** (`src/network/relay.py`), the default for development and CI | The development sandbox has no `sch_netem` kernel module. The relay is bit-reproducible from its seed. The two backends must be cross-checked on one machine with NetEm before production runs |
+| Jitter model | Time-correlated: AR(1) per 20 ms slot (φ = 0.8) with the configured SD; FIFO order kept | Independent per-packet jitter with FIFO ordering inflated median delay by about +105 ms at T5 (caught by `tests/test_network.py`) |
+| Frame identity (§3) | RTP timestamp with `timestamp-offset=0`: frame *i* ↔ RTP ts *i* × 3600. The RTP header extension is not needed | Simpler and standard. Verified with a pixel barcode: 100% alignment at T0 |
+| Raw frame format | `BGRx` into `appsrc` / out of `appsink` | 3-byte BGR rows at 854 px are padded by GStreamer; unpadded pushes produced flat grey video |
+| Pre-emulator loss | Sender counts RTP packets (buffer-list aware); the relay socket uses 8 MB buffers; **new validation (d): relay-received = sender-sent** | Python relay socket overflow during keyframe bursts silently dropped about 1.5% of packets *before* the emulator, corrupting the ground-truth fate table |
+| N1 loss | Reorder-robust: late packets close earlier gaps | Gap counting alone treated reordering as loss |
+| Display clock (§4) | Reconstructed offline from the decode log (`src/streaming/display.py`); **fixed playout margin 80 ms**; analysis window ends at the last decoded frame | Without a margin, normal decode-time jitter produced 10.8% freeze ticks at T0. With it, T0 has none apart from end-of-stream flush |
+| Stale content | Measured on synthetic video as the fraction of decoded frames whose barcode ≠ their RTP index | Decoder concealment shows older pixels under loss. This is a pipeline property to report, not an alignment failure |
+
+### Not yet implemented (open P2.2 items)
+- **NACK/RTX** (`rtprtxsend`/`rtprtxreceive` via `rtpbin` with RTCP feedback). The primary condition in the pre-registration has RTX on, so **this must be done before any study run.** Current pilot results are RTX-off.
+- ULP-FEC secondary factor; jitter-buffer stats for RTX (`rtx-count`, `rtx-success-count` columns exist but stay 0).
+- V1: NIQE, optical flow, backbone `feat_drift` and the learned `q2err` predictor (needs the phase model). Implemented so far: `freeze_px`, frame difference, Laplacian variance, gradient energy.
+- V0 (needs the phase models, P2.3). N2 decoder concealment fraction (libavcodec does not expose it through `avdec_h264`; decoder warnings are logged instead).
+- NetEm cross-check on a host with `sch_netem`.

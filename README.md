@@ -11,7 +11,7 @@ When surgical video crosses a network to reach a remote surgeon (or an AI model)
 | **Status** | Phase 0 complete (M0). Phase 1 deliverables complete: gap validated, study pre-registered and specified (M1 pending author sign-off). Phase 2 next. |
 | **Evidence base** | 179 coded sources across surgical CV, datasets, distribution shift, reliable inference, telesurgery networking and adjacent fields |
 | **Primary question** | Does network-side information improve failure detection for surgical AI beyond what is visible in the received video? |
-| **Experiments** | None yet, by design. The study is [pre-registered](research/integrated-study/preregistration.md); data acquisition and implementation start in Phase 2. |
+| **Experiments** | No clinical data yet. The study is [pre-registered](research/integrated-study/preregistration.md); the media pipeline and analysis code are built and [validated on synthetic video](experiments/pilots/pipeline-synthetic/). |
 
 ---
 
@@ -68,6 +68,12 @@ The programme started with three provisional tracks. A claim-by-claim [novelty s
 | 2 — Dataset & task feasibility | Acquire permitted data, verify licences, reproduce a baseline | Planned |
 | 3–7 | Baselines → shift benchmarking → reliability → network-aware reliability → validation | Planned |
 
+### Latest: pipeline validated on synthetic video
+
+![Pipeline pilot](figures/fig5-pipeline-pilot.svg)
+
+The media pipeline (real RTP/H.264 streaming through a seeded network-impairment relay) has been built and validated on synthetic video. Building it surfaced, and fixed, two silent faults that would have corrupted the study: hidden packet loss *before* the emulator, and a delay-inflating jitter model. Details: [pilot report](experiments/pilots/pipeline-synthetic/).
+
 ---
 
 ## Repository guide
@@ -83,7 +89,8 @@ The programme started with three provisional tracks. A claim-by-claim [novelty s
 | [`figures/`](figures/) | Programme figures and the script that generates them |
 | [`task-completion-report/`](task-completion-report/) | Formal closure record for every completed task |
 | [`phase-task-files/`](phase-task-files/) | Task specifications |
-| `src/`, `experiments/`, `notebooks/` | Reserved for Phase 2+ implementation |
+| [`src/`](src/) · [`tests/`](tests/) | Pipeline (network emulation, RTP streaming, display clock), monitor features, statistics and conformal code; 38 tests |
+| [`experiments/pilots/`](experiments/pilots/) | Validation pilots (synthetic data only so far) |
 
 Programme files: [`EXECUTION_BRIEF.md`](EXECUTION_BRIEF.md) (standards), [`ROADMAP.md`](ROADMAP.md), [`TASK.md`](TASK.md) (active tasks), [`RESEARCH_LOG.md`](RESEARCH_LOG.md) (dated decisions), [`MEMORY.md`](MEMORY.md) (durable context), [`AGENT.md`](AGENT.md) (rules for AI-assisted sessions).
 
@@ -92,7 +99,12 @@ Programme files: [`EXECUTION_BRIEF.md`](EXECUTION_BRIEF.md) (standards), [`ROADM
 python3 literature/intersection-analysis/build_global_evidence_matrix.py   # coded evidence matrix + coverage summary
 python3 figures/make_figures.py                                            # README figures
 ```
-Both scripts use only the Python standard library.
+Both scripts use only the Python standard library. Pipeline code and tests need the pinned environment in [`requirements.txt`](requirements.txt):
+```bash
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python -m pytest -q tests/
+.venv/bin/python scripts/run_pipeline_pilot.py --seconds 40      # synthetic pipeline pilot (~6 min)
+```
 
 ## Research principles
 1. Evidence before novelty claims.

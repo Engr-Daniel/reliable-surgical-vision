@@ -114,6 +114,8 @@ Phase 0 is complete (M0, 2026-11-12). Phase 1 (Gap Validation) deliverables are 
 
 - **Phase 1 deliverables complete (2026-11-12); M1 pending author sign-off.** The study is pre-registered at `research/integrated-study/preregistration.md` (v1.1). Durable design facts: Cholec80 1–32/33–40/41–80; PhaKIR (same 7 phases) external; tiers T0 local + VISTA's five published tiers; monitors cross-fitted over 5 procedure folds; M1 = TeCNO (GPL-3.0, not vendored), M2 = Surgformer (CC BY-NC 4.0); VISTA's pipeline code is **not** public, so the pipeline is built independently; streaming is real time (≈ 500 h total). Repository LICENSE not yet chosen.
 
+- **Phase 2 engineering (2026-11-12, no data):** pipeline implemented in `src/`, validated on synthetic video (`experiments/pilots/pipeline-synthetic/`). The seeded user-space relay replaces NetEm where `sch_netem` is unavailable. Frame identity = RTP timestamp / 3600 (offset 0). Display playout margin 80 ms. **NACK/RTX not yet implemented**, although the primary condition requires it. Use a clean venv (no system site packages) for PyGObject.
+
 ## Update rule
 
 Only add information here when it is expected to remain useful across many future research sessions. Put current actions in `TASK.md` and dated observations in `RESEARCH_LOG.md`.

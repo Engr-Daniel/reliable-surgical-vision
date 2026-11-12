@@ -259,9 +259,42 @@ def fig4():
     return svg(W, H, "\n".join(b), "Programme roadmap")
 
 
+# ---------------------------------------------------------------- fig 5
+def fig5():
+    path = os.path.join(ROOT, "experiments/pilots/pipeline-synthetic/summary.csv")
+    rows = list(csv.DictReader(open(path)))
+    panels = [("Display freeze (% of ticks)", "freeze_tick_pct", "{:.1f}"),
+              ("End-to-end delay, median (ms)", "e2e_delay_median_ms", "{:.0f}"),
+              ("PSNR of on-time frame (dB)", "psnr_on_time_db", "{:.1f}"),
+              ("Stale decoded content (% frames)", "stale_content_pct", "{:.1f}")]
+    W, H = 1400, 500
+    pw, ph, gap, x0, y0 = 315, 260, 22, 40, 130
+    b = [text(40, 48, "Pipeline pilot: synthetic video through the six pre-registered conditions", "title"),
+         text(40, 76, "Real GStreamer RTP/H.264 + seeded impairment relay, 40 s per condition, NACK/RTX off. Validation only; no clinical data, no AI model.", "sub")]
+    for pi, (title, col, fmt) in enumerate(panels):
+        px = x0 + pi * (pw + gap)
+        vals = [float(r[col]) for r in rows]
+        vmax = max(vals) * 1.15 or 1
+        b.append(text(px, y0 - 14, title, "h"))
+        b.append(f'<line x1="{px}" y1="{y0 + ph}" x2="{px + pw}" y2="{y0 + ph}" stroke="#c3c2b7" stroke-width="1"/>')
+        bw = (pw - 10) / len(rows) - 8
+        for i, (r, v) in enumerate(zip(rows, vals)):
+            bx = px + 5 + i * (bw + 8)
+            bh = ph * v / vmax
+            col_fill = MUTED if r["condition"] == "T0" else BLUE
+            b.append(f'<path d="M{bx},{y0 + ph} L{bx},{y0 + ph - bh + 4} Q{bx},{y0 + ph - bh} {bx + 4},{y0 + ph - bh} '
+                     f'L{bx + bw - 4},{y0 + ph - bh} Q{bx + bw},{y0 + ph - bh} {bx + bw},{y0 + ph - bh + 4} L{bx + bw},{y0 + ph} Z" fill="{col_fill}"/>')
+            b.append(text(bx + bw / 2, y0 + ph - bh - 6, fmt.format(v), "bs", "middle"))
+            b.append(text(bx + bw / 2, y0 + ph + 18, r["condition"], "bs", "middle"))
+    b.append(text(40, y0 + ph + 52, "T0 local (grey) · T1 hospital LAN · T2 5G urban · T3 4G rural · T4 LEO · T5 GEO (VISTA tier parameters).", "bs"))
+    b.append(text(40, y0 + ph + 72, "Without retransmission, every frame with a lost packet stalls the jitter buffer (up to 100 ms), so freezes rise steeply from T2 upwards.", "bs"))
+    b.append(text(40, y0 + ph + 92, "Data: experiments/pilots/pipeline-synthetic/summary.csv", "bs"))
+    return svg(W, H, "\n".join(b), "Pipeline pilot results by condition")
+
+
 def main():
     for name, fn in [("fig1-research-question.svg", fig1), ("fig2-evidence-landscape.svg", fig2),
-                     ("fig3-track-merge.svg", fig3), ("fig4-roadmap.svg", fig4)]:
+                     ("fig3-track-merge.svg", fig3), ("fig4-roadmap.svg", fig4), ("fig5-pipeline-pilot.svg", fig5)]:
         with open(os.path.join(OUT, name), "w") as fh:
             fh.write(fn())
         print("wrote", name)

@@ -94,9 +94,10 @@ Plan: `literature/intersection-analysis/phase1-direction.md`. No data acquisitio
 
 ---
 
-## Phase 2 — Dataset & Task Feasibility (next)
-- [ ] P2.1 Request Cholec80, PhaKIR (and AutoLaparo if gated in); re-verify terms at download.
-- [ ] P2.2 Build and validate the media pipeline (pipeline-spec §6 checks).
-- [ ] P2.3 Reproduce TeCNO and Surgformer Cholec80 baselines on the pinned split.
-- [ ] P2.4 Implement feature extraction with the leakage unit tests (feature-spec §5).
-- [ ] P2.5 Pilot: stream 2 calibration videos (33–34) through all tiers; check logs, alignment and realised loss.
+## Phase 2 — Dataset & Task Feasibility (engineering started; no data)
+- [ ] P2.1 Request Cholec80, PhaKIR (and AutoLaparo if gated in); re-verify terms at download. **Needs the author.**
+- [~] P2.2 Build and validate the media pipeline. **Built and validated on synthetic video** (`experiments/pilots/pipeline-synthetic/`): checks (a)–(d) pass. Open: **NACK/RTX (primary condition)**, ULP-FEC, NetEm cross-check on a host with `sch_netem`.
+- [ ] P2.3 Reproduce TeCNO and Surgformer Cholec80 baselines on the pinned split. Needs data and a GPU.
+- [~] P2.4 Feature extraction and leakage tests. N1, N2 (subset) and V1 (subset) implemented with causality/leakage tests. Open: V0, NIQE/flow/feat_drift, learned `q2err`.
+- [x] P2.6 Analysis code (not in the original list): metrics, procedure-level BCa bootstrap, Holm, interpretation bands, APS/RAPS/Mondrian conformal, cross-fitting folds, with tests (`src/evaluation/`, `src/uncertainty/`).
+- [ ] P2.5 Pilot: stream 2 calibration videos (33–34) through all tiers; check logs, alignment and realised loss. Needs data.

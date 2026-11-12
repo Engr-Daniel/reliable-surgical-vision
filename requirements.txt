@@ -1,1 +1,15 @@
-# Dependencies will be pinned once Phase 2 implementation begins.
+# Python dependencies (pinned 2026-11-12; Python 3.13). Install in a clean venv:
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+# System packages (Ubuntu 24.04): gstreamer1.0-tools gstreamer1.0-plugins-{base,good,bad,ugly}
+#   gstreamer1.0-libav gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0 libgirepository-2.0-dev
+#   libcairo2-dev pkg-config iproute2   (GStreamer 1.24.2 used in development)
+# Do NOT use --system-site-packages: the distro 'gi' module shadows PyGObject.
+numpy==2.5.4
+opencv-python-headless==5.0.0.93
+pandas==3.1.1
+pyarrow==26.0.1
+pycairo==1.29.2
+PyGObject==3.58.1
+pytest==9.2.0
+scikit-learn==1.9.1
+scipy==1.18.1

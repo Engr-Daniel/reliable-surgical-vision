@@ -239,3 +239,22 @@ Phase 1 deliverables complete; **M1 pending author sign-off**. Open items: repos
 
 ### Next
 Phase 2 — data requests, pipeline build/validation, baseline reproduction.
+
+## 2026-11-12 — Phase 2 engineering (no data): pipeline built and validated on synthetic video
+
+### Done
+- Implemented `src/network/` (Gilbert–Elliott, pre-registered tiers, seeded impairment model, live UDP relay, NetEm command builder), `src/streaming/` (GStreamer RTP/H.264 sender/receiver with receiver-side logs, offline 25 Hz display clock, barcoded synthetic video), `src/features/` (N1, N2, V1 subsets), `src/evaluation/` and `src/uncertainty/` (metrics, BCa cluster bootstrap, Holm, conformal APS/RAPS/Mondrian, folds). 38 tests pass.
+- Pilot over T0–T5 (40 s each): validation checks (a)–(d) pass.
+
+### Faults found and fixed (would otherwise have contaminated the study)
+1. Relay socket overflow during keyframe bursts dropped ~1.5% of packets **before** the emulator, invisible to its ground truth. Fixed with 8 MB buffers and a new check (d), sender count = relay count.
+2. Independent per-packet jitter with FIFO ordering inflated delay (+105 ms median at T5). Replaced with time-correlated AR(1) jitter.
+3. 3-byte BGR row padding produced grey video. Switched to BGRx.
+4. N1 counted reordering as loss. Made reorder-robust.
+5. Display clock without a playout margin produced 10.8% spurious freezes at T0. A fixed 80 ms margin removes them.
+
+### Observations
+Without RTX, each frame with a lost packet stalls the jitter buffer for up to 100 ms, so freeze ticks reach 19–38% at T2–T5. Decoder concealment leaves 12–20% of frames with stale content at a correct frame index. **RTX (the primary pre-registered condition) is not yet implemented and is the next engineering task.**
+
+### Environment
+The sandbox lacks `sch_netem`, hence the user-space relay. PyGObject needs a clean venv (the distro `gi` shadows it); dependencies are pinned in `requirements.txt`.
