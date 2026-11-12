@@ -170,3 +170,36 @@ P0.6 passes its exit criteria. Track C remains plausible only in a narrower form
 
 ### Next
 P0.7 — Intersection Analysis & Novelty Stress-Test.
+
+## 2026-11-12 — P0.7 Intersection Analysis & Novelty Stress-Test completed
+
+### Scope
+Integrated P0.1–P0.6, refreshed the literature for overlap since the P0.6 cutoff (2026-09-26), rated 26 intersections, stress-tested Tracks A–C, decided the track structure, revised the RQs, audited novelty language and defined the Phase 1 direction.
+
+### Method
+- Built `literature/intersection-analysis/build_global_evidence_matrix.py`, which codes every retained source manually on evidence level, directness, task, shift, reliability concept, network layer, downstream-AI evaluation and telemetry use. Output: 175 rows / 165 unique sources.
+- Found and fixed a records gap: 11 sources present in P0.4/P0.6 maps (SH01, SH03, SH04, SH25, NW16, NW21–NW25, NW35) were missing from `literature/literature-map.csv`; rows and BibTeX entries restored.
+- Overlap refresh (12 query families, 2026-11-12): 12 retained (IX01–IX12), 12 excluded/deferred.
+
+### Key findings
+- **VISTA (May 2026)** occupies the surgical network → decoded-video benchmark layer (no AI evaluated). Matched-PSNR tiers produced very different human success rates.
+- **NetFI (2026)** provides trace-informed fault injection (command path only).
+- **MICCAI 2026 phase temporal-stability work** (TEC/EGTP, TFI) adds to occupancy of phase reliability without corruption/network analysis.
+- **Generic video analytics** establishes network/codec → DNN accuracy; **teleoperated driving** establishes telemetry → QoS forecasting. Neither predicts AI failure from telemetry against a video-only baseline.
+- Occupancy over 26 cells: 3 saturated, 11 occupied, 4 partial, 8 not found in retained evidence.
+
+### Decision
+Merge Tracks A–C into one integrated study:
+- **RQ1 (primary, former C):** incremental value of receiver-observable telemetry over a strong video-only monitor for failure detection/selective deferral in online phase recognition on network-delivered video;
+- **RQ2 (former B):** calibration/conformal validity under decoder-mediated and natural shift; telemetry-stratified Mondrian calibration;
+- **RQ3 (former A):** mechanism-dependent degradation at matched video quality.
+
+### Risks
+The primary cell carries **high** residual risk of unretrieved work in networking venues, so Phase 1 P1.1 is a blocking targeted search. The emulated pipeline is an abstraction of, not a proxy for, any proprietary platform.
+
+### Status
+P0.7 passes its exit criteria. **Phase 0 complete (M0).** Suggested tag after commit/review: `v0.0.7`.
+
+### Next
+Phase 1 — Gap Validation, starting with P1.1 (targeted gap-validation search).
+

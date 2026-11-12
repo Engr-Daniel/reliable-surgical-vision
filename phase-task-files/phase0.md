@@ -20,7 +20,7 @@ The phase is complete only when the provisional research tracks have been stress
 | P0.4 | Distribution-Shift Literature Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.5 | Reliable-Inference Literature Reconnaissance | **COMPLETE — 2026-09-25** |
 | P0.6 | Telesurgery / Network Literature Reconnaissance | **COMPLETE — 2026-09-26** |
-| P0.7 | Intersection Analysis & Novelty Stress-Test | **READY TO START** |
+| P0.7 | Intersection Analysis & Novelty Stress-Test | **COMPLETE — 2026-11-12** |
 
 ---
 
@@ -1918,15 +1918,68 @@ Next active task: **P0.7 — Intersection Analysis & Novelty Stress-Test**.
 
 ## P0.7 — Intersection Analysis & Novelty Stress-Test
 
+## Status
+`COMPLETE — 2026-11-12`
+
+## 1. Purpose
 Integrate P0.1–P0.6 and determine which research questions remain defensible.
 
-Expected outputs include:
-- global evidence matrix;
-- task × dataset × shift × reliability-method × network intersection map;
-- well-studied vs under-studied combinations;
-- novelty stress-test for Tracks A–C;
-- revised research questions;
-- decision on whether tracks remain separate, merge, split, or are discontinued.
+> **Which task × dataset × shift × reliability × network intersections are already occupied, which remain open in the retained evidence, and what single research direction does that justify?**
+
+## 2. Scope Boundaries
+### In scope
+- integration of all retained P0.1–P0.6 sources on common dimensions;
+- a dated overlap-refresh search covering the interval since the P0.6 cutoff, including adjacent non-medical fields (video analytics, teleoperated driving);
+- intersection occupancy ratings with residual risk;
+- claim-by-claim stress-test of Tracks A–C;
+- track-structure decision, revised RQs and Phase 1 direction;
+- claim audit of novelty/"first" language.
+
+### Out of scope
+- experiments, data acquisition, model training;
+- final media-pipeline implementation;
+- definitive novelty statements (passed to Phase 1 gap validation).
+
+## 3. Research Questions
+1. What does the integrated evidence base contain?
+2. Which intersections are saturated, occupied, partial or not found?
+3–5. Does each of Tracks A, B, C survive the stress-test, and in what form?
+6. Should tracks remain separate, merge, split or be discontinued?
+7. What are the revised candidate research questions?
+8. What Phase 1 direction does the evidence justify?
+9. Have unsupported novelty/"first" claims been removed?
+
+## 4. Required Artifacts
+`literature/intersection-analysis/`: `README.md`, `search-protocol.md`, `source-screening-log.csv`, `source-index.md`, `references.bib`, `build_global_evidence_matrix.py`, `global-evidence-matrix.csv`, `coverage-summary.md`, `intersection-map.csv`, `intersection-analysis.md`, `novelty-stress-test.md`, `track-decision.md`, `revised-research-questions.md`, `phase1-direction.md`, `claim-audit.md`, `rq-answer-matrix.md`, `open-questions.md`; `research/integrated-study/README.md`; `task-completion-report/P0.7_COMPLETION_REPORT.md`.
+
+## 5. Quality Requirements
+- every retained source coded; builder fails on uncoded sources;
+- "not found in retained evidence" is never written as "novel" or "first";
+- every not-found cell carries a residual-risk rating;
+- adjacent-domain evidence counts toward occupancy of the idea;
+- every hypothesis has a pre-specified rejection criterion.
+
+## 6. Exit Criteria
+- [x] global evidence matrix complete;
+- [x] intersection map complete with occupancy and residual risk;
+- [x] Tracks A–C stress-tested;
+- [x] track structure decided;
+- [x] RQs revised with falsifiable hypotheses;
+- [x] Phase 1 direction defined;
+- [x] novelty/"first" claims audited;
+- [x] all P0.7 RQs answered;
+- [x] programme records updated;
+- [x] completion report produced.
+
+## 7. Outcome
+Tracks merged into one integrated study: **RQ1 (primary, former C)**: incremental value of receiver-observable telemetry for failure detection/selective deferral in online phase recognition on network-delivered video; **RQ2 (former B)**: reliability audit and telemetry-stratified calibration; **RQ3 (former A)**: mechanism-dependent degradation at matched video quality.
+
+## 8. P0.7 Completion Milestone
+P0.7 completed on **2026-11-12**.
+
+Suggested milestone: **`v0.0.7 — Intersection Analysis & Novelty Stress-Test`**
+
+Next active phase: **Phase 1 — Gap Validation** (`literature/intersection-analysis/phase1-direction.md`).
 
 ---
 
@@ -1940,12 +1993,12 @@ Phase 0 is complete when:
 - [x] distribution-shift literature is mapped;
 - [x] reliable-inference literature is mapped;
 - [x] telesurgery/network literature is mapped;
-- [ ] the intersection evidence matrix is complete;
-- [ ] Track A–C novelty has been stress-tested;
-- [ ] candidate research questions have been revised from evidence;
-- [ ] unsupported novelty claims have been removed;
-- [ ] the next experimental/research phase is justified by the evidence.
+- [x] the intersection evidence matrix is complete;
+- [x] Track A–C novelty has been stress-tested;
+- [x] candidate research questions have been revised from evidence;
+- [x] unsupported novelty claims have been removed;
+- [x] the next experimental/research phase is justified by the evidence.
 
 ## Phase 0 Programme Milestone
 
-**M0 — Evidence-Backed Research Map**
+**M0 — Evidence-Backed Research Map** — **reached 2026-11-12** (P0.7 completion).

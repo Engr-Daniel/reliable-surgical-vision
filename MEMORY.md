@@ -14,6 +14,8 @@ How can computer-vision systems used in robot-assisted and tele-robotic surgery 
 
 ## Current tracks
 
+**Since P0.7 (2026-11-12) the tracks are work packages of one integrated study** (`literature/intersection-analysis/track-decision.md`): C → RQ1 (primary), B → RQ2 (reliability layer), A → RQ3 (shift substrate). The original track definitions are kept below for history.
+
 ### Track A — Compound Shift
 Study performance and reliability degradation under individual and compound visual/network-induced shifts.
 
@@ -31,7 +33,7 @@ This is a hypothesis to investigate, not an established project conclusion.
 
 ## Research status
 
-The programme is in **Phase 0: Research Foundation**. No paper title, novelty claim, dataset choice, model architecture, or experimental conclusion is final.
+Phase 0 is complete (M0, 2026-11-12). The programme is in **Phase 1: Gap Validation**. No paper title, novelty claim, final dataset, model architecture or experimental conclusion is final.
 
 ## Durable decisions
 
@@ -95,6 +97,18 @@ The programme is in **Phase 0: Research Foundation**. No paper title, novelty cl
 - Track C is narrowed to whether network/system telemetry adds incremental reliability/failure-prediction or selective-inference value beyond received-video evidence.
 - The preferred future design distinguishes decoded-video abstraction from mechanistic network+codec experiments.
 - Final task/dataset/shift/reliability/network choice and all novelty claims remain gated by P0.7.
+
+- **P0.7 Intersection Analysis & Novelty Stress-Test completed (2026-11-12). Phase 0 complete (M0).**
+- Global evidence matrix: 165 unique sources coded on task/shift/reliability/network dimensions by `literature/intersection-analysis/build_global_evidence_matrix.py`; 11 previously missing global-map rows restored.
+- Surgical-CV and telesurgery-network literatures are nearly disjoint: no retained telesurgery source evaluates AI.
+- VISTA (arXiv 2605.08886, 2026) already provides a surgical forward-video network-impairment benchmark (H.264/UDP/NetEm Gilbert–Elliott, five tiers, PSNR/SSIM/VMAF/freeze, human outcomes, no AI). Reuse it rather than claim the pipeline.
+- The network/codec → DNN-accuracy relation is established in generic video analytics (DDS, AccMPEG, DNN-aware retransmission); telemetry → QoS forecasting is established in teleoperated driving.
+- Tracks merged: **RQ1 (primary)** = incremental value of receiver-observable network/transport/decoder telemetry over a strong video-only (model-output + decoded-frame) monitor for failure detection and selective deferral in **online surgical phase recognition**; RQ2 = calibration/conformal validity under decoder-mediated and natural shift plus telemetry-stratified Mondrian calibration; RQ3 = mechanism-dependent degradation at matched VMAF.
+- Primary task is online phase recognition (per-frame labels; temporal mechanism; segmentation monitoring is occupied by TCSR-Monitor). Datasets: Cholec80 (development), PhaKIR (external, descriptive), AutoLaparo optional.
+- Monitor features must be receiver-observable; emulator ground truth and tier identity are never features; V1 must detect pixel-visible freezes.
+- Primary hypothesis has a pre-specified kill criterion (ΔAUROC ≥ 0.02 with procedure-level CI excluding 0, or AURC reduction); a negative result is reportable.
+- "Not found in retained evidence" ≠ novel. Cells X22/X23 carry **high** residual risk; Phase 1 P1.1 targeted search is blocking.
+- No affirmative novelty/"first" claims exist in programme text; prohibited claims are listed in `literature/intersection-analysis/claim-audit.md`.
 
 ## Update rule
 

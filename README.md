@@ -6,13 +6,21 @@ This repository is a research programme investigating how computer-vision system
 
 ## Research programme
 
-The repository currently contains three provisional research tracks:
+Phase 0 began with three provisional research tracks. P0.7 merged them into one integrated study (see below):
 
 - **Track A — Compound Shift:** quantify how individual and compound visual/network-induced shifts affect surgical computer-vision performance and reliability.
 - **Track B — Selective Inference:** investigate uncertainty quantification, calibration, conformal prediction, and selective prediction under surgical distribution shift.
 - **Track C — Network-Aware Inference:** investigate whether visual evidence and network telemetry can jointly identify unreliable inference in telesurgical settings.
 
-These are research tracks, not predetermined publications. Tracks may be refined, combined, divided, or discontinued as evidence accumulates.
+These are research tracks, not predetermined publications. After P0.7 they are work packages of one integrated study:
+
+| Question | Role | Former track |
+|---|---|---|
+| **RQ1** | **Primary:** does receiver-observable network/transport/decoder telemetry improve failure detection and selective deferral of online surgical phase recognition on network-delivered video, beyond a strong video-only monitor? | C |
+| RQ2 | Do calibration and conformal coverage survive decoder-mediated and natural shift, and does telemetry-stratified calibration help? | B |
+| RQ3 | Does degradation mechanism matter at matched decoded-video quality? | A |
+
+See `literature/intersection-analysis/revised-research-questions.md` and `research/integrated-study/`.
 
 ## Core research question
 
@@ -20,17 +28,17 @@ These are research tracks, not predetermined publications. Tracks may be refined
 
 ## Current research status
 
-**Phase 0 — Research Foundation**
+**Phase 0 — Research Foundation: complete (M0 reached 2026-11-12)**
 
 - P0.1 Toumai architecture reconnaissance — **complete** (`v0.0.1`)
 - P0.2 Surgical computer-vision landscape — **complete** (`v0.0.2`)
 - P0.3 Dataset reconnaissance — **complete** (`v0.0.3`)
 - P0.4 Distribution-shift literature reconnaissance — **complete** (`v0.0.4`)
 - P0.5 Reliable-inference literature reconnaissance — **complete** (`v0.0.5`)
-- P0.6 Telesurgery / network literature reconnaissance — **complete**
-- P0.7 Intersection Analysis & Novelty Stress-Test — **next**
+- P0.6 Telesurgery / network literature reconnaissance — **complete** (`v0.0.6`)
+- P0.7 Intersection Analysis & Novelty Stress-Test — **complete** (suggested `v0.0.7`)
 
-P0.6 establishes the explicit network→transport/recovery→codec/decoder→received-video pathway and narrows Track C to the incremental value of network/system telemetry for downstream surgical-CV reliability. No final novelty or Phase 1 experiment has been fixed.
+**Phase 1 — Gap Validation: next.** P1.1, a targeted search of networking/video-analytics and 2026 surgical venues, is blocking because the primary question carries high residual risk of unretrieved prior work. No novelty claim is made.
 
 ## Research principles
 
@@ -42,4 +50,4 @@ P0.6 establishes the explicit network→transport/recovery→codec/decoder→rec
 6. Safety-aware interpretation of medical-AI research.
 7. Version-controlled experiments, configurations, results, and decisions.
 
-See `EXECUTION_BRIEF.md`, `ROADMAP.md`, `AGENT.md`, `TASK.md`, and `MEMORY.md`.
+See `EXECUTION_BRIEF.md`, `ROADMAP.md`, `AGENT.md`, `TASK.md`, `MEMORY.md`, and `literature/intersection-analysis/README.md`.
